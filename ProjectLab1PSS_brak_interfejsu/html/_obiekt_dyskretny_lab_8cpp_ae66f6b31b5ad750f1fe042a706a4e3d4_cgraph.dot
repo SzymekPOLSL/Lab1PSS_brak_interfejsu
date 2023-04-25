@@ -1,0 +1,27 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="ARX::odczytajDane",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_a_r_x.html#a507465138d27f9beda85b7b94101e94b",tooltip="Metoda służy do odczytania parametrów obiektu ARX z pliku konfiguracyjnego (json)"];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="ARX::aktualizujParametr",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_a_r_x.html#a9ceed0a5f96290dccb956ae8b2077bff",tooltip="Zmiana opóźnienia modelu ARX."];
+  Node2 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="ARX::aktualizujWielomianA",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_a_r_x.html#a0ea5d18350bae9be968171e5f2077d0f",tooltip="Zmiana współczynników wielomianu A."];
+  Node2 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="ARX::aktualizujWielomianB",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_a_r_x.html#abaef0e431556e7a22180c35b2306a55a",tooltip="Zmiana współczynników wielomianu B."];
+  Node1 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="ARX::Symuluj",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_a_r_x.html#aa2ee25b5f56aa74bda0323f61cef3c27",tooltip="Dziedziczona metoda Symuluj z klasy bazowej SISO."];
+  Node1 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="ARX::wyswietlParametry",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_a_r_x.html#a8660da07ee58cf49db7bcf61affbf568",tooltip="Metoda odpowiedzialna za wyświetlenie aktualnych pól opisujących model ARX."];
+  Node7 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="print",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$klasa_a_r_x_8cpp.html#a73d9ecf1b45067ffeb02ce0f0e42ef43",tooltip="Wyświetlenie kolejnych elementów wektora."];
+  Node1 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="ARX::zapiszDane",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_a_r_x.html#a555a9b18a1acbbb9f17fcf478d0a6b35",tooltip="Metoda służy do zapisu aktualnych parametrów obiektu ARX z pliku konfiguracyjnego (json)"];
+  Node1 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="zapiszDoPliku",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_obiekt_dyskretny_lab_8cpp.html#a218660886a6f90987773eaaff8c83de8",tooltip="Funkcja odpowiedzialna za zapis wyjścia modelu ARX do pliku."];
+}

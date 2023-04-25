@@ -10,18 +10,30 @@
 */
 
 class ARX: public SISO{
-    int s_k; ///< Opóźnienie
+    unsigned int s_k; ///< Opóźnienie
     double s_varE; ///< Wariancja białego szumu
 
 protected:
-    /// Współczynniki wielomianów A oraz B
-    std::vector<double> s_paramA, s_paramB;
-    ///Kolejki z wartościami wejścia oraz wyjścia. Ich rozmiar zależy od ilości współczynników wielomianów A oraz B.
-    std::deque<double> s_u, s_y; 
+    /// Współczynniki wielomianu A
+    std::vector<double> s_paramA;
+    /// Współczynniki wielomianu B
+    std::vector<double> s_paramB;
+    ///Kolejka z wartościami wejścia. Jej rozmiar zależy od ilości współczynników wielomianu B zsumowaną z opóźnieniem.
+    std::deque<double> s_u; 
+    ///Kolejka z wartościami wyjścia. Jej rozmiar zależy od ilości współczynników wielomianu A.
+    std::deque<double> s_y;
 
 public:
     ARX(); ///< Konstruktor domyślny
-    ARX(std::vector<double> nparamA, std::vector<double> nparamB, int nk, double nvarE); ///< Konstruktor parametryczny
+    /**
+    * Konstruktor parametryczny z następującymi zmiennymi wejściowymi:
+    * @param[in] paramA
+    * @param[in] paramB
+    * @param[in] k
+    * @param[in] varE
+    *
+    */
+    ARX(std::vector<double>& nparamA, std::vector<double>& nparamB, unsigned int& nk, double& nvarE);
     ~ARX();
 
     std::ostream& wyswietlParametry(std::ostream & os); ///< Metoda odpowiedzialna za wyświetlenie aktualnych pól opisujących model ARX.
@@ -33,13 +45,17 @@ public:
     ///Zmiana współczynników wielomianu B
     void aktualizujWielomianB(std::vector <double> wielomian);
     ///Zmiana opóźnienia modelu ARX
-    void aktualizujParametr(int parametr);
+    void aktualizujParametr(unsigned int parametr);
     ///Zmiana wariancji białego szumu
     void aktualizujParametr(double parametr);
 
     double Symuluj(double s_u) override; ///< Dziedziczona metoda Symuluj z klasy bazowej SISO
 
-    ///Metoda służy do odczytania parametrów obiektu ARX z pliku konfiguracyjnego (json)
+    /** 
+    * Metoda służy do odczytania parametrów obiektu ARX z pliku konfiguracyjnego(json)
+    * @param[in] obiekt ARX
+    * 
+    */
     void odczytajDane(ARX& arx);
     
     ///Metoda służy do zapisu aktualnych parametrów obiektu ARX z pliku konfiguracyjnego (json)

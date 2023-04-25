@@ -11,157 +11,160 @@
 \DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <random>}}
 \DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}\ }
 \DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00019}\mbox{\hyperlink{klasa_a_r_x_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{00019}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{klasa_a_r_x_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}}\ =\ nlohmann::json;\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00022}00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{print}}(std::vector<double>\ \textcolor{keyword}{const}\ \&input);\ \textcolor{comment}{//\ Funkcja\ umożlwiająca\ wyświetlenie\ kolejnych\ elementów\ wektora.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00024}\mbox{\hyperlink{class_a_r_x_a33446ecffef6c604cae4b0376dc90d30}{00024}}\ \mbox{\hyperlink{class_a_r_x_a33446ecffef6c604cae4b0376dc90d30}{ARX::ARX}}():\ s\_paramA(1),\ s\_paramB(0),\ s\_k(0),\ s\_varE(0),\ s\_u(0),\ s\_y(0)\{\}\ \textcolor{comment}{//\ Wpisanie\ wartości\ domyślnych\ do\ konstruktora}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00020}\mbox{\hyperlink{klasa_a_r_x_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{00020}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{klasa_a_r_x_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}}\ =\ nlohmann::json;\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00023}00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{print}}(std::vector<double>\ \textcolor{keyword}{const}\ \&input);\ \textcolor{comment}{//\ Funkcja\ umożlwiająca\ wyświetlenie\ kolejnych\ elementów\ wektora.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00024}00024\ }
 \DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00026}00026\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00027}00027\ \textcolor{comment}{*\ Przypisanie\ polom\ konstruktora\ wartości\ za\ pomocą\ zmiennych\ w\ liście\ inicjalizacyjnej.\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00028}00028\ \textcolor{comment}{*\ Wielkość\ s\_u\ oraz\ s\_y\ zależy\ od\ liczby\ podanych\ współczynników\ wielomianów\ A\ oraz\ B.\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00029}00029\ \textcolor{comment}{*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00030}00030\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00031}\mbox{\hyperlink{class_a_r_x_a4e4ddffa5a0de70e864728340e5bdd1e}{00031}}\ \mbox{\hyperlink{class_a_r_x_a33446ecffef6c604cae4b0376dc90d30}{ARX::ARX}}(std::vector<double>\ nparamA,\ std::vector<double>\ nparamB,\ \textcolor{keywordtype}{int}\ nk,\ \textcolor{keywordtype}{double}\ nvarE):\ s\_paramA(nparamA),\ s\_paramB(nparamB),\ s\_k(nk),\ s\_varE(nvarE),\ s\_u(0),\ s\_y(0)\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00032}00032\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()+\mbox{\hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\_k}},\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00033}00033\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00034}00034\ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00035}\mbox{\hyperlink{class_a_r_x_abbba12ab36a3f0a6536938b242271c9f}{00035}}\ \mbox{\hyperlink{class_a_r_x_abbba12ab36a3f0a6536938b242271c9f}{ARX::\string~ARX}}()\{\}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00037}00037\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00038}00038\ \textcolor{comment}{*\ Wyświetlenie\ kolejnych\ pól\ stworzonego\ obiektu\ z\ uwzględnieniem\ dodatkowo\ rzędów\ wielomianów.\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00039}00039\ \textcolor{comment}{*\ Metoda\ wykorzystuje\ funkcję\ "{}print"{}\ do\ wyświetlenia\ kolejnych\ elementów\ wektora.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00040}00040\ \textcolor{comment}{*}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00041}00041\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00042}\mbox{\hyperlink{class_a_r_x_a53f2b0c4002c9f001a37edcdcb4e89dd}{00042}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a53f2b0c4002c9f001a37edcdcb4e89dd}{ARX::wyswietlParametry}}()\{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00043}00043\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Oto\ aktualnie\ wybrane\ parametry\ modelu\ ARX:\ \(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00044}00044\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}dA\ =\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size()\ <<\ \textcolor{stringliteral}{"{},\ dB\ =\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00045}00045\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}s\_k\ =\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\_k}}\ <<\ \textcolor{stringliteral}{"{},\ s\_varE\ =\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{s\_varE}}\ <<\ std::endl;\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00046}00046\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Param\_A:\ "{}};}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{print}}(this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}});}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00048}00048\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Param\_B:\ "{}};}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{print}}(this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}});}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00050}00050\ \ \ \ \ std::cout\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00051}00051\ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00053}00053\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00054}00054\ \textcolor{comment}{*\ Wpisanie\ nowych\ współczynników\ wielomianu\ A.\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00055}00055\ \textcolor{comment}{*\ Wyzerowanie\ kolejek\ s\_y\ oraz\ s\_u,\ z\ uwzględnieniem\ nowej\ wielkości\ wielomianu\ A}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00056}00056\ \textcolor{comment}{*}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00057}00057\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00058}\mbox{\hyperlink{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}{00058}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}{ARX::aktualizujWielomianA}}(std::vector\ <double>\ wielomian)\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00059}00059\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.clear();}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00060}00060\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}\ =\ wielomian;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00061}00061\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00062}00062\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ +\ \mbox{\hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\_k}},\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00063}00063\ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00064}00064\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00065}00065\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00066}00066\ \textcolor{comment}{*\ Wpisanie\ nowych\ współczynników\ wielomianu\ B.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00067}00067\ \textcolor{comment}{*\ Wyzerowanie\ kolejek\ s\_y\ oraz\ s\_u,\ z\ uwzględnieniem\ nowej\ wielkości\ wielomianu\ B}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00068}00068\ \textcolor{comment}{*}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00069}00069\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00070}\mbox{\hyperlink{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}{00070}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}{ARX::aktualizujWielomianB}}(std::vector\ <double>\ wielomian)\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00071}00071\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.clear();}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00072}00072\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}\ =\ wielomian;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00073}00073\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00074}00074\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ +\ \mbox{\hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\_k}},\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00075}00075\ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00076}00076\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00077}00077\ \textcolor{comment}{/*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00078}00078\ \textcolor{comment}{*\ Wpisanie\ nowej\ wartości\ opóźnienia.\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00079}00079\ \textcolor{comment}{*\ Aktualizacja\ wielkości\ kolejki\ s\_u.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00080}00080\ \textcolor{comment}{*}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00081}00081\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00082}\mbox{\hyperlink{class_a_r_x_a9ceed0a5f96290dccb956ae8b2077bff}{00082}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a9ceed0a5f96290dccb956ae8b2077bff}{ARX::aktualizujParametr}}(\textcolor{keywordtype}{int}\ parametr)\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00083}00083\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\_k}}\ =\ parametr;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00084}00084\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00085}00085\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ +\ \mbox{\hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\_k}},\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00086}00086\ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00087}00087\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00088}00088\ \textcolor{comment}{/*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00089}00089\ \textcolor{comment}{*\ Wpisanie\ nowej\ wartości\ wariancji\ białego\ szumu.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00090}00090\ \textcolor{comment}{*\ Zerowanie\ kolejek\ s\_y\ oraz\ s\_u}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00091}00091\ \textcolor{comment}{*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00092}00092\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00093}\mbox{\hyperlink{class_a_r_x_a6353c1891e1b8ad9fa62ec14536caaa1}{00093}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a9ceed0a5f96290dccb956ae8b2077bff}{ARX::aktualizujParametr}}(\textcolor{keywordtype}{double}\ parametr)\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00094}00094\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{s\_varE}}\ =\ parametr;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00095}00095\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00096}00096\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ +\ \mbox{\hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\_k}},\ 0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00097}00097\ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00098}00098\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00099}00099\ \textcolor{comment}{/*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00100}00100\ \textcolor{comment}{*\ Symulacja\ modelu\ ARX.\ Na\ wejściu\ podawana\ jest\ pojedyncza\ próbka\ wejścia,}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00101}00101\ \textcolor{comment}{*\ zaś\ poprzez\ symulację\ otrzymywana\ jest\ próbka\ wyjścia.\ Wyjście\ zaszumiane\ jest\ białym\ szumem.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00102}00102\ \textcolor{comment}{*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00103}00103\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00104}\mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{00104}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{ARX::Symuluj}}(\textcolor{keywordtype}{double}\ u)\{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{comment}{//Usunięcie\ wartości\ wejścia\ z\ tyłu\ i\ dodanie\ nowego\ wejścia\ z\ przodu.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00106}00106\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.push\_front(u);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00107}00107\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.pop\_back();}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{comment}{//Obliczenie\ wartości\ wyjścia\ w\ i-\/tej\ próbce}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordtype}{double}\ a\ =\ std::inner\_product(this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.begin(),\ this-\/>s\_paramB.end(),\ this-\/>s\_u.begin()+\mbox{\hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\_k}},\ 0.0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00110}00110\ \ \ \ \ \textcolor{keywordtype}{double}\ b\ =\ std::inner\_product(this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.begin(),\ this-\/>s\_paramA.end(),\ this-\/>s\_y.begin(),\ 0.0);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00111}00111\ \ \ \ \ \textcolor{keywordtype}{double}\ wynik\ =\ a\ -\/\ b;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//Losowanie\ wartości,\ odwzorowującej\ szum\ (rozkład\ normalny)}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00113}00113\ \ \ \ \ std::random\_device\ rd;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00114}00114\ \ \ \ \ std::mt19937\ gen(rd());}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00115}00115\ \ \ \ \ std::normal\_distribution<>\ dist(0,\ 1);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordtype}{double}\ szum\ =\ dist(gen)\ *\ \mbox{\hyperlink{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{s\_varE}};}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{comment}{//Usunięcie\ wartości\ wyjścia\ z\ tyłu\ i\ dodanie\ nowego\ wyjścia\ wraz\ z\ szumem\ z\ przodu.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00118}00118\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.push\_front(wynik+szum);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00119}00119\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.pop\_back();}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{return}\ wynik;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00121}00121\ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00122}00122\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00123}00123\ \textcolor{comment}{/*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00124}00124\ \textcolor{comment}{*\ Odczyt\ danych\ z\ wcześniej\ przygotowanego\ pliku\ "{}obiekt.json"{}.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00125}00125\ \textcolor{comment}{*\ Podczas\ odczytu\ istotne\ jest\ nazewnictwo\ zmiennych\ podanych\ w\ pliku.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00126}00126\ \textcolor{comment}{*\ Metoda\ aktualizuje\ odpowiednie\ pola\ obiektu\ ARX.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00127}00127\ \textcolor{comment}{*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00128}00128\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00129}\mbox{\hyperlink{class_a_r_x_a507465138d27f9beda85b7b94101e94b}{00129}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a507465138d27f9beda85b7b94101e94b}{ARX::odczytajDane}}(\mbox{\hyperlink{class_a_r_x}{ARX}}\&\ arx)\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00130}00130\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00131}00131\ \ \ \ \ \textcolor{comment}{//\ Odczyt\ danych\ z\ pliku\ JSON}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00132}00132\ \ \ \ \ std::ifstream\ input(\textcolor{stringliteral}{"{}obiekt.json"{}});}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00133}00133\ \ \ \ \ \textcolor{keyword}{auto}\ j\ =\ json::parse(input);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00026}\mbox{\hyperlink{class_a_r_x_a33446ecffef6c604cae4b0376dc90d30}{00026}}\ \mbox{\hyperlink{class_a_r_x_a33446ecffef6c604cae4b0376dc90d30}{ARX::ARX}}():\ s\_paramA(1),\ s\_paramB(0),\ s\_k(0),\ s\_varE(0),\ s\_u(0),\ s\_y(0)\{\}\ \textcolor{comment}{//\ Wpisanie\ wartości\ domyślnych\ do\ konstruktora}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00028}00028\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00029}00029\ \textcolor{comment}{*\ Przypisanie\ polom\ konstruktora\ wartości\ za\ pomocą\ zmiennych\ w\ liście\ inicjalizacyjnej.\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00030}00030\ \textcolor{comment}{*\ Wielkość\ s\_u\ oraz\ s\_y\ zależy\ od\ liczby\ podanych\ współczynników\ wielomianów\ A\ oraz\ B.\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00031}00031\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00032}00032\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00033}\mbox{\hyperlink{class_a_r_x_ad624eb10134aea9defb445a80a1e9571}{00033}}\ \mbox{\hyperlink{class_a_r_x_a33446ecffef6c604cae4b0376dc90d30}{ARX::ARX}}(std::vector<double>\&\ nparamA,\ std::vector<double>\&\ nparamB,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\&\ nk,\ \textcolor{keywordtype}{double}\&\ nvarE):\ s\_paramA(nparamA),\ s\_paramB(nparamB),\ s\_k(nk),\ s\_varE(nvarE),\ s\_u(0),\ s\_y(0)\ \{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00034}00034\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()+\mbox{\hyperlink{class_a_r_x_a7d9974f04433a984d5562c7c403e102a}{s\_k}},\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00035}00035\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00038}\mbox{\hyperlink{class_a_r_x_abbba12ab36a3f0a6536938b242271c9f}{00038}}\ \mbox{\hyperlink{class_a_r_x_abbba12ab36a3f0a6536938b242271c9f}{ARX::\string~ARX}}()\{\}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00040}00040\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00041}00041\ \textcolor{comment}{*\ Wyświetlenie\ kolejnych\ pól\ stworzonego\ obiektu\ z\ uwzględnieniem\ dodatkowo\ rzędów\ wielomianów.\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00042}00042\ \textcolor{comment}{*\ Metoda\ wykorzystuje\ funkcję\ "{}print"{}\ do\ wyświetlenia\ kolejnych\ elementów\ wektora.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00043}00043\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00044}00044\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00045}\mbox{\hyperlink{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}{00045}}\ std::ostream\&\ \mbox{\hyperlink{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}{ARX::wyswietlParametry}}(std::ostream\&\ os)\{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00046}00046\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Oto\ aktualnie\ wybrane\ parametry\ modelu\ ARX:\ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00047}00047\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}dA\ =\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size()\ <<\ \textcolor{stringliteral}{"{},\ dB\ =\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00048}00048\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}s\_k\ =\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_a_r_x_a7d9974f04433a984d5562c7c403e102a}{s\_k}}\ <<\ \textcolor{stringliteral}{"{},\ s\_varE\ =\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{s\_varE}}\ <<\ std::endl;\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00049}00049\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Param\_A:\ "{}};}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{print}}(this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}});}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00051}00051\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Param\_B:\ "{}};}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{print}}(this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}});}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00053}00053\ \ \ \ \ os\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00057}00057\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00058}00058\ \textcolor{comment}{*\ Wpisanie\ nowych\ współczynników\ wielomianu\ A.\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00059}00059\ \textcolor{comment}{*\ Wyzerowanie\ kolejek\ s\_y\ oraz\ s\_u,\ z\ uwzględnieniem\ nowej\ wielkości\ wielomianu\ A}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00060}00060\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00061}00061\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00062}\mbox{\hyperlink{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}{00062}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}{ARX::aktualizujWielomianA}}(std::vector\ <double>\ wielomian)\ \{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00063}00063\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.clear();}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00064}00064\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}\ =\ wielomian;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00065}00065\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00066}00066\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ +\ \mbox{\hyperlink{class_a_r_x_a7d9974f04433a984d5562c7c403e102a}{s\_k}},\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00069}00069\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00070}00070\ \textcolor{comment}{*\ Wpisanie\ nowych\ współczynników\ wielomianu\ B.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00071}00071\ \textcolor{comment}{*\ Wyzerowanie\ kolejek\ s\_y\ oraz\ s\_u,\ z\ uwzględnieniem\ nowej\ wielkości\ wielomianu\ B}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00072}00072\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00073}00073\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00074}\mbox{\hyperlink{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}{00074}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}{ARX::aktualizujWielomianB}}(std::vector\ <double>\ wielomian)\ \{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00075}00075\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.clear();}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00076}00076\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}\ =\ wielomian;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00077}00077\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00078}00078\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ +\ \mbox{\hyperlink{class_a_r_x_a7d9974f04433a984d5562c7c403e102a}{s\_k}},\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00081}00081\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00082}00082\ \textcolor{comment}{*\ Wpisanie\ nowej\ wartości\ opóźnienia.\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00083}00083\ \textcolor{comment}{*\ Aktualizacja\ wielkości\ kolejki\ s\_u.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00084}00084\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00085}00085\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00086}\mbox{\hyperlink{class_a_r_x_a940f5087455d8d6ce64e27b36a0fdc7e}{00086}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a940f5087455d8d6ce64e27b36a0fdc7e}{ARX::aktualizujParametr}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ parametr)\ \{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00087}00087\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a7d9974f04433a984d5562c7c403e102a}{s\_k}}\ =\ parametr;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00088}00088\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00089}00089\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ +\ \mbox{\hyperlink{class_a_r_x_a7d9974f04433a984d5562c7c403e102a}{s\_k}},\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00092}00092\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00093}00093\ \textcolor{comment}{*\ Wpisanie\ nowej\ wartości\ wariancji\ białego\ szumu.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00094}00094\ \textcolor{comment}{*\ Zerowanie\ kolejek\ s\_y\ oraz\ s\_u}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00095}00095\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00096}00096\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00097}\mbox{\hyperlink{class_a_r_x_a6353c1891e1b8ad9fa62ec14536caaa1}{00097}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a940f5087455d8d6ce64e27b36a0fdc7e}{ARX::aktualizujParametr}}(\textcolor{keywordtype}{double}\ parametr)\ \{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00098}00098\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{s\_varE}}\ =\ parametr;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00099}00099\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.size(),\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00100}00100\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.resize((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.size()\ +\ \mbox{\hyperlink{class_a_r_x_a7d9974f04433a984d5562c7c403e102a}{s\_k}},\ 0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00103}00103\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00104}00104\ \textcolor{comment}{*\ Symulacja\ modelu\ ARX.\ Na\ wejściu\ podawana\ jest\ pojedyncza\ próbka\ wejścia,}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00105}00105\ \textcolor{comment}{*\ zaś\ poprzez\ symulację\ otrzymywana\ jest\ próbka\ wyjścia.\ Wyjście\ zaszumiane\ jest\ białym\ szumem.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00106}00106\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00107}00107\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00108}\mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{00108}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{ARX::Symuluj}}(\textcolor{keywordtype}{double}\ u)\{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{comment}{//Usunięcie\ wartości\ wejścia\ z\ tyłu\ i\ dodanie\ nowego\ wejścia\ z\ przodu.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00110}00110\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.push\_front(u);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00111}00111\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\_u}}.pop\_back();}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//Obliczenie\ wartości\ wyjścia\ w\ i-\/tej\ próbce}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00113}00113\ \ \ \ \ \textcolor{keywordtype}{double}\ a\ =\ std::inner\_product(this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}.begin(),\ this-\/>s\_paramB.end(),\ this-\/>s\_u.begin()+\mbox{\hyperlink{class_a_r_x_a7d9974f04433a984d5562c7c403e102a}{s\_k}},\ 0.0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{keywordtype}{double}\ b\ =\ std::inner\_product(this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}.begin(),\ this-\/>s\_paramA.end(),\ this-\/>s\_y.begin(),\ 0.0);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{keywordtype}{double}\ wynik\ =\ a\ -\/\ b;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{comment}{//Losowanie\ wartości,\ odwzorowującej\ szum\ (rozkład\ normalny)}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00117}00117\ \ \ \ \ std::random\_device\ rd;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00118}00118\ \ \ \ \ std::mt19937\ gen(rd());}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00119}00119\ \ \ \ \ std::normal\_distribution<>\ dist(0,\ 1);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordtype}{double}\ szum\ =\ dist(gen)\ *\ \mbox{\hyperlink{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{s\_varE}};}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00121}00121\ \ \ \ \ \textcolor{comment}{//Usunięcie\ wartości\ wyjścia\ z\ tyłu\ i\ dodanie\ nowego\ wyjścia\ wraz\ z\ szumem\ z\ przodu.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00122}00122\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.push\_front(wynik+szum);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00123}00123\ \ \ \ \ this-\/>\mbox{\hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\_y}}.pop\_back();}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{return}\ wynik;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00125}00125\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00127}00127\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00128}00128\ \textcolor{comment}{*\ Odczyt\ danych\ z\ wcześniej\ przygotowanego\ pliku\ "{}obiekt.json"{}.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00129}00129\ \textcolor{comment}{*\ Podczas\ odczytu\ istotne\ jest\ nazewnictwo\ zmiennych\ podanych\ w\ pliku.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00130}00130\ \textcolor{comment}{*\ Metoda\ aktualizuje\ odpowiednie\ pola\ obiektu\ ARX.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00131}00131\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00132}00132\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00133}\mbox{\hyperlink{class_a_r_x_a507465138d27f9beda85b7b94101e94b}{00133}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a507465138d27f9beda85b7b94101e94b}{ARX::odczytajDane}}(\mbox{\hyperlink{class_a_r_x}{ARX}}\&\ arx)\ \{}
 \DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00134}00134\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00135}00135\ \ \ \ \ \textcolor{comment}{//\ Zapis\ danych\ do\ odpowiednich\ pól\ obiektu}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00136}00136\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}{aktualizujWielomianA}}(j[\textcolor{stringliteral}{"{}paramA"{}}]);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00137}00137\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}{aktualizujWielomianB}}(j[\textcolor{stringliteral}{"{}paramB"{}}]);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00138}00138\ \ \ \ \ \textcolor{keywordtype}{int}\ k\ =\ j[\textcolor{stringliteral}{"{}k"{}}];}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00139}00139\ \ \ \ \ \textcolor{keywordtype}{double}\ var\ =\ j[\textcolor{stringliteral}{"{}varE"{}}];}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00140}00140\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a9ceed0a5f96290dccb956ae8b2077bff}{aktualizujParametr}}(k);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00141}00141\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a9ceed0a5f96290dccb956ae8b2077bff}{aktualizujParametr}}(var);}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00142}00142\ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00143}00143\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00144}00144\ \textcolor{comment}{/*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00145}00145\ \textcolor{comment}{*\ Zapis\ danych\ z\ obiektu\ ARX\ do\ pliku\ "{}obiekt.json"{}.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00146}00146\ \textcolor{comment}{*\ Podczas\ zapisu\ do\ pliku\ wybierane\ jest\ nazewnictwo\ zmiennych.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00147}00147\ \textcolor{comment}{*\ Metoda\ aktualizuje\ dane\ parametru.}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00148}00148\ \textcolor{comment}{*\ }}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00149}00149\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00150}\mbox{\hyperlink{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}{00150}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}{ARX::zapiszDane}}()\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00151}00151\ \ \ \ \ \textcolor{comment}{//\ Tworzenie\ obiektu\ JSON}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00152}00152\ \ \ \ \ \mbox{\hyperlink{klasa_a_r_x_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}}\ data\ =\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}paramA"{}},\ this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}\},}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}paramB"{}},\ this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}\},}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}k"{}},\ this-\/>\mbox{\hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\_k}}\},}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}varE"{}},\ this-\/>\mbox{\hyperlink{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{s\_varE}}\}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00157}00157\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00158}00158\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00159}00159\ \ \ \ \ \textcolor{comment}{//\ Zapisywanie\ danych\ do\ pliku\ JSON}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00160}00160\ \ \ \ \ std::ofstream\ file(\textcolor{stringliteral}{"{}obiekt.json"{}});}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00161}00161\ \ \ \ \ file\ <<\ data;}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00162}00162\ \ \ \ \ file.close();}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00163}00163\ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00164}00164\ }
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00165}00165\ \textcolor{comment}{//Wyświetlanie\ podanego\ do\ funkcji\ wektora}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00166}\mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{00166}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{print}}(std::vector<double>\ \textcolor{keyword}{const}\ \&input)}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00167}00167\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00168}00168\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ input.size();\ i++)\ \{}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ std::cout\ <<\ input.at(i)\ <<\ \textcolor{charliteral}{'\ '};}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00170}00170\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00171}00171\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00135}00135\ \ \ \ \ \textcolor{comment}{//\ Odczyt\ danych\ z\ pliku\ JSON}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00136}00136\ \ \ \ \ std::ifstream\ input(\textcolor{stringliteral}{"{}obiekt.json"{}});}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00137}00137\ \ \ \ \ \textcolor{keyword}{auto}\ j\ =\ json::parse(input);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00139}00139\ \ \ \ \ \textcolor{comment}{//\ Zapis\ danych\ do\ odpowiednich\ pól\ obiektu}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00140}00140\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}{aktualizujWielomianA}}(j[\textcolor{stringliteral}{"{}paramA"{}}]);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00141}00141\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}{aktualizujWielomianB}}(j[\textcolor{stringliteral}{"{}paramB"{}}]);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00142}00142\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k\ =\ j[\textcolor{stringliteral}{"{}k"{}}];}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00143}00143\ \ \ \ \ \textcolor{keywordtype}{double}\ var\ =\ j[\textcolor{stringliteral}{"{}varE"{}}];}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00144}00144\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a940f5087455d8d6ce64e27b36a0fdc7e}{aktualizujParametr}}(k);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00145}00145\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a940f5087455d8d6ce64e27b36a0fdc7e}{aktualizujParametr}}(var);}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00146}00146\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00148}00148\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00149}00149\ \textcolor{comment}{*\ Zapis\ danych\ z\ obiektu\ ARX\ do\ pliku\ "{}obiekt.json"{}.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00150}00150\ \textcolor{comment}{*\ Podczas\ zapisu\ do\ pliku\ wybierane\ jest\ nazewnictwo\ zmiennych.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00151}00151\ \textcolor{comment}{*\ Metoda\ aktualizuje\ dane\ parametru.}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00152}00152\ \textcolor{comment}{*\ }}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00153}00153\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00154}\mbox{\hyperlink{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}{00154}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}{ARX::zapiszDane}}()\ \{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00155}00155\ \ \ \ \ \textcolor{comment}{//\ Tworzenie\ obiektu\ JSON}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00156}00156\ \ \ \ \ \mbox{\hyperlink{klasa_a_r_x_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}}\ data\ =\ \{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}paramA"{}},\ this-\/>\mbox{\hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\_paramA}}\},}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}paramB"{}},\ this-\/>\mbox{\hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\_paramB}}\},}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}k"{}},\ this-\/>\mbox{\hyperlink{class_a_r_x_a7d9974f04433a984d5562c7c403e102a}{s\_k}}\},}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}varE"{}},\ this-\/>\mbox{\hyperlink{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{s\_varE}}\}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00161}00161\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00163}00163\ \ \ \ \ \textcolor{comment}{//\ Zapisywanie\ danych\ do\ pliku\ JSON}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00164}00164\ \ \ \ \ std::ofstream\ file(\textcolor{stringliteral}{"{}obiekt.json"{}});}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00165}00165\ \ \ \ \ file\ <<\ data;}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00166}00166\ \ \ \ \ file.close();}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00167}00167\ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00169}00169\ \textcolor{comment}{//Wyświetlanie\ podanego\ do\ funkcji\ wektora}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00170}\mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{00170}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{klasa_a_r_x_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{print}}(std::vector<double>\ \textcolor{keyword}{const}\ \&input)}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00171}00171\ \{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00172}00172\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ input.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ std::cout\ <<\ input.at(i)\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00174}00174\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{klasa_a_r_x_8cpp_source_l00175}00175\ \}}
 
 \end{DoxyCode}

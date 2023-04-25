@@ -22,6 +22,7 @@ using json = nlohmann::json;
 ///Wyświetlenie kolejnych elementów wektora
 void print(std::vector<double> const &input); // Funkcja umożlwiająca wyświetlenie kolejnych elementów wektora.
 
+
 ARX::ARX(): s_paramA(1), s_paramB(0), s_k(0), s_varE(0), s_u(0), s_y(0){} // Wpisanie wartości domyślnych do konstruktora
 
 /*
@@ -29,10 +30,11 @@ ARX::ARX(): s_paramA(1), s_paramB(0), s_k(0), s_varE(0), s_u(0), s_y(0){} // Wpi
 * Wielkość s_u oraz s_y zależy od liczby podanych współczynników wielomianów A oraz B. 
 * 
 */
-ARX::ARX(std::vector<double> nparamA, std::vector<double> nparamB, int nk, double nvarE): s_paramA(nparamA), s_paramB(nparamB), s_k(nk), s_varE(nvarE), s_u(0), s_y(0) {
+ARX::ARX(std::vector<double>& nparamA, std::vector<double>& nparamB, unsigned int& nk, double& nvarE): s_paramA(nparamA), s_paramB(nparamB), s_k(nk), s_varE(nvarE), s_u(0), s_y(0) {
     this->s_u.resize((int)s_paramB.size()+s_k, 0);
     this->s_y.resize((int)s_paramA.size(), 0);
 }
+
 ARX::~ARX(){}
 
 /*
@@ -81,7 +83,7 @@ void ARX::aktualizujWielomianB(std::vector <double> wielomian) {
 * Aktualizacja wielkości kolejki s_u.
 *
 */
-void ARX::aktualizujParametr(int parametr) {
+void ARX::aktualizujParametr(unsigned int parametr) {
     this->s_k = parametr;
     this->s_y.resize((int)s_paramA.size(), 0);
     this->s_u.resize((int)s_paramB.size() + s_k, 0);
@@ -137,7 +139,7 @@ void ARX::odczytajDane(ARX& arx) {
     // Zapis danych do odpowiednich pól obiektu
     arx.aktualizujWielomianA(j["paramA"]);
     arx.aktualizujWielomianB(j["paramB"]);
-    int k = j["k"];
+    unsigned int k = j["k"];
     double var = j["varE"];
     arx.aktualizujParametr(k);
     arx.aktualizujParametr(var);

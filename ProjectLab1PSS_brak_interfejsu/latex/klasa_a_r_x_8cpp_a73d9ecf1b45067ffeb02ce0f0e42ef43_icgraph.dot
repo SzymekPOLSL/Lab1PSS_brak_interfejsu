@@ -1,0 +1,13 @@
+digraph "print"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="print",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Wyświetlenie kolejnych elementów wektora."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="ARX::wyswietlParametry",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_a_r_x.html#a8660da07ee58cf49db7bcf61affbf568",tooltip="Metoda odpowiedzialna za wyświetlenie aktualnych pól opisujących model ARX."];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_obiekt_dyskretny_lab_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+}
