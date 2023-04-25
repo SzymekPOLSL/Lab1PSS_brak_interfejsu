@@ -1,0 +1,304 @@
+\hypertarget{class_a_r_x}{\section{Dokumentacja klasy A\-R\-X}
+\label{class_a_r_x}\index{A\-R\-X@{A\-R\-X}}
+}
+
+
+{\ttfamily \#include $<$klasa\-A\-R\-X.\-hpp$>$}
+
+Diagram dziedziczenia dla A\-R\-X\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_r_x}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_r_x_a33446ecffef6c604cae4b0376dc90d30}{A\-R\-X} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny. \end{DoxyCompactList}\item 
+\hyperlink{class_a_r_x_a4e4ddffa5a0de70e864728340e5bdd1e}{A\-R\-X} (std\-::vector$<$ double $>$ nparam\-A, std\-::vector$<$ double $>$ nparam\-B, int nk, double nvar\-E)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny. \end{DoxyCompactList}\item 
+\hyperlink{class_a_r_x_abbba12ab36a3f0a6536938b242271c9f}{$\sim$\-A\-R\-X} ()
+\item 
+std\-::ostream \& \hyperlink{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}{wyswietl\-Parametry} (std\-::ostream \&os)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za wyświetlenie aktualnych pól opisujących model \hyperlink{class_a_r_x}{A\-R\-X}. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}{aktualizuj\-Wielomian\-A} (std\-::vector$<$ double $>$ wielomian)
+\begin{DoxyCompactList}\small\item\em Zmiana współczynników wielomianu A. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}{aktualizuj\-Wielomian\-B} (std\-::vector$<$ double $>$ wielomian)
+\begin{DoxyCompactList}\small\item\em Zmiana współczynników wielomianu B. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_r_x_a9ceed0a5f96290dccb956ae8b2077bff}{aktualizuj\-Parametr} (int parametr)
+\begin{DoxyCompactList}\small\item\em Zmiana opóźnienia modelu \hyperlink{class_a_r_x}{A\-R\-X}. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_r_x_a6353c1891e1b8ad9fa62ec14536caaa1}{aktualizuj\-Parametr} (double parametr)
+\begin{DoxyCompactList}\small\item\em Zmiana wariancji białego szumu. \end{DoxyCompactList}\item 
+double \hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{Symuluj} (double \hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\-\_\-u}) override
+\begin{DoxyCompactList}\small\item\em Dziedziczona metoda Symuluj z klasy bazowej \hyperlink{class_s_i_s_o}{S\-I\-S\-O}. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_r_x_a507465138d27f9beda85b7b94101e94b}{odczytaj\-Dane} (\hyperlink{class_a_r_x}{A\-R\-X} \&arx)
+\begin{DoxyCompactList}\small\item\em Metoda służy do odczytania parametrów obiektu \hyperlink{class_a_r_x}{A\-R\-X} z pliku konfiguracyjnego (json) \end{DoxyCompactList}\item 
+void \hyperlink{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}{zapisz\-Dane} ()
+\begin{DoxyCompactList}\small\item\em Metoda służy do zapisu aktualnych parametrów obiektu \hyperlink{class_a_r_x}{A\-R\-X} z pliku konfiguracyjnego (json) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ double $>$ \hyperlink{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{s\-\_\-param\-A}
+\begin{DoxyCompactList}\small\item\em Współczynniki wielomianów A oraz B. \end{DoxyCompactList}\item 
+std\-::vector$<$ double $>$ \hyperlink{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{s\-\_\-param\-B}
+\item 
+std\-::deque$<$ double $>$ \hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\-\_\-u}
+\begin{DoxyCompactList}\small\item\em Kolejki z wartościami wejścia oraz wyjścia. Ich rozmiar zależy od ilości współczynników wielomianów A oraz B. \end{DoxyCompactList}\item 
+std\-::deque$<$ double $>$ \hyperlink{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{s\-\_\-y}
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{s\-\_\-k}
+\begin{DoxyCompactList}\small\item\em Opóźnienie. \end{DoxyCompactList}\item 
+double \hyperlink{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{s\-\_\-var\-E}
+\begin{DoxyCompactList}\small\item\em Wariancja białego szumu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 12 pliku klasa\-A\-R\-X.\-hpp.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_a_r_x_a33446ecffef6c604cae4b0376dc90d30}{\index{A\-R\-X@{A\-R\-X}!A\-R\-X@{A\-R\-X}}
+\index{A\-R\-X@{A\-R\-X}!ARX@{A\-R\-X}}
+\subsubsection[{A\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}A\-R\-X\-::\-A\-R\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_a33446ecffef6c604cae4b0376dc90d30}
+
+
+Konstruktor domyślny. 
+
+
+
+Definicja w linii 25 pliku klasa\-A\-R\-X.\-cpp.
+
+\hypertarget{class_a_r_x_a4e4ddffa5a0de70e864728340e5bdd1e}{\index{A\-R\-X@{A\-R\-X}!A\-R\-X@{A\-R\-X}}
+\index{A\-R\-X@{A\-R\-X}!ARX@{A\-R\-X}}
+\subsubsection[{A\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}A\-R\-X\-::\-A\-R\-X (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ double $>$}]{nparam\-A, }
+\item[{std\-::vector$<$ double $>$}]{nparam\-B, }
+\item[{int}]{nk, }
+\item[{double}]{nvar\-E}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_a4e4ddffa5a0de70e864728340e5bdd1e}
+
+
+Konstruktor parametryczny. 
+
+
+
+Definicja w linii 32 pliku klasa\-A\-R\-X.\-cpp.
+
+\hypertarget{class_a_r_x_abbba12ab36a3f0a6536938b242271c9f}{\index{A\-R\-X@{A\-R\-X}!$\sim$\-A\-R\-X@{$\sim$\-A\-R\-X}}
+\index{$\sim$\-A\-R\-X@{$\sim$\-A\-R\-X}!ARX@{A\-R\-X}}
+\subsubsection[{$\sim$\-A\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}A\-R\-X\-::$\sim$\-A\-R\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_abbba12ab36a3f0a6536938b242271c9f}
+
+
+Definicja w linii 36 pliku klasa\-A\-R\-X.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_a_r_x_a9ceed0a5f96290dccb956ae8b2077bff}{\index{A\-R\-X@{A\-R\-X}!aktualizuj\-Parametr@{aktualizuj\-Parametr}}
+\index{aktualizuj\-Parametr@{aktualizuj\-Parametr}!ARX@{A\-R\-X}}
+\subsubsection[{aktualizuj\-Parametr}]{\setlength{\rightskip}{0pt plus 5cm}void A\-R\-X\-::aktualizuj\-Parametr (
+\begin{DoxyParamCaption}
+\item[{int}]{parametr}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_a9ceed0a5f96290dccb956ae8b2077bff}
+
+
+Zmiana opóźnienia modelu \hyperlink{class_a_r_x}{A\-R\-X}. 
+
+
+
+Definicja w linii 84 pliku klasa\-A\-R\-X.\-cpp.
+
+\hypertarget{class_a_r_x_a6353c1891e1b8ad9fa62ec14536caaa1}{\index{A\-R\-X@{A\-R\-X}!aktualizuj\-Parametr@{aktualizuj\-Parametr}}
+\index{aktualizuj\-Parametr@{aktualizuj\-Parametr}!ARX@{A\-R\-X}}
+\subsubsection[{aktualizuj\-Parametr}]{\setlength{\rightskip}{0pt plus 5cm}void A\-R\-X\-::aktualizuj\-Parametr (
+\begin{DoxyParamCaption}
+\item[{double}]{parametr}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_a6353c1891e1b8ad9fa62ec14536caaa1}
+
+
+Zmiana wariancji białego szumu. 
+
+
+
+Definicja w linii 95 pliku klasa\-A\-R\-X.\-cpp.
+
+\hypertarget{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}{\index{A\-R\-X@{A\-R\-X}!aktualizuj\-Wielomian\-A@{aktualizuj\-Wielomian\-A}}
+\index{aktualizuj\-Wielomian\-A@{aktualizuj\-Wielomian\-A}!ARX@{A\-R\-X}}
+\subsubsection[{aktualizuj\-Wielomian\-A}]{\setlength{\rightskip}{0pt plus 5cm}void A\-R\-X\-::aktualizuj\-Wielomian\-A (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ double $>$}]{wielomian}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}
+
+
+Zmiana współczynników wielomianu A. 
+
+
+
+Definicja w linii 60 pliku klasa\-A\-R\-X.\-cpp.
+
+\hypertarget{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}{\index{A\-R\-X@{A\-R\-X}!aktualizuj\-Wielomian\-B@{aktualizuj\-Wielomian\-B}}
+\index{aktualizuj\-Wielomian\-B@{aktualizuj\-Wielomian\-B}!ARX@{A\-R\-X}}
+\subsubsection[{aktualizuj\-Wielomian\-B}]{\setlength{\rightskip}{0pt plus 5cm}void A\-R\-X\-::aktualizuj\-Wielomian\-B (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ double $>$}]{wielomian}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}
+
+
+Zmiana współczynników wielomianu B. 
+
+
+
+Definicja w linii 72 pliku klasa\-A\-R\-X.\-cpp.
+
+\hypertarget{class_a_r_x_a507465138d27f9beda85b7b94101e94b}{\index{A\-R\-X@{A\-R\-X}!odczytaj\-Dane@{odczytaj\-Dane}}
+\index{odczytaj\-Dane@{odczytaj\-Dane}!ARX@{A\-R\-X}}
+\subsubsection[{odczytaj\-Dane}]{\setlength{\rightskip}{0pt plus 5cm}void A\-R\-X\-::odczytaj\-Dane (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-R\-X} \&}]{arx}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_a507465138d27f9beda85b7b94101e94b}
+
+
+Metoda służy do odczytania parametrów obiektu \hyperlink{class_a_r_x}{A\-R\-X} z pliku konfiguracyjnego (json) 
+
+
+
+Definicja w linii 131 pliku klasa\-A\-R\-X.\-cpp.
+
+\hypertarget{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{\index{A\-R\-X@{A\-R\-X}!Symuluj@{Symuluj}}
+\index{Symuluj@{Symuluj}!ARX@{A\-R\-X}}
+\subsubsection[{Symuluj}]{\setlength{\rightskip}{0pt plus 5cm}double A\-R\-X\-::\-Symuluj (
+\begin{DoxyParamCaption}
+\item[{double}]{s\-\_\-u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}
+
+
+Dziedziczona metoda Symuluj z klasy bazowej \hyperlink{class_s_i_s_o}{S\-I\-S\-O}. 
+
+
+
+Implementuje \hyperlink{class_s_i_s_o_a5939b03ee6c80591bda9f0582ab50714}{S\-I\-S\-O}.
+
+
+
+Definicja w linii 106 pliku klasa\-A\-R\-X.\-cpp.
+
+\hypertarget{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}{\index{A\-R\-X@{A\-R\-X}!wyswietl\-Parametry@{wyswietl\-Parametry}}
+\index{wyswietl\-Parametry@{wyswietl\-Parametry}!ARX@{A\-R\-X}}
+\subsubsection[{wyswietl\-Parametry}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream \& A\-R\-X\-::wyswietl\-Parametry (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}
+
+
+Metoda odpowiedzialna za wyświetlenie aktualnych pól opisujących model \hyperlink{class_a_r_x}{A\-R\-X}. 
+
+
+
+Definicja w linii 43 pliku klasa\-A\-R\-X.\-cpp.
+
+\hypertarget{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}{\index{A\-R\-X@{A\-R\-X}!zapisz\-Dane@{zapisz\-Dane}}
+\index{zapisz\-Dane@{zapisz\-Dane}!ARX@{A\-R\-X}}
+\subsubsection[{zapisz\-Dane}]{\setlength{\rightskip}{0pt plus 5cm}void A\-R\-X\-::zapisz\-Dane (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}
+
+
+Metoda służy do zapisu aktualnych parametrów obiektu \hyperlink{class_a_r_x}{A\-R\-X} z pliku konfiguracyjnego (json) 
+
+
+
+Definicja w linii 152 pliku klasa\-A\-R\-X.\-cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}{\index{A\-R\-X@{A\-R\-X}!s\-\_\-k@{s\-\_\-k}}
+\index{s\-\_\-k@{s\-\_\-k}!ARX@{A\-R\-X}}
+\subsubsection[{s\-\_\-k}]{\setlength{\rightskip}{0pt plus 5cm}int A\-R\-X\-::s\-\_\-k\hspace{0.3cm}{\ttfamily [private]}}}\label{class_a_r_x_a041d4c3b4a858f93cbb6281dbf3ce061}
+
+
+Opóźnienie. 
+
+
+
+Definicja w linii 13 pliku klasa\-A\-R\-X.\-hpp.
+
+\hypertarget{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}{\index{A\-R\-X@{A\-R\-X}!s\-\_\-param\-A@{s\-\_\-param\-A}}
+\index{s\-\_\-param\-A@{s\-\_\-param\-A}!ARX@{A\-R\-X}}
+\subsubsection[{s\-\_\-param\-A}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ A\-R\-X\-::s\-\_\-param\-A\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_a_r_x_a6f9a9743a50d912f9e8547a433b2baea}
+
+
+Współczynniki wielomianów A oraz B. 
+
+
+
+Definicja w linii 18 pliku klasa\-A\-R\-X.\-hpp.
+
+\hypertarget{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}{\index{A\-R\-X@{A\-R\-X}!s\-\_\-param\-B@{s\-\_\-param\-B}}
+\index{s\-\_\-param\-B@{s\-\_\-param\-B}!ARX@{A\-R\-X}}
+\subsubsection[{s\-\_\-param\-B}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ A\-R\-X\-::s\-\_\-param\-B\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_a_r_x_a57104d29d3cdd002f814d3460a9be2df}
+
+
+Definicja w linii 18 pliku klasa\-A\-R\-X.\-hpp.
+
+\hypertarget{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{\index{A\-R\-X@{A\-R\-X}!s\-\_\-u@{s\-\_\-u}}
+\index{s\-\_\-u@{s\-\_\-u}!ARX@{A\-R\-X}}
+\subsubsection[{s\-\_\-u}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<$double$>$ A\-R\-X\-::s\-\_\-u\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}
+
+
+Kolejki z wartościami wejścia oraz wyjścia. Ich rozmiar zależy od ilości współczynników wielomianów A oraz B. 
+
+
+
+Definicja w linii 20 pliku klasa\-A\-R\-X.\-hpp.
+
+\hypertarget{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}{\index{A\-R\-X@{A\-R\-X}!s\-\_\-var\-E@{s\-\_\-var\-E}}
+\index{s\-\_\-var\-E@{s\-\_\-var\-E}!ARX@{A\-R\-X}}
+\subsubsection[{s\-\_\-var\-E}]{\setlength{\rightskip}{0pt plus 5cm}double A\-R\-X\-::s\-\_\-var\-E\hspace{0.3cm}{\ttfamily [private]}}}\label{class_a_r_x_a3361b14c8d2d075a3c23e7d2f07c8592}
+
+
+Wariancja białego szumu. 
+
+
+
+Definicja w linii 14 pliku klasa\-A\-R\-X.\-hpp.
+
+\hypertarget{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}{\index{A\-R\-X@{A\-R\-X}!s\-\_\-y@{s\-\_\-y}}
+\index{s\-\_\-y@{s\-\_\-y}!ARX@{A\-R\-X}}
+\subsubsection[{s\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<$double$>$ A\-R\-X\-::s\-\_\-y\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_a_r_x_aaeb3515374c95f4b7ed58c9676d89639}
+
+
+Definicja w linii 20 pliku klasa\-A\-R\-X.\-hpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{klasa_a_r_x_8hpp}{klasa\-A\-R\-X.\-hpp}\item 
+\hyperlink{klasa_a_r_x_8cpp}{klasa\-A\-R\-X.\-cpp}\end{DoxyCompactItemize}

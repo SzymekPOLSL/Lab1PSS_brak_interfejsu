@@ -1,0 +1,86 @@
+\hypertarget{_obiekt_dyskretny_lab_8cpp_source}{}\doxysection{Obiekt\+Dyskretny\+Lab.\+cpp}
+\mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <locale>}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{klasa_a_r_x_8hpp}{klasaARX.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{klasa_s_i_s_o_8hpp}{klasaSISO.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00011}00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_a218660886a6f90987773eaaff8c83de8}{zapiszDoPliku}}(std::vector<double>\ dane);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00013}\mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00013}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//Uwzlęgnienie\ przy\ wypisywaniu\ danych\ w\ terminalu\ polskich\ liter.}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00015}00015\ \ \ \ \ std::locale::global(std::locale(\textcolor{stringliteral}{"{}pl\_PL.UTF-\/8"{}}));}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00016}00016\ \ \ \ \ std::wcout.imbue(std::locale());}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00017}00017\ \ \ \ \ std::vector<double>\ wyjscie\_y;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//Stworzenie\ obiektu\ klasy\ ARX}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//Wybór\ jednej\ z\ możliwości}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//ARX\ arx\ =\ \{\ \{\ -\/0.4\ \},\ \{\ 0.6\ \},\ 1,\ 0.01\ \};}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//ARX\ arx\ =\ \{\ \{\ -\/0.4\ \},\ \{\ 0.6\ \},\ 2,\ 0\ \};}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//ARX\ arx\ =\ \{\ \{-\/0.4,\ 0.2\},\ \{0.6,\ 0.3\},\ 2,\ 0.0\ \};}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//Stworzenie\ obiektu\ o\ domyślnych\ parametrach}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_a_r_x}{ARX}}\ arx;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//Zamiana\ parametrów\ obiektu\ na\ dane\ z\ pliku\ konfiguracyjnego}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00029}00029\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a507465138d27f9beda85b7b94101e94b}{odczytajDane}}(arx);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00030}00030\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a53f2b0c4002c9f001a37edcdcb4e89dd}{wyswietlParametry}}();}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00031}00031\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//Symulacja\ dla\ zadanej\ liczby\ próbek\ i\ wejścia\ w\ postaci\ skoku\ jednostkowego}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 25;\ i++)}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00034}00034\ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ y\_i\ =\ arx.\mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{Symuluj}}(0.0);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}wyjście:\ "{}}\ <<\ y\_i\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_y.push\_back(y\_i);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ y\_i\ =\ arx.\mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{Symuluj}}(1.0);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}wyjście:\ "{}}\ <<\ y\_i\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_y.push\_back(y\_i);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//Zapisanie\ danych\ otrzymanego\ wyjścia\ do\ pliku\ tekstowego.}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_a218660886a6f90987773eaaff8c83de8}{zapiszDoPliku}}(wyjscie\_y);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//Zapisanie\ parametrów\ obiektu\ do\ pliku}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00051}00051\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}{zapiszDane}}();}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00052}00052\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a53f2b0c4002c9f001a37edcdcb4e89dd}{wyswietlParametry}}();}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00057}00057\ \textcolor{comment}{//Zapisywanie\ danych\ w\ postaci\ wektora\ zawierającego\ dane\ typu\ double\ do\ pliku.}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00058}\mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_a218660886a6f90987773eaaff8c83de8}{00058}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_a218660886a6f90987773eaaff8c83de8}{zapiszDoPliku}}(std::vector<double>\ dane)\{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{comment}{//Otwarcie\ pliku\ do\ zapisu}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00061}00061\ \ \ \ \ std::ofstream\ plik(\textcolor{stringliteral}{"{}Dane.txt"{}},\ std::ios::out);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//Sprawdzenie,\ czy\ plik\ został\ poprawnie\ otwarty}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (plik.is\_open())}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00065}00065\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Nastąpi\ zapis\ danych\ do\ pliku!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Zapisanie\ danych\ do\ pliku}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&d\ :\ dane)}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ plik\ <<\ d\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};\ \textcolor{comment}{//\ Zapisanie\ danych,\ oddzielając\ je\ znakiem\ nowej\ linii}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Zamknięcie\ pliku}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ plik.close();}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Nie\ udało\ się\ otworzyć\ pliku\ do\ zapisu!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00082}00082\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Dokumentacja laboratorium PSS: Plik źródłowy klasaARX.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dokumentacja laboratorium PSS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">klasaARX.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="klasa_a_r_x_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="klasa_s_i_s_o_8hpp.html">klasaSISO.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;deque&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="class_a_r_x.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_a_r_x.html">ARX</a>: <span class="keyword">public</span> <a class="code" href="class_s_i_s_o.html">SISO</a>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="class_a_r_x.html#a041d4c3b4a858f93cbb6281dbf3ce061">   13</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_a_r_x.html#a041d4c3b4a858f93cbb6281dbf3ce061" title="Opóźnienie.">s_k</a>; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="class_a_r_x.html#a3361b14c8d2d075a3c23e7d2f07c8592">   14</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_a_r_x.html#a3361b14c8d2d075a3c23e7d2f07c8592" title="Wariancja białego szumu.">s_varE</a>; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_a_r_x.html#a57104d29d3cdd002f814d3460a9be2df">   18</a></span>&#160;    std::vector&lt;double&gt; <a class="code" href="class_a_r_x.html#a6f9a9743a50d912f9e8547a433b2baea" title="Współczynniki wielomianów A oraz B.">s_paramA</a>, <a class="code" href="class_a_r_x.html#a57104d29d3cdd002f814d3460a9be2df">s_paramB</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639">   20</a></span>&#160;    std::deque&lt;double&gt; <a class="code" href="class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7" title="Kolejki z wartościami wejścia oraz wyjścia. Ich rozmiar zależy od ilości współczynników wielomianów A...">s_u</a>, <a class="code" href="class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639">s_y</a>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_a_r_x.html#a33446ecffef6c604cae4b0376dc90d30" title="Konstruktor domyślny.">ARX</a>(); </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_a_r_x.html#a33446ecffef6c604cae4b0376dc90d30" title="Konstruktor domyślny.">ARX</a>(std::vector&lt;double&gt; nparamA, std::vector&lt;double&gt; nparamB, <span class="keywordtype">int</span> nk, <span class="keywordtype">double</span> nvarE); </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_a_r_x.html#abbba12ab36a3f0a6536938b242271c9f">~ARX</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::ostream&amp; <a class="code" href="class_a_r_x.html#a8660da07ee58cf49db7bcf61affbf568" title="Metoda odpowiedzialna za wyświetlenie aktualnych pól opisujących model ARX.">wyswietlParametry</a>(std::ostream &amp; os); </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// Kolejne 4 metody pełnią rolę Setterów, umożlwiających zastąpienie poszczególnych pól obiektu ARX.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_a_r_x.html#a0ea5d18350bae9be968171e5f2077d0f" title="Zmiana współczynników wielomianu A.">aktualizujWielomianA</a>(std::vector &lt;double&gt; wielomian);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_a_r_x.html#abaef0e431556e7a22180c35b2306a55a" title="Zmiana współczynników wielomianu B.">aktualizujWielomianB</a>(std::vector &lt;double&gt; wielomian);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_a_r_x.html#a9ceed0a5f96290dccb956ae8b2077bff" title="Zmiana opóźnienia modelu ARX.">aktualizujParametr</a>(<span class="keywordtype">int</span> parametr);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_a_r_x.html#a9ceed0a5f96290dccb956ae8b2077bff" title="Zmiana opóźnienia modelu ARX.">aktualizujParametr</a>(<span class="keywordtype">double</span> parametr);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_a_r_x.html#aa2ee25b5f56aa74bda0323f61cef3c27" title="Dziedziczona metoda Symuluj z klasy bazowej SISO.">Symuluj</a>(<span class="keywordtype">double</span> <a class="code" href="class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7" title="Kolejki z wartościami wejścia oraz wyjścia. Ich rozmiar zależy od ilości współczynników wielomianów A...">s_u</a>) <span class="keyword">override</span>; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_a_r_x.html#a507465138d27f9beda85b7b94101e94b" title="Metoda służy do odczytania parametrów obiektu ARX z pliku konfiguracyjnego (json)">odczytajDane</a>(<a class="code" href="class_a_r_x.html">ARX</a>&amp; arx);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_a_r_x.html#a555a9b18a1acbbb9f17fcf478d0a6b35" title="Metoda służy do zapisu aktualnych parametrów obiektu ARX z pliku konfiguracyjnego (json)...">zapiszDane</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>
