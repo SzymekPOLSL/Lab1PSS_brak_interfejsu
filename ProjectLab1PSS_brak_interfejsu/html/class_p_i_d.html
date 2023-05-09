@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dokumentacja laboratorium PSS: Dokumentacja klasy PID</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dokumentacja laboratorium PSS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="class_p_i_d-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy PID</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_p_i_d_8hpp_source.html">PID.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla PID</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_p_i_d.png" usemap="#PID_map" alt=""/>
+  <map id="PID_map" name="PID_map">
+<area href="class_p_i.html" alt="PI" shape="rect" coords="0,56,41,80"/>
+<area href="class_p_d.html" alt="PD" shape="rect" coords="51,56,92,80"/>
+<area href="class_s_i_s_o.html" alt="SISO" shape="rect" coords="0,0,41,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a2c8431d3c35848835202e4e5f6563100"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d.html#a2c8431d3c35848835202e4e5f6563100">PID</a> (double nkp, double nki, double nsumaI, double nw, double nUmax, double nUmin, double nh, double nkd)</td></tr>
+<tr class="separator:a2c8431d3c35848835202e4e5f6563100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d389fc5b88d881bc25f5dafd360441"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d.html#ab7d389fc5b88d881bc25f5dafd360441">~PID</a> ()</td></tr>
+<tr class="memdesc:ab7d389fc5b88d881bc25f5dafd360441"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor klasy <a class="el" href="class_p_i_d.html">PID</a>.  <br /></td></tr>
+<tr class="separator:ab7d389fc5b88d881bc25f5dafd360441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a873659269100f2093d3cf8f8edcab806"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d.html#a873659269100f2093d3cf8f8edcab806">Symuluj</a> (double s_y) override</td></tr>
+<tr class="separator:a873659269100f2093d3cf8f8edcab806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44bb16f16ca1c79cc01df56361f02aec"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d.html#a44bb16f16ca1c79cc01df56361f02aec">wyswietlParametryPID</a> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:a44bb16f16ca1c79cc01df56361f02aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyświetlenie parametrów regulatora <a class="el" href="class_p_i_d.html">PID</a>.  <br /></td></tr>
+<tr class="separator:a44bb16f16ca1c79cc01df56361f02aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6818750e674d3f4aff7e170caadee3cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d.html#a6818750e674d3f4aff7e170caadee3cf">odczytajDane</a> (<a class="el" href="class_p_i_d.html">PID</a> &amp;pid, const std::string &amp;file_path)</td></tr>
+<tr class="separator:a6818750e674d3f4aff7e170caadee3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8e2491d584e36e1a1fbfbe3d4f946e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d.html#a1d8e2491d584e36e1a1fbfbe3d4f946e">zapiszDane</a> (const std::string &amp;file_path)</td></tr>
+<tr class="separator:a1d8e2491d584e36e1a1fbfbe3d4f946e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_p_i"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_p_i')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_p_i.html">PI</a></td></tr>
+<tr class="memitem:a5231efe2d96d7dfbf7a16073edeff363 inherit pub_methods_class_p_i"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a5231efe2d96d7dfbf7a16073edeff363">PI</a> ()</td></tr>
+<tr class="memdesc:a5231efe2d96d7dfbf7a16073edeff363 inherit pub_methods_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor domyślny klasy <a class="el" href="class_p_i.html">PI</a>.  <br /></td></tr>
+<tr class="separator:a5231efe2d96d7dfbf7a16073edeff363 inherit pub_methods_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab940e38ce9bd545e33c3d832942ea9f8 inherit pub_methods_class_p_i"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#ab940e38ce9bd545e33c3d832942ea9f8">PI</a> (double &amp;nkp, double &amp;nki, double &amp;nsumaI, double &amp;nw, double &amp;nUmax, double &amp;nUmin, double &amp;nh)</td></tr>
+<tr class="memdesc:ab940e38ce9bd545e33c3d832942ea9f8 inherit pub_methods_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor parametryczny klasy <a class="el" href="class_p_i.html">PI</a>.  <br /></td></tr>
+<tr class="separator:ab940e38ce9bd545e33c3d832942ea9f8 inherit pub_methods_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d9cd956997465c9197e4ba05cac2ba inherit pub_methods_class_p_i"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a28d9cd956997465c9197e4ba05cac2ba">~PI</a> ()</td></tr>
+<tr class="memdesc:a28d9cd956997465c9197e4ba05cac2ba inherit pub_methods_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor klasy <a class="el" href="class_p_i.html">PI</a>.  <br /></td></tr>
+<tr class="separator:a28d9cd956997465c9197e4ba05cac2ba inherit pub_methods_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2241bb922838e0a311532a70267a51f inherit pub_methods_class_p_i"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#ab2241bb922838e0a311532a70267a51f">Symuluj</a> (double s_y) override</td></tr>
+<tr class="separator:ab2241bb922838e0a311532a70267a51f inherit pub_methods_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84272a249cc16c092312e977cc932aa6 inherit pub_methods_class_p_i"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a84272a249cc16c092312e977cc932aa6">wyswietlParametryPI</a> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:a84272a249cc16c092312e977cc932aa6 inherit pub_methods_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyświetlenie parametrów regulatora <a class="el" href="class_p_i.html">PI</a>.  <br /></td></tr>
+<tr class="separator:a84272a249cc16c092312e977cc932aa6 inherit pub_methods_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de86e4629a04aff44725c46928e8a32 inherit pub_methods_class_p_i"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a3de86e4629a04aff44725c46928e8a32">odczytajDane</a> (<a class="el" href="class_p_i.html">PI</a> &amp;pi, const std::string &amp;file_path)</td></tr>
+<tr class="separator:a3de86e4629a04aff44725c46928e8a32 inherit pub_methods_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74c8315fe60657bc8603a17f8f6f8610 inherit pub_methods_class_p_i"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a74c8315fe60657bc8603a17f8f6f8610">zapiszDane</a> (const std::string &amp;file_path)</td></tr>
+<tr class="separator:a74c8315fe60657bc8603a17f8f6f8610 inherit pub_methods_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_s_i_s_o"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_s_i_s_o')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_s_i_s_o.html">SISO</a></td></tr>
+<tr class="memitem:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">~SISO</a> ()</td></tr>
+<tr class="memdesc:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor.  <br /></td></tr>
+<tr class="separator:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5939b03ee6c80591bda9f0582ab50714 inherit pub_methods_class_s_i_s_o"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a5939b03ee6c80591bda9f0582ab50714">Symuluj</a> (double s_u)=0</td></tr>
+<tr class="separator:a5939b03ee6c80591bda9f0582ab50714 inherit pub_methods_class_s_i_s_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_p_i"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_p_i')"><img src="closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="class_p_i.html">PI</a></td></tr>
+<tr class="memitem:aaabc4ca453fb4dd7862d51619974b5ca inherit pro_attribs_class_p_i"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#aaabc4ca453fb4dd7862d51619974b5ca">s_kp_PI</a></td></tr>
+<tr class="memdesc:aaabc4ca453fb4dd7862d51619974b5ca inherit pro_attribs_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wzmocnienie części proporcjonalnej.  <br /></td></tr>
+<tr class="separator:aaabc4ca453fb4dd7862d51619974b5ca inherit pro_attribs_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34c203ce1731a1bfdf3fc913220ba74 inherit pro_attribs_class_p_i"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#aa34c203ce1731a1bfdf3fc913220ba74">s_ki_PI</a></td></tr>
+<tr class="memdesc:aa34c203ce1731a1bfdf3fc913220ba74 inherit pro_attribs_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wzmocnienie części całkującej.  <br /></td></tr>
+<tr class="separator:aa34c203ce1731a1bfdf3fc913220ba74 inherit pro_attribs_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f28def205676e2328702494241713d inherit pro_attribs_class_p_i"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a58f28def205676e2328702494241713d">s_w_PI</a></td></tr>
+<tr class="memdesc:a58f28def205676e2328702494241713d inherit pro_attribs_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wartość zadana.  <br /></td></tr>
+<tr class="separator:a58f28def205676e2328702494241713d inherit pro_attribs_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200f363813542da839801b7e0e15c658 inherit pro_attribs_class_p_i"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a200f363813542da839801b7e0e15c658">s_Umax_PI</a></td></tr>
+<tr class="memdesc:a200f363813542da839801b7e0e15c658 inherit pro_attribs_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max sterowanie.  <br /></td></tr>
+<tr class="separator:a200f363813542da839801b7e0e15c658 inherit pro_attribs_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab10df9aee0c237515c9fa7fa893ce5bd inherit pro_attribs_class_p_i"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#ab10df9aee0c237515c9fa7fa893ce5bd">s_Umin_PI</a></td></tr>
+<tr class="memdesc:ab10df9aee0c237515c9fa7fa893ce5bd inherit pro_attribs_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Min sterowanie.  <br /></td></tr>
+<tr class="separator:ab10df9aee0c237515c9fa7fa893ce5bd inherit pro_attribs_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd36160f2fcf1a3eeb1c0fb436435ba inherit pro_attribs_class_p_i"><td class="memItemLeft" align="right" valign="top">std::deque&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a1fd36160f2fcf1a3eeb1c0fb436435ba">s_error_PI</a></td></tr>
+<tr class="memdesc:a1fd36160f2fcf1a3eeb1c0fb436435ba inherit pro_attribs_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kolejka, do której zapisywane są błędy (wartość zadana - próbka wyjścia)  <br /></td></tr>
+<tr class="separator:a1fd36160f2fcf1a3eeb1c0fb436435ba inherit pro_attribs_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb673ffe4aab3af1686cadad8dbe0e4 inherit pro_attribs_class_p_i"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#a3cb673ffe4aab3af1686cadad8dbe0e4">s_sumaI_PI</a></td></tr>
+<tr class="memdesc:a3cb673ffe4aab3af1686cadad8dbe0e4 inherit pro_attribs_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suma błędów do obliczenia części całkującej.  <br /></td></tr>
+<tr class="separator:a3cb673ffe4aab3af1686cadad8dbe0e4 inherit pro_attribs_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3c6516ba15151ea1223494edfa5475 inherit pro_attribs_class_p_i"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i.html#add3c6516ba15151ea1223494edfa5475">s_h_PI</a></td></tr>
+<tr class="memdesc:add3c6516ba15151ea1223494edfa5475 inherit pro_attribs_class_p_i"><td class="mdescLeft">&#160;</td><td class="mdescRight">Czas próbkowania.  <br /></td></tr>
+<tr class="separator:add3c6516ba15151ea1223494edfa5475 inherit pro_attribs_class_p_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_p_d"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_p_d')"><img src="closed.png" alt="-"/>&#160;Metody prywatne dziedziczone z <a class="el" href="class_p_d.html">PD</a></td></tr>
+<tr class="memitem:aabe1ba1de4e253d6192d02cd979bd904 inherit pub_methods_class_p_d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_d.html#aabe1ba1de4e253d6192d02cd979bd904">PD</a> ()</td></tr>
+<tr class="memdesc:aabe1ba1de4e253d6192d02cd979bd904 inherit pub_methods_class_p_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor domyślny klasy <a class="el" href="class_p_d.html">PD</a>.  <br /></td></tr>
+<tr class="separator:aabe1ba1de4e253d6192d02cd979bd904 inherit pub_methods_class_p_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb2ea41cc2d61369bacd8d57045e2a8 inherit pub_methods_class_p_d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_d.html#acdb2ea41cc2d61369bacd8d57045e2a8">PD</a> (double &amp;nkd)</td></tr>
+<tr class="memdesc:acdb2ea41cc2d61369bacd8d57045e2a8 inherit pub_methods_class_p_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dziedziczenie tylko wartości kd (do <a class="el" href="class_p_i_d.html">PID</a>)  <br /></td></tr>
+<tr class="separator:acdb2ea41cc2d61369bacd8d57045e2a8 inherit pub_methods_class_p_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8946aaff70414bebd43d359fc6751a3b inherit pub_methods_class_p_d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_d.html#a8946aaff70414bebd43d359fc6751a3b">PD</a> (double &amp;nkp, double &amp;nkd, double &amp;nw, double &amp;nUmax, double &amp;nUmin, double &amp;nh)</td></tr>
+<tr class="memdesc:a8946aaff70414bebd43d359fc6751a3b inherit pub_methods_class_p_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor parametryczny klasy <a class="el" href="class_p_d.html">PD</a>.  <br /></td></tr>
+<tr class="separator:a8946aaff70414bebd43d359fc6751a3b inherit pub_methods_class_p_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29d4dd5df4f417dfa1d059e4bc1b958 inherit pub_methods_class_p_d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_d.html#ae29d4dd5df4f417dfa1d059e4bc1b958">~PD</a> ()</td></tr>
+<tr class="memdesc:ae29d4dd5df4f417dfa1d059e4bc1b958 inherit pub_methods_class_p_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor klasy <a class="el" href="class_p_d.html">PD</a>.  <br /></td></tr>
+<tr class="separator:ae29d4dd5df4f417dfa1d059e4bc1b958 inherit pub_methods_class_p_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0031536b92ec76f27abeb6dfc1c3f0 inherit pub_methods_class_p_d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_d.html#a4f0031536b92ec76f27abeb6dfc1c3f0">Symuluj</a> (double s_y) override</td></tr>
+<tr class="separator:a4f0031536b92ec76f27abeb6dfc1c3f0 inherit pub_methods_class_p_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaecc51cd65d1f3ae969900ef387b34ca inherit pub_methods_class_p_d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_d.html#aaecc51cd65d1f3ae969900ef387b34ca">wyswietlParametryPD</a> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:aaecc51cd65d1f3ae969900ef387b34ca inherit pub_methods_class_p_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyświetlenie parametrów regulatora <a class="el" href="class_p_d.html">PD</a>.  <br /></td></tr>
+<tr class="separator:aaecc51cd65d1f3ae969900ef387b34ca inherit pub_methods_class_p_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade785f98ac7393ed46e413cbc849a0ad inherit pub_methods_class_p_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_d.html#ade785f98ac7393ed46e413cbc849a0ad">odczytajDane</a> (<a class="el" href="class_p_d.html">PD</a> &amp;pd, const std::string &amp;file_path)</td></tr>
+<tr class="separator:ade785f98ac7393ed46e413cbc849a0ad inherit pub_methods_class_p_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8ed7db040dc62c50d6887fa67386c5 inherit pub_methods_class_p_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_d.html#a4e8ed7db040dc62c50d6887fa67386c5">zapiszDane</a> (const std::string &amp;file_path)</td></tr>
+<tr class="separator:a4e8ed7db040dc62c50d6887fa67386c5 inherit pub_methods_class_p_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_s_i_s_o"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_s_i_s_o')"><img src="closed.png" alt="-"/>&#160;Metody prywatne dziedziczone z <a class="el" href="class_s_i_s_o.html">SISO</a></td></tr>
+<tr class="memitem:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">~SISO</a> ()</td></tr>
+<tr class="memdesc:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor.  <br /></td></tr>
+<tr class="separator:a3f6b0b7cda79493b941553e5d5780167 inherit pub_methods_class_s_i_s_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5939b03ee6c80591bda9f0582ab50714 inherit pub_methods_class_s_i_s_o"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a5939b03ee6c80591bda9f0582ab50714">Symuluj</a> (double s_u)=0</td></tr>
+<tr class="separator:a5939b03ee6c80591bda9f0582ab50714 inherit pub_methods_class_s_i_s_o"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_p_d"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_p_d')"><img src="closed.png" alt="-"/>&#160;Atrybuty prywatne dziedziczone z <a class="el" href="class_p_d.html">PD</a></td></tr>
+<tr class="memitem:a662827c5903f82ecf70b956e38e69eb0 inherit pub_attribs_class_p_d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_d.html#a662827c5903f82ecf70b956e38e69eb0">s_kd</a></td></tr>
+<tr class="memdesc:a662827c5903f82ecf70b956e38e69eb0 inherit pub_attribs_class_p_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wzmocnienie część różniczkująca.  <br /></td></tr>
+<tr class="separator:a662827c5903f82ecf70b956e38e69eb0 inherit pub_attribs_class_p_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock">
+<p class="definition">Definicja w linii <a class="el" href="_p_i_d_8hpp_source.html#l00013">13</a> pliku <a class="el" href="_p_i_d_8hpp_source.html">PID.hpp</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a2c8431d3c35848835202e4e5f6563100" name="a2c8431d3c35848835202e4e5f6563100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c8431d3c35848835202e4e5f6563100">&#9670;&#160;</a></span>PID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PID::PID </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>nkp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>nki</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>nsumaI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>nw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>nUmax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>nUmin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>nh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>nkd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="_p_i_d_8cpp_source.html#l00008">8</a> pliku <a class="el" href="_p_i_d_8cpp_source.html">PID.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab7d389fc5b88d881bc25f5dafd360441" name="ab7d389fc5b88d881bc25f5dafd360441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d389fc5b88d881bc25f5dafd360441">&#9670;&#160;</a></span>~PID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PID::~PID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruktor klasy <a class="el" href="class_p_i_d.html">PID</a>. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="_p_i_d_8cpp_source.html#l00013">13</a> pliku <a class="el" href="_p_i_d_8cpp_source.html">PID.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a6818750e674d3f4aff7e170caadee3cf" name="a6818750e674d3f4aff7e170caadee3cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6818750e674d3f4aff7e170caadee3cf">&#9670;&#160;</a></span>odczytajDane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::odczytajDane </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_p_i_d.html">PID</a> &amp;&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metoda służy do odczytania parametrów obiektu <a class="el" href="class_p_i_d.html">PID</a> z pliku konfiguracyjnego(json) </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">obiekt</td><td><a class="el" href="class_p_i.html">PI</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ścieżka</td><td>do pliku, z którego odczytywane są parametry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="_p_i_d_8cpp_source.html#l00059">59</a> pliku <a class="el" href="_p_i_d_8cpp_source.html">PID.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a873659269100f2093d3cf8f8edcab806" name="a873659269100f2093d3cf8f8edcab806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873659269100f2093d3cf8f8edcab806">&#9670;&#160;</a></span>Symuluj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PID::Symuluj </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>s_y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Metoda publiczna dziedziczona z klasy <a class="el" href="class_s_i_s_o.html">SISO</a> Regulacja obiektu za pomocą regulatora <a class="el" href="class_p_i_d.html">PID</a>. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s_y</td><td>///&lt; próbka wyjścia z obiektu </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">s_u</td><td>///&lt; próbka sterowania </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplementowana z <a class="el" href="class_p_d.html#a4f0031536b92ec76f27abeb6dfc1c3f0">PD</a>.</p>
+
+<p class="definition">Definicja w linii <a class="el" href="_p_i_d_8cpp_source.html#l00028">28</a> pliku <a class="el" href="_p_i_d_8cpp_source.html">PID.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a44bb16f16ca1c79cc01df56361f02aec" name="a44bb16f16ca1c79cc01df56361f02aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44bb16f16ca1c79cc01df56361f02aec">&#9670;&#160;</a></span>wyswietlParametryPID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; PID::wyswietlParametryPID </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wyświetlenie parametrów regulatora <a class="el" href="class_p_i_d.html">PID</a>. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="_p_i_d_8cpp_source.html#l00016">16</a> pliku <a class="el" href="_p_i_d_8cpp_source.html">PID.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1d8e2491d584e36e1a1fbfbe3d4f946e" name="a1d8e2491d584e36e1a1fbfbe3d4f946e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8e2491d584e36e1a1fbfbe3d4f946e">&#9670;&#160;</a></span>zapiszDane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::zapiszDane </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metoda służy do zapisu aktualnych parametrów obiektu <a class="el" href="class_p_i_d.html">PID</a> z pliku konfiguracyjnego(json) </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ścieżka</td><td>do pliku, do którego zapisywane są parametry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="_p_i_d_8cpp_source.html#l00081">81</a> pliku <a class="el" href="_p_i_d_8cpp_source.html">PID.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="_p_i_d_8hpp_source.html">PID.hpp</a></li>
+<li><a class="el" href="_p_i_d_8cpp_source.html">PID.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

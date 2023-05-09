@@ -1,0 +1,43 @@
+\hypertarget{funkcje_pomocnicze_8cpp_source}{}\doxysection{funkcje\+Pomocnicze.\+cpp}
+\mbox{\hyperlink{funkcje_pomocnicze_8cpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{funkcje_pomocniczne_8hpp}{funkcjePomocniczne.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00005}00005\ \textcolor{comment}{//Zapisywanie\ danych\ w\ postaci\ wektora\ zawierającego\ dane\ typu\ double\ do\ pliku.}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00006}\mbox{\hyperlink{funkcje_pomocnicze_8cpp_aa8fa1d07926357c02d36123fcefaa2b7}{00006}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcje_pomocnicze_8cpp_aa8fa1d07926357c02d36123fcefaa2b7}{zapiszDoPliku}}(std::vector<double>\ dane,\ \textcolor{keyword}{const}\ std::string\&\ file\_path)\ \{}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//Otwarcie\ pliku\ do\ zapisu}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00009}00009\ \ \ \ \ std::ofstream\ plik(file\_path,\ std::ios::out);}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{comment}{//Sprawdzenie,\ czy\ plik\ został\ poprawnie\ otwarty}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (plik.is\_open())}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Nastąpi\ zapis\ danych\ do\ pliku!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Zapisanie\ danych\ do\ pliku}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ d\ :\ dane)}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ plik\ <<\ d\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};\ \textcolor{comment}{//\ Zapisanie\ danych,\ oddzielając\ je\ znakiem\ nowej\ linii}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Zamknięcie\ pliku}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ plik.close();}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Nie\ udało\ się\ otworzyć\ pliku\ do\ zapisu!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00032}00032\ \textcolor{comment}{//Wyświetlanie\ podanego\ do\ funkcji\ wektora}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00033}\mbox{\hyperlink{funkcje_pomocnicze_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcje_pomocnicze_8cpp_a73d9ecf1b45067ffeb02ce0f0e42ef43}{print}}(std::vector<double>\ \textcolor{keyword}{const}\&\ input)}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ input.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ std::cout\ <<\ input.at(i)\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funkcje_pomocnicze_8cpp_source_l00038}00038\ \}}
+
+\end{DoxyCode}

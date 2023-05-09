@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['json_0',['json',['../klasa_a_r_x_8cpp.html#ab701e3ac61a85b337ec5c1abaad6742d',1,'klasaARX.cpp']]]
+  ['funkcjepomocnicze_2ecpp_0',['funkcjePomocnicze.cpp',['../funkcje_pomocnicze_8cpp.html',1,'']]],
+  ['funkcjepomocniczne_2ehpp_1',['funkcjePomocniczne.hpp',['../funkcje_pomocniczne_8hpp.html',1,'']]]
 ];

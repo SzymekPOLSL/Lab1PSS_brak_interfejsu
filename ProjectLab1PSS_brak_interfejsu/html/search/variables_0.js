@@ -1,9 +1,24 @@
 var searchData=
 [
-  ['s_5fk_0',['s_k',['../class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a',1,'ARX']]],
-  ['s_5fparama_1',['s_paramA',['../class_a_r_x.html#a6f9a9743a50d912f9e8547a433b2baea',1,'ARX']]],
-  ['s_5fparamb_2',['s_paramB',['../class_a_r_x.html#a57104d29d3cdd002f814d3460a9be2df',1,'ARX']]],
-  ['s_5fu_3',['s_u',['../class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7',1,'ARX']]],
-  ['s_5fvare_4',['s_varE',['../class_a_r_x.html#a3361b14c8d2d075a3c23e7d2f07c8592',1,'ARX']]],
-  ['s_5fy_5',['s_y',['../class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639',1,'ARX']]]
+  ['s_5ferror_0',['s_error',['../class_p_d.html#a0f31acbddf73b67cffb44a885b920962',1,'PD']]],
+  ['s_5ferror_5fpi_1',['s_error_PI',['../class_p_i.html#a1fd36160f2fcf1a3eeb1c0fb436435ba',1,'PI']]],
+  ['s_5fh_2',['s_h',['../class_p_d.html#a84993f9cc21cff00b1f446788859394d',1,'PD']]],
+  ['s_5fh_5fpi_3',['s_h_PI',['../class_p_i.html#add3c6516ba15151ea1223494edfa5475',1,'PI']]],
+  ['s_5fk_4',['s_k',['../class_a_r_x.html#a7d9974f04433a984d5562c7c403e102a',1,'ARX']]],
+  ['s_5fkd_5',['s_kd',['../class_p_d.html#a662827c5903f82ecf70b956e38e69eb0',1,'PD']]],
+  ['s_5fki_5fpi_6',['s_ki_PI',['../class_p_i.html#aa34c203ce1731a1bfdf3fc913220ba74',1,'PI']]],
+  ['s_5fkp_7',['s_kp',['../class_p_d.html#ac4975bc269f1ca880396c066c5ae47cd',1,'PD']]],
+  ['s_5fkp_5fpi_8',['s_kp_PI',['../class_p_i.html#aaabc4ca453fb4dd7862d51619974b5ca',1,'PI']]],
+  ['s_5fparama_9',['s_paramA',['../class_a_r_x.html#a6f9a9743a50d912f9e8547a433b2baea',1,'ARX']]],
+  ['s_5fparamb_10',['s_paramB',['../class_a_r_x.html#a57104d29d3cdd002f814d3460a9be2df',1,'ARX']]],
+  ['s_5fsumai_5fpi_11',['s_sumaI_PI',['../class_p_i.html#a3cb673ffe4aab3af1686cadad8dbe0e4',1,'PI']]],
+  ['s_5fu_12',['s_u',['../class_a_r_x.html#af61ad06d76ce7b19daa55ee0f59639e7',1,'ARX']]],
+  ['s_5fumax_13',['s_Umax',['../class_p_d.html#adda2f5296b8a866f0b3243c644196b64',1,'PD']]],
+  ['s_5fumax_5fpi_14',['s_Umax_PI',['../class_p_i.html#a200f363813542da839801b7e0e15c658',1,'PI']]],
+  ['s_5fumin_15',['s_Umin',['../class_p_d.html#ad29d5916c72065338ff63a7e75ba4c9d',1,'PD']]],
+  ['s_5fumin_5fpi_16',['s_Umin_PI',['../class_p_i.html#ab10df9aee0c237515c9fa7fa893ce5bd',1,'PI']]],
+  ['s_5fvare_17',['s_varE',['../class_a_r_x.html#a3361b14c8d2d075a3c23e7d2f07c8592',1,'ARX']]],
+  ['s_5fw_18',['s_w',['../class_p_d.html#ac72ece569f0dc0f16faf79cec95a2bff',1,'PD']]],
+  ['s_5fw_5fpi_19',['s_w_PI',['../class_p_i.html#a58f28def205676e2328702494241713d',1,'PI']]],
+  ['s_5fy_20',['s_y',['../class_a_r_x.html#aaeb3515374c95f4b7ed58c9676d89639',1,'ARX']]]
 ];

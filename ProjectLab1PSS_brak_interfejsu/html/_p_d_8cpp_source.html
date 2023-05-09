@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dokumentacja laboratorium PSS: Plik źródłowy PD.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dokumentacja laboratorium PSS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PD.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_p_d_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_p_d_8hpp.html">PD.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;deque&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;json.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//Konstruktor domyślny</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_p_d.html#aabe1ba1de4e253d6192d02cd979bd904">    8</a></span><a class="code hl_function" href="class_p_d.html#aabe1ba1de4e253d6192d02cd979bd904">PD::PD</a>() : s_kp(2.0), s_kd(1.0), s_w(2.0), s_Umax(10.0), s_Umin(0.0){</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    this-&gt;<a class="code hl_variable" href="class_p_d.html#a0f31acbddf73b67cffb44a885b920962">s_error</a>.resize(2,0);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//Konstruktor domyślny z uwzględnieniem wzmocnienia części różniczkującej jako parametru.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_p_d.html#acdb2ea41cc2d61369bacd8d57045e2a8">   13</a></span><a class="code hl_function" href="class_p_d.html#aabe1ba1de4e253d6192d02cd979bd904">PD::PD</a>(<span class="keywordtype">double</span>&amp; nkd):s_kp(0.0), s_kd(nkd), s_w(0.0), s_Umax(10.0), s_Umin(0.0)  {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    this-&gt;<a class="code hl_variable" href="class_p_d.html#a0f31acbddf73b67cffb44a885b920962">s_error</a>.resize(2, 0);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//Konstruktor parametryczny</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_p_d.html#a8946aaff70414bebd43d359fc6751a3b">   18</a></span><a class="code hl_function" href="class_p_d.html#aabe1ba1de4e253d6192d02cd979bd904">PD::PD</a>(<span class="keywordtype">double</span>&amp; nkp, <span class="keywordtype">double</span>&amp; nkd, <span class="keywordtype">double</span>&amp; nw, <span class="keywordtype">double</span>&amp; nUmax, <span class="keywordtype">double</span>&amp; nUmin, <span class="keywordtype">double</span>&amp; nh): s_kp(nkp), s_kd(nkd), s_w(nw), s_Umax(nUmax), s_Umin(nUmin), s_h(nh) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    this-&gt;<a class="code hl_variable" href="class_p_d.html#a0f31acbddf73b67cffb44a885b920962">s_error</a>.resize(2, 0);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//Destruktor</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_p_d.html#ae29d4dd5df4f417dfa1d059e4bc1b958">   23</a></span><a class="code hl_function" href="class_p_d.html#ae29d4dd5df4f417dfa1d059e4bc1b958">PD::~PD</a>() {}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//Wyświetlenie aktualnie wybranych parametrów regulatora PD</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_p_d.html#aaecc51cd65d1f3ae969900ef387b34ca">   26</a></span>std::ostream&amp; <a class="code hl_function" href="class_p_d.html#aaecc51cd65d1f3ae969900ef387b34ca">PD::wyswietlParametryPD</a>(std::ostream&amp; os) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    os &lt;&lt; <span class="stringliteral">&quot;Oto aktualnie wybrane parametry obiektu PI: \n&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    os &lt;&lt; <span class="stringliteral">&quot;Wzmocnienie członu proporcjonalnego: &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_p_d.html#ac4975bc269f1ca880396c066c5ae47cd">s_kp</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    os &lt;&lt; <span class="stringliteral">&quot;Wzmocnienie członu różniczkującego: &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_p_d.html#a662827c5903f82ecf70b956e38e69eb0">s_kd</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    os &lt;&lt; <span class="stringliteral">&quot;Maksymalne sterowanie: &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_p_d.html#adda2f5296b8a866f0b3243c644196b64">s_Umax</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    os &lt;&lt; <span class="stringliteral">&quot;Minimalne sterowanie: &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_p_d.html#ad29d5916c72065338ff63a7e75ba4c9d">s_Umin</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    os &lt;&lt; <span class="stringliteral">&quot;Czas próbkowania: &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_p_d.html#a84993f9cc21cff00b1f446788859394d">s_h</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// Proces regulacji regulatorem PD</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_p_d.html#a4f0031536b92ec76f27abeb6dfc1c3f0">   37</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="class_p_d.html#a4f0031536b92ec76f27abeb6dfc1c3f0">PD::Symuluj</a>(<span class="keywordtype">double</span> s_y){</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">double</span> u = 0.0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">//Aktualizacja wartości błędu</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    this-&gt;<a class="code hl_variable" href="class_p_d.html#a0f31acbddf73b67cffb44a885b920962">s_error</a>.push_front(this-&gt;<a class="code hl_variable" href="class_p_d.html#ac72ece569f0dc0f16faf79cec95a2bff">s_w</a> - s_y);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    this-&gt;<a class="code hl_variable" href="class_p_d.html#a0f31acbddf73b67cffb44a885b920962">s_error</a>.pop_back();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">//Obliczenie części proporcjonalnej oraz różniczkującej</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">double</span> P = this-&gt;<a class="code hl_variable" href="class_p_d.html#ac4975bc269f1ca880396c066c5ae47cd">s_kp</a> * this-&gt;<a class="code hl_variable" href="class_p_d.html#a0f31acbddf73b67cffb44a885b920962">s_error</a>.at(0);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">double</span> D = this-&gt;<a class="code hl_variable" href="class_p_d.html#a662827c5903f82ecf70b956e38e69eb0">s_kd</a> * (this-&gt;<a class="code hl_variable" href="class_p_d.html#a0f31acbddf73b67cffb44a885b920962">s_error</a>.at(0) - this-&gt;<a class="code hl_variable" href="class_p_d.html#a0f31acbddf73b67cffb44a885b920962">s_error</a>.at(1))/this-&gt;<a class="code hl_variable" href="class_p_d.html#a84993f9cc21cff00b1f446788859394d">s_h</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    u = P + D;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//Sprawdzenie, czy sterowanie mieści się w zadanym zakresie.</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (u &gt; this-&gt;<a class="code hl_variable" href="class_p_d.html#adda2f5296b8a866f0b3243c644196b64">s_Umax</a>) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        u = <a class="code hl_variable" href="class_p_d.html#adda2f5296b8a866f0b3243c644196b64">s_Umax</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (u &lt; this-&gt;<a class="code hl_variable" href="class_p_d.html#ad29d5916c72065338ff63a7e75ba4c9d">s_Umin</a>) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        u = <a class="code hl_variable" href="class_p_d.html#ad29d5916c72065338ff63a7e75ba4c9d">s_Umin</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> u;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">* Odczyt danych z wcześniej przygotowanego pliku znajdującego się w podanej ścieżce.</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">* Podczas odczytu istotne jest nazewnictwo zmiennych podanych w pliku.</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">* Metoda aktualizuje odpowiednie pola obiektu PI.</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">*</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_p_d.html#ade785f98ac7393ed46e413cbc849a0ad">   62</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_p_d.html#ade785f98ac7393ed46e413cbc849a0ad">PD::odczytajDane</a>(<a class="code hl_class" href="class_p_d.html">PD</a>&amp; pd, <span class="keyword">const</span> std::string&amp; file_path) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Odczyt danych z pliku JSON</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::ifstream input(file_path);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">auto</span> j = nlohmann::json::parse(input);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// Zapis danych do odpowiednich pól obiektu</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    pd.<a class="code hl_variable" href="class_p_d.html#ac4975bc269f1ca880396c066c5ae47cd">s_kp</a> = j[<span class="stringliteral">&quot;kp&quot;</span>];</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    pd.<a class="code hl_variable" href="class_p_d.html#a662827c5903f82ecf70b956e38e69eb0">s_kd</a> = j[<span class="stringliteral">&quot;kd&quot;</span>];</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    pd.<a class="code hl_variable" href="class_p_d.html#ac72ece569f0dc0f16faf79cec95a2bff">s_w</a> = j[<span class="stringliteral">&quot;w&quot;</span>];</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    pd.<a class="code hl_variable" href="class_p_d.html#a84993f9cc21cff00b1f446788859394d">s_h</a> = j[<span class="stringliteral">&quot;h&quot;</span>];</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    pd.<a class="code hl_variable" href="class_p_d.html#adda2f5296b8a866f0b3243c644196b64">s_Umax</a> = j[<span class="stringliteral">&quot;Umax&quot;</span>];</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    pd.<a class="code hl_variable" href="class_p_d.html#ad29d5916c72065338ff63a7e75ba4c9d">s_Umin</a> = j[<span class="stringliteral">&quot;Umin&quot;</span>];</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">* Zapis danych z obiektu PD do pliku o podanej ścieżce.</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">* Podczas zapisu do pliku wybierane jest nazewnictwo zmiennych.</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">* Metoda aktualizuje dane parametru.</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">*</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_p_d.html#a4e8ed7db040dc62c50d6887fa67386c5">   83</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_p_d.html#a4e8ed7db040dc62c50d6887fa67386c5">PD::zapiszDane</a>(<span class="keyword">const</span> std::string&amp; file_path) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// Tworzenie obiektu JSON</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    nlohmann::json data = {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        {<span class="stringliteral">&quot;kp&quot;</span>, this-&gt;<a class="code hl_variable" href="class_p_d.html#ac4975bc269f1ca880396c066c5ae47cd">s_kp</a>},</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        {<span class="stringliteral">&quot;kd&quot;</span>, this-&gt;<a class="code hl_variable" href="class_p_d.html#a662827c5903f82ecf70b956e38e69eb0">s_kd</a>},</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        {<span class="stringliteral">&quot;w&quot;</span>, this-&gt;<a class="code hl_variable" href="class_p_d.html#ac72ece569f0dc0f16faf79cec95a2bff">s_w</a>},</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        {<span class="stringliteral">&quot;h&quot;</span>, this-&gt;<a class="code hl_variable" href="class_p_d.html#a84993f9cc21cff00b1f446788859394d">s_h</a>},</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        {<span class="stringliteral">&quot;Umax&quot;</span>, this-&gt;<a class="code hl_variable" href="class_p_d.html#adda2f5296b8a866f0b3243c644196b64">s_Umax</a>},</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        {<span class="stringliteral">&quot;Umin&quot;</span>, this-&gt;<a class="code hl_variable" href="class_p_d.html#ad29d5916c72065338ff63a7e75ba4c9d">s_Umin</a>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    };</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Zapisywanie danych do pliku JSON</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    std::ofstream file(file_path, std::ios::app);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    file &lt;&lt; data;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+<div class="ttc" id="a_p_d_8hpp_html"><div class="ttname"><a href="_p_d_8hpp.html">PD.hpp</a></div></div>
+<div class="ttc" id="aclass_p_d_html"><div class="ttname"><a href="class_p_d.html">PD</a></div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8hpp_source.html#l00014">PD.hpp:14</a></div></div>
+<div class="ttc" id="aclass_p_d_html_a0f31acbddf73b67cffb44a885b920962"><div class="ttname"><a href="class_p_d.html#a0f31acbddf73b67cffb44a885b920962">PD::s_error</a></div><div class="ttdeci">std::deque&lt; double &gt; s_error</div><div class="ttdoc">Kolejka, do której zapisywane są błędy (wartość zadana - próbka wyjścia)</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8hpp_source.html#l00017">PD.hpp:17</a></div></div>
+<div class="ttc" id="aclass_p_d_html_a4e8ed7db040dc62c50d6887fa67386c5"><div class="ttname"><a href="class_p_d.html#a4e8ed7db040dc62c50d6887fa67386c5">PD::zapiszDane</a></div><div class="ttdeci">void zapiszDane(const std::string &amp;file_path)</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8cpp_source.html#l00083">PD.cpp:83</a></div></div>
+<div class="ttc" id="aclass_p_d_html_a4f0031536b92ec76f27abeb6dfc1c3f0"><div class="ttname"><a href="class_p_d.html#a4f0031536b92ec76f27abeb6dfc1c3f0">PD::Symuluj</a></div><div class="ttdeci">double Symuluj(double s_y) override</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8cpp_source.html#l00037">PD.cpp:37</a></div></div>
+<div class="ttc" id="aclass_p_d_html_a662827c5903f82ecf70b956e38e69eb0"><div class="ttname"><a href="class_p_d.html#a662827c5903f82ecf70b956e38e69eb0">PD::s_kd</a></div><div class="ttdeci">double s_kd</div><div class="ttdoc">Wzmocnienie część różniczkująca.</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8hpp_source.html#l00030">PD.hpp:30</a></div></div>
+<div class="ttc" id="aclass_p_d_html_a84993f9cc21cff00b1f446788859394d"><div class="ttname"><a href="class_p_d.html#a84993f9cc21cff00b1f446788859394d">PD::s_h</a></div><div class="ttdeci">double s_h</div><div class="ttdoc">Czas próbkowania.</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8hpp_source.html#l00027">PD.hpp:27</a></div></div>
+<div class="ttc" id="aclass_p_d_html_aabe1ba1de4e253d6192d02cd979bd904"><div class="ttname"><a href="class_p_d.html#aabe1ba1de4e253d6192d02cd979bd904">PD::PD</a></div><div class="ttdeci">PD()</div><div class="ttdoc">Konstruktor domyślny klasy PD.</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8cpp_source.html#l00008">PD.cpp:8</a></div></div>
+<div class="ttc" id="aclass_p_d_html_aaecc51cd65d1f3ae969900ef387b34ca"><div class="ttname"><a href="class_p_d.html#aaecc51cd65d1f3ae969900ef387b34ca">PD::wyswietlParametryPD</a></div><div class="ttdeci">std::ostream &amp; wyswietlParametryPD(std::ostream &amp;os)</div><div class="ttdoc">Wyświetlenie parametrów regulatora PD.</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8cpp_source.html#l00026">PD.cpp:26</a></div></div>
+<div class="ttc" id="aclass_p_d_html_ac4975bc269f1ca880396c066c5ae47cd"><div class="ttname"><a href="class_p_d.html#ac4975bc269f1ca880396c066c5ae47cd">PD::s_kp</a></div><div class="ttdeci">double s_kp</div><div class="ttdoc">Wzmocnienie część proporcjonalna.</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8hpp_source.html#l00019">PD.hpp:19</a></div></div>
+<div class="ttc" id="aclass_p_d_html_ac72ece569f0dc0f16faf79cec95a2bff"><div class="ttname"><a href="class_p_d.html#ac72ece569f0dc0f16faf79cec95a2bff">PD::s_w</a></div><div class="ttdeci">double s_w</div><div class="ttdoc">Wartość zadana.</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8hpp_source.html#l00021">PD.hpp:21</a></div></div>
+<div class="ttc" id="aclass_p_d_html_ad29d5916c72065338ff63a7e75ba4c9d"><div class="ttname"><a href="class_p_d.html#ad29d5916c72065338ff63a7e75ba4c9d">PD::s_Umin</a></div><div class="ttdeci">double s_Umin</div><div class="ttdoc">Min sterowanie.</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8hpp_source.html#l00025">PD.hpp:25</a></div></div>
+<div class="ttc" id="aclass_p_d_html_adda2f5296b8a866f0b3243c644196b64"><div class="ttname"><a href="class_p_d.html#adda2f5296b8a866f0b3243c644196b64">PD::s_Umax</a></div><div class="ttdeci">double s_Umax</div><div class="ttdoc">Max sterowanie.</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8hpp_source.html#l00023">PD.hpp:23</a></div></div>
+<div class="ttc" id="aclass_p_d_html_ade785f98ac7393ed46e413cbc849a0ad"><div class="ttname"><a href="class_p_d.html#ade785f98ac7393ed46e413cbc849a0ad">PD::odczytajDane</a></div><div class="ttdeci">void odczytajDane(PD &amp;pd, const std::string &amp;file_path)</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8cpp_source.html#l00062">PD.cpp:62</a></div></div>
+<div class="ttc" id="aclass_p_d_html_ae29d4dd5df4f417dfa1d059e4bc1b958"><div class="ttname"><a href="class_p_d.html#ae29d4dd5df4f417dfa1d059e4bc1b958">PD::~PD</a></div><div class="ttdeci">~PD()</div><div class="ttdoc">Destruktor klasy PD.</div><div class="ttdef"><b>Definition:</b> <a href="_p_d_8cpp_source.html#l00023">PD.cpp:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

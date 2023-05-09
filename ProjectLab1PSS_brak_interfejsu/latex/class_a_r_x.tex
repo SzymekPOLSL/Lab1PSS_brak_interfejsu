@@ -31,10 +31,10 @@ void \mbox{\hyperlink{class_a_r_x_a6353c1891e1b8ad9fa62ec14536caaa1}{aktualizuj\
 \begin{DoxyCompactList}\small\item\em Zmiana wariancji białego szumu. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{Symuluj}} (double \mbox{\hyperlink{class_a_r_x_af61ad06d76ce7b19daa55ee0f59639e7}{s\+\_\+u}}) override
 \begin{DoxyCompactList}\small\item\em Dziedziczona metoda Symuluj z klasy bazowej \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_a_r_x_a507465138d27f9beda85b7b94101e94b}{odczytaj\+Dane}} (\mbox{\hyperlink{class_a_r_x}{ARX}} \&arx)
+void \mbox{\hyperlink{class_a_r_x_a31e36511ddebb81a49d6bb82e086dda7}{odczytaj\+Dane}} (\mbox{\hyperlink{class_a_r_x}{ARX}} \&arx, const std\+::string \&file\+\_\+path)
 \item 
-void \mbox{\hyperlink{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}{zapisz\+Dane}} ()
-\begin{DoxyCompactList}\small\item\em Metoda służy do zapisu aktualnych parametrów obiektu \mbox{\hyperlink{class_a_r_x}{ARX}} z pliku konfiguracyjnego (json) \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_a_r_x_a1b6183dbda8b9224847f691bd2eff93d}{zapisz\+Dane}} (const std\+::string \&file\+\_\+path)
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_s_i_s_o}{SISO}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -82,7 +82,7 @@ Konstruktor domyślny.
 
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00026}{26}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00020}{20}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
 \mbox{\Hypertarget{class_a_r_x_ad624eb10134aea9defb445a80a1e9571}\label{class_a_r_x_ad624eb10134aea9defb445a80a1e9571}} 
 \index{ARX@{ARX}!ARX@{ARX}}
@@ -103,7 +103,7 @@ Konstruktor parametryczny z następującymi zmiennymi wejściowymi\+:
 \end{DoxyParams}
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00033}{33}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00027}{27}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
 \mbox{\Hypertarget{class_a_r_x_abbba12ab36a3f0a6536938b242271c9f}\label{class_a_r_x_abbba12ab36a3f0a6536938b242271c9f}} 
 \index{ARX@{ARX}!````~ARX@{$\sim$ARX}}
@@ -113,7 +113,7 @@ Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00033}{33}} pliku \m
 
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00038}{38}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00032}{32}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
 
 
@@ -130,7 +130,7 @@ Zmiana wariancji białego szumu.
 
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00097}{97}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00091}{91}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
 \mbox{\Hypertarget{class_a_r_x_a940f5087455d8d6ce64e27b36a0fdc7e}\label{class_a_r_x_a940f5087455d8d6ce64e27b36a0fdc7e}} 
 \index{ARX@{ARX}!aktualizujParametr@{aktualizujParametr}}
@@ -144,7 +144,7 @@ Zmiana opóźnienia modelu \mbox{\hyperlink{class_a_r_x}{ARX}}.
 
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00086}{86}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00080}{80}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
 \mbox{\Hypertarget{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}\label{class_a_r_x_a0ea5d18350bae9be968171e5f2077d0f}} 
 \index{ARX@{ARX}!aktualizujWielomianA@{aktualizujWielomianA}}
@@ -158,7 +158,7 @@ Zmiana współczynników wielomianu A.
 
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00062}{62}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00056}{56}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
 \mbox{\Hypertarget{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}\label{class_a_r_x_abaef0e431556e7a22180c35b2306a55a}} 
 \index{ARX@{ARX}!aktualizujWielomianB@{aktualizujWielomianB}}
@@ -172,22 +172,24 @@ Zmiana współczynników wielomianu B.
 
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00074}{74}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00068}{68}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
-\mbox{\Hypertarget{class_a_r_x_a507465138d27f9beda85b7b94101e94b}\label{class_a_r_x_a507465138d27f9beda85b7b94101e94b}} 
+\mbox{\Hypertarget{class_a_r_x_a31e36511ddebb81a49d6bb82e086dda7}\label{class_a_r_x_a31e36511ddebb81a49d6bb82e086dda7}} 
 \index{ARX@{ARX}!odczytajDane@{odczytajDane}}
 \index{odczytajDane@{odczytajDane}!ARX@{ARX}}
 \doxysubsubsection{\texorpdfstring{odczytajDane()}{odczytajDane()}}
-{\footnotesize\ttfamily void ARX\+::odczytaj\+Dane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_r_x}{ARX}} \&}]{arx }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ARX\+::odczytaj\+Dane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_r_x}{ARX}} \&}]{arx,  }\item[{const std\+::string \&}]{file\+\_\+path }\end{DoxyParamCaption})}
 
 Metoda służy do odczytania parametrów obiektu \mbox{\hyperlink{class_a_r_x}{ARX}} z pliku konfiguracyjnego(json) 
 \begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em obiekt} & \mbox{\hyperlink{class_a_r_x}{ARX}} \\
 \hline
+\mbox{\texttt{ in}}  & {\em ścieżka} & do pliku, z którego odczytywane są parametry \\
+\hline
 \end{DoxyParams}
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00133}{133}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00127}{127}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
 \mbox{\Hypertarget{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}\label{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}} 
 \index{ARX@{ARX}!Symuluj@{Symuluj}}
@@ -205,7 +207,7 @@ Implementuje \mbox{\hyperlink{class_s_i_s_o_a5939b03ee6c80591bda9f0582ab50714}{S
 
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00108}{108}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00102}{102}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
 \mbox{\Hypertarget{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}\label{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}} 
 \index{ARX@{ARX}!wyswietlParametry@{wyswietlParametry}}
@@ -219,21 +221,22 @@ Metoda odpowiedzialna za wyświetlenie aktualnych pól opisujących model \mbox{
 
 
 
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00045}{45}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00039}{39}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
-\mbox{\Hypertarget{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}\label{class_a_r_x_a555a9b18a1acbbb9f17fcf478d0a6b35}} 
+\mbox{\Hypertarget{class_a_r_x_a1b6183dbda8b9224847f691bd2eff93d}\label{class_a_r_x_a1b6183dbda8b9224847f691bd2eff93d}} 
 \index{ARX@{ARX}!zapiszDane@{zapiszDane}}
 \index{zapiszDane@{zapiszDane}!ARX@{ARX}}
 \doxysubsubsection{\texorpdfstring{zapiszDane()}{zapiszDane()}}
-{\footnotesize\ttfamily void ARX\+::zapisz\+Dane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ARX\+::zapisz\+Dane (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+Metoda służy do zapisu aktualnych parametrów obiektu \mbox{\hyperlink{class_a_r_x}{ARX}} z pliku konfiguracyjnego(json) 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em ścieżka} & do pliku, do którego zapisywane są parametry \\
+\hline
+\end{DoxyParams}
 
 
-
-Metoda służy do zapisu aktualnych parametrów obiektu \mbox{\hyperlink{class_a_r_x}{ARX}} z pliku konfiguracyjnego (json) 
-
-
-
-Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00154}{154}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_a_r_x_8cpp_source_l00148}{148}} pliku \mbox{\hyperlink{klasa_a_r_x_8cpp_source}{klasa\+ARX.\+cpp}}.
 
 
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+  ['obiektdyskretnylab_2ecpp_0',['ObiektDyskretnyLab.cpp',['../_obiekt_dyskretny_lab_8cpp.html',1,'']]]
 ];

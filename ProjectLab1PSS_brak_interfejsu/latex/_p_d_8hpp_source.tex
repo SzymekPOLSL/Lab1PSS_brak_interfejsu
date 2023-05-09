@@ -1,0 +1,34 @@
+\hypertarget{_p_d_8hpp_source}{}\doxysection{PD.\+hpp}
+\mbox{\hyperlink{_p_d_8hpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{klasa_s_i_s_o_8hpp}{klasaSISO.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00014}\mbox{\hyperlink{class_p_d}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_p_d}{PD}}:\ \textcolor{keyword}{virtual}\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_s_i_s_o}{SISO}}\ \{}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00017}\mbox{\hyperlink{class_p_d_a0f31acbddf73b67cffb44a885b920962}{00017}}\ \ \ \ \ \ \ \ \ std::deque<double>\ \mbox{\hyperlink{class_p_d_a0f31acbddf73b67cffb44a885b920962}{s\_error}};}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00019}\mbox{\hyperlink{class_p_d_ac4975bc269f1ca880396c066c5ae47cd}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_d_ac4975bc269f1ca880396c066c5ae47cd}{s\_kp}};\ }
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00021}\mbox{\hyperlink{class_p_d_ac72ece569f0dc0f16faf79cec95a2bff}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_d_ac72ece569f0dc0f16faf79cec95a2bff}{s\_w}};}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00023}\mbox{\hyperlink{class_p_d_adda2f5296b8a866f0b3243c644196b64}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_d_adda2f5296b8a866f0b3243c644196b64}{s\_Umax}};}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00025}\mbox{\hyperlink{class_p_d_ad29d5916c72065338ff63a7e75ba4c9d}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_d_ad29d5916c72065338ff63a7e75ba4c9d}{s\_Umin}};}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00027}\mbox{\hyperlink{class_p_d_a84993f9cc21cff00b1f446788859394d}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_d_a84993f9cc21cff00b1f446788859394d}{s\_h}};}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00030}\mbox{\hyperlink{class_p_d_a662827c5903f82ecf70b956e38e69eb0}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_d_a662827c5903f82ecf70b956e38e69eb0}{s\_kd}};}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_d_aabe1ba1de4e253d6192d02cd979bd904}{PD}}();}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_d_aabe1ba1de4e253d6192d02cd979bd904}{PD}}(\textcolor{keywordtype}{double}\&\ nkd);}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_d_aabe1ba1de4e253d6192d02cd979bd904}{PD}}(\textcolor{keywordtype}{double}\&\ nkp,\ \textcolor{keywordtype}{double}\&\ nkd,\ \textcolor{keywordtype}{double}\&\ nw,\ \textcolor{keywordtype}{double}\&\ nUmax,\ \textcolor{keywordtype}{double}\&\ nUmin,\ \textcolor{keywordtype}{double}\&\ nh);}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_p_d_ae29d4dd5df4f417dfa1d059e4bc1b958}{\string~PD}}();}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_d_a4f0031536b92ec76f27abeb6dfc1c3f0}{Symuluj}}(\textcolor{keywordtype}{double}\ s\_y)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ std::ostream\&\ \mbox{\hyperlink{class_p_d_aaecc51cd65d1f3ae969900ef387b34ca}{wyswietlParametryPD}}(std::ostream\&\ os);}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_d_ade785f98ac7393ed46e413cbc849a0ad}{odczytajDane}}(\mbox{\hyperlink{class_p_d}{PD}}\&\ pd,\ \textcolor{keyword}{const}\ std::string\&\ file\_path);}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_d_a4e8ed7db040dc62c50d6887fa67386c5}{zapiszDane}}(\textcolor{keyword}{const}\ std::string\&\ file\_path);}
+\DoxyCodeLine{\Hypertarget{_p_d_8hpp_source_l00067}00067\ \};}
+
+\end{DoxyCode}

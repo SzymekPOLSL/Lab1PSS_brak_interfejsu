@@ -1,0 +1,102 @@
+\hypertarget{_p_i_8cpp_source}{}\doxysection{PI.\+cpp}
+\mbox{\hyperlink{_p_i_8cpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_p_i_8hpp}{PI.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00007}00007\ \textcolor{comment}{//Konstruktor\ domyślny}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00008}\mbox{\hyperlink{class_p_i_a5231efe2d96d7dfbf7a16073edeff363}{00008}}\ \mbox{\hyperlink{class_p_i_a5231efe2d96d7dfbf7a16073edeff363}{PI::PI}}():\ s\_kp\_PI(0.1),\ s\_ki\_PI(0.1),\ s\_sumaI\_PI(0.0),\ s\_w\_PI(2.0),\ s\_Umax\_PI(100.0),\ s\_Umin\_PI(0)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00009}00009\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.push\_front(0.0);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00012}00012\ \textcolor{comment}{//Konstruktor\ parametryczny}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00013}\mbox{\hyperlink{class_p_i_ab940e38ce9bd545e33c3d832942ea9f8}{00013}}\ \mbox{\hyperlink{class_p_i_a5231efe2d96d7dfbf7a16073edeff363}{PI::PI}}(\textcolor{keywordtype}{double}\&\ nkp,\ \textcolor{keywordtype}{double}\&\ nki,\ \textcolor{keywordtype}{double}\&\ nsumaI,\ \textcolor{keywordtype}{double}\&\ nw,\ \textcolor{keywordtype}{double}\&\ nUmax,\ \textcolor{keywordtype}{double}\&\ nUmin,\ \textcolor{keywordtype}{double}\&\ nh)\ :\ s\_kp\_PI(nkp),\ s\_ki\_PI(nki),\ s\_sumaI\_PI(nsumaI),\ s\_w\_PI(nw),\ s\_Umax\_PI(nUmax),\ s\_Umin\_PI(nUmin),\ s\_h\_PI(nh)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00014}00014\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.push\_front(0.0);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00017}00017\ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00018}\mbox{\hyperlink{class_p_i_a28d9cd956997465c9197e4ba05cac2ba}{00018}}\ \mbox{\hyperlink{class_p_i_a28d9cd956997465c9197e4ba05cac2ba}{PI::\string~PI}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00020}00020\ \textcolor{comment}{//Wyświetlenie\ poszczególnych\ parametrów\ regulatora\ PI}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00021}\mbox{\hyperlink{class_p_i_a84272a249cc16c092312e977cc932aa6}{00021}}\ std::ostream\&\ \mbox{\hyperlink{class_p_i_a84272a249cc16c092312e977cc932aa6}{PI::wyswietlParametryPI}}(std::ostream\&\ os)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00022}00022\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Oto\ aktualnie\ wybrane\ parametry\ obiektu\ PI:\ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00023}00023\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Wzmocnienie\ członu\ proporcjonalnego:\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\_kp\_PI}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00024}00024\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Wzmocnienie\ członu\ całkującego:\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00025}00025\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Maksymalne\ sterowanie:\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00026}00026\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Minimalne\ sterowanie:\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00027}00027\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Czas\ próbkowania:\ "{}}\ <<\ this-\/>\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00031}00031\ \textcolor{comment}{//\ Proces\ regulacji\ regulatorem\ PI}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00032}\mbox{\hyperlink{class_p_i_ab2241bb922838e0a311532a70267a51f}{00032}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_i_ab2241bb922838e0a311532a70267a51f}{PI::Symuluj}}(\textcolor{keywordtype}{double}\ s\_y)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{double}\ u\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//Aktualizacja\ wartości\ błędu}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00035}00035\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.push\_front(this-\/>\mbox{\hyperlink{class_p_i_a58f28def205676e2328702494241713d}{s\_w\_PI}}\ -\/\ s\_y);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00036}00036\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.pop\_back();}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//Obliczenie\ sumy\ błędu\ potrzebnej\ w\ części\ całkującej}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00038}00038\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ +=\ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.at(0);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//Obliczenie\ części\ proporcjonalnej\ oraz\ całkującej}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{double}\ P\ =\ this-\/>\mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\_kp\_PI}}\ *\ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.at(0);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{double}\ I\ =\ this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ *\ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ *\ this-\/>\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}};}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00042}00042\ \ \ \ \ u\ =\ P\ +\ I;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//Anti-\/wnidup}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (u\ >\ this-\/>\mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}})\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ =\ (u\ -\/\ P)\ /\ (this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ *\ this-\/>s\_h\_PI);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ u\ =\ \mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}};}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (u\ <\ this-\/>\mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}})\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ =\ (u\ -\/\ P)\ /\ (this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ *\ this-\/>s\_h\_PI);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ u\ =\ \mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}};}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{return}\ u;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00056}00056\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00057}00057\ \textcolor{comment}{*\ Odczyt\ danych\ z\ wcześniej\ przygotowanego\ pliku\ znajdującego\ się\ w\ podanej\ ścieżce.}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00058}00058\ \textcolor{comment}{*\ Podczas\ odczytu\ istotne\ jest\ nazewnictwo\ zmiennych\ podanych\ w\ pliku.}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00059}00059\ \textcolor{comment}{*\ Metoda\ aktualizuje\ odpowiednie\ pola\ obiektu\ PI.}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00060}00060\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00061}00061\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00062}\mbox{\hyperlink{class_p_i_a3de86e4629a04aff44725c46928e8a32}{00062}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_i_a3de86e4629a04aff44725c46928e8a32}{PI::odczytajDane}}(\mbox{\hyperlink{class_p_i}{PI}}\&\ pi,\ \textcolor{keyword}{const}\ std::string\&\ file\_path)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ Odczyt\ danych\ z\ pliku\ JSON}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00065}00065\ \ \ \ \ std::ifstream\ input(file\_path);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{auto}\ j\ =\ nlohmann::json::parse(input);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ Zapis\ danych\ do\ odpowiednich\ pól\ obiektu}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00069}00069\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\_kp\_PI}}\ =\ j[\textcolor{stringliteral}{"{}kp"{}}];}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00070}00070\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ =\ j[\textcolor{stringliteral}{"{}ki"{}}];}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00071}00071\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_a58f28def205676e2328702494241713d}{s\_w\_PI}}\ =\ j[\textcolor{stringliteral}{"{}w"{}}];}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00072}00072\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}}\ =\ j[\textcolor{stringliteral}{"{}h"{}}];}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00073}00073\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}}\ =\ j[\textcolor{stringliteral}{"{}Umax"{}}];}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00074}00074\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}}\ =\ j[\textcolor{stringliteral}{"{}Umin"{}}];}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00075}00075\ \}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00077}00077\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00078}00078\ \textcolor{comment}{*\ Zapis\ danych\ z\ obiektu\ PI\ do\ pliku\ o\ podanej\ ścieżce.}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00079}00079\ \textcolor{comment}{*\ Podczas\ zapisu\ do\ pliku\ wybierane\ jest\ nazewnictwo\ zmiennych.}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00080}00080\ \textcolor{comment}{*\ Metoda\ aktualizuje\ dane\ parametru.}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00081}00081\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00082}00082\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00083}\mbox{\hyperlink{class_p_i_a74c8315fe60657bc8603a17f8f6f8610}{00083}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_i_a74c8315fe60657bc8603a17f8f6f8610}{PI::zapiszDane}}(\textcolor{keyword}{const}\ std::string\&\ file\_path)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//\ Tworzenie\ obiektu\ JSON}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00085}00085\ \ \ \ \ nlohmann::json\ data\ =\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}kp"{}},\ this-\/>\mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\_kp\_PI}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}ki"{}},\ this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}w"{}},\ this-\/>\mbox{\hyperlink{class_p_i_a58f28def205676e2328702494241713d}{s\_w\_PI}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}h"{}},\ this-\/>\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Umax"{}},\ this-\/>\mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Umin"{}},\ this-\/>\mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}}\}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00092}00092\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ Zapisywanie\ danych\ do\ pliku\ JSON}}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00095}00095\ \ \ \ \ std::ofstream\ file(file\_path,\ std::ios::app);}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00096}00096\ \ \ \ \ file\ <<\ data;}
+\DoxyCodeLine{\Hypertarget{_p_i_8cpp_source_l00097}00097\ \}}
+
+\end{DoxyCode}
