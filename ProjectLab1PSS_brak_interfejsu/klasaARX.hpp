@@ -54,10 +54,15 @@ public:
     /** 
     * Metoda służy do odczytania parametrów obiektu ARX z pliku konfiguracyjnego(json)
     * @param[in] obiekt ARX
+    * @param[in] ścieżka do pliku, z którego odczytywane są parametry
     * 
     */
-    void odczytajDane(ARX& arx);
+    void odczytajDane(ARX& arx, const std::string& file_path);
     
-    ///Metoda służy do zapisu aktualnych parametrów obiektu ARX z pliku konfiguracyjnego (json)
-    void zapiszDane();
+    /**
+    * Metoda służy do zapisu aktualnych parametrów obiektu ARX z pliku konfiguracyjnego(json)
+    * @param[in] ścieżka do pliku, do którego zapisywane są parametry
+    * 
+    */
+    void zapiszDane(const std::string& file_path);
 };

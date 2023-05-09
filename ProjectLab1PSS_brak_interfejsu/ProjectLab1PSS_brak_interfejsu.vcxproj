@@ -128,13 +128,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="funkcjePomocnicze.cpp" />
     <ClCompile Include="klasaARX.cpp" />
     <ClCompile Include="ObiektDyskretnyLab.cpp" />
+    <ClCompile Include="PD.cpp" />
+    <ClCompile Include="PI.cpp" />
+    <ClCompile Include="PID.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\OneDrive\Pulpit\json-develop\json-develop\single_include\nlohmann\json.hpp" />
+    <ClInclude Include="funkcjePomocniczne.hpp" />
     <ClInclude Include="klasaARX.hpp" />
     <ClInclude Include="klasaSISO.hpp" />
+    <ClInclude Include="PD.hpp" />
+    <ClInclude Include="PI.hpp" />
+    <ClInclude Include="PID.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

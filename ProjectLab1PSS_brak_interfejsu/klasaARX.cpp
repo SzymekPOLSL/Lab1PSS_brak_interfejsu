@@ -7,6 +7,7 @@
 #include <numeric>
 #include <random>
 #include "json.hpp" 
+#include "funkcjePomocniczne.hpp"
 
 /**
 * @file klasaARX.cpp
@@ -15,13 +16,6 @@
 * Poza tymi metodami w pliku można znaleźć dodatkowo funkcję print, umożliwiającą wyświetlenie elementów wektora.
 * 
 */
-
-/// Wykorzystanie przestrzeni nazw "nlohmann::json", używając wyłącznie "json".
-using json = nlohmann::json; 
-
-///Wyświetlenie kolejnych elementów wektora
-void print(std::vector<double> const &input); // Funkcja umożlwiająca wyświetlenie kolejnych elementów wektora.
-
 
 ARX::ARX(): s_paramA(1), s_paramB(0), s_k(0), s_varE(0), s_u(0), s_y(0){} // Wpisanie wartości domyślnych do konstruktora
 
@@ -121,20 +115,20 @@ double ARX::Symuluj(double u){
     //Usunięcie wartości wyjścia z tyłu i dodanie nowego wyjścia wraz z szumem z przodu.
     this->s_y.push_front(wynik+szum);
     this->s_y.pop_back();
-    return wynik;
+    return wynik+szum;
 }
 
 /* 
-* Odczyt danych z wcześniej przygotowanego pliku "obiekt.json".
+* Odczyt danych z wcześniej przygotowanego pliku znajdują cego się w podanej ścieżce.
 * Podczas odczytu istotne jest nazewnictwo zmiennych podanych w pliku.
 * Metoda aktualizuje odpowiednie pola obiektu ARX.
 * 
 */
-void ARX::odczytajDane(ARX& arx) {
+void ARX::odczytajDane(ARX& arx, const std::string& file_path){
 
     // Odczyt danych z pliku JSON
-    std::ifstream input("obiekt.json");
-    auto j = json::parse(input);
+    std::ifstream input(file_path);
+    auto j = nlohmann::json::parse(input);
 
     // Zapis danych do odpowiednich pól obiektu
     arx.aktualizujWielomianA(j["paramA"]);
@@ -146,14 +140,14 @@ void ARX::odczytajDane(ARX& arx) {
 }
 
 /* 
-* Zapis danych z obiektu ARX do pliku "obiekt.json".
+* Zapis danych z obiektu ARX do pliku o podanej ścieżce.
 * Podczas zapisu do pliku wybierane jest nazewnictwo zmiennych.
 * Metoda aktualizuje dane parametru.
 * 
 */
-void ARX::zapiszDane() {
+void ARX::zapiszDane(const std::string& file_path) {
     // Tworzenie obiektu JSON
-    json data = {
+    nlohmann::json data = {
         {"paramA", this->s_paramA},
         {"paramB", this->s_paramB},
         {"k", this->s_k},
@@ -161,15 +155,6 @@ void ARX::zapiszDane() {
     };
 
     // Zapisywanie danych do pliku JSON
-    std::ofstream file("obiekt.json");
+    std::ofstream file(file_path);
     file << data;
-    file.close();
-}
-
-//Wyświetlanie podanego do funkcji wektora
-void print(std::vector<double> const &input)
-{
-    for (int i = 0; i < input.size(); i++) {
-        std::cout << input.at(i) << ' ';
-    }
 }
