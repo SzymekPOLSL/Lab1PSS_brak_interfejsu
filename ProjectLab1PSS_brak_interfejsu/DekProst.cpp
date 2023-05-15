@@ -3,19 +3,19 @@
 
 /**
 * @file DekProst.cpp
-* W pliku znajduje siê implementacja konstruktora, destruktora klasy DekProst.
-* Oprócz tego mo¿na tutaj znaleŸæ definicjê funkcji gen().
+* W pliku znajduje siÄ™ implementacja konstruktora, destruktora klasy DekProst.
+* OprÃ³cz tego moÅ¼na tutaj znaleÅºÄ‡ definicjÄ™ funkcji gen().
 *
 */
 
-//Zdefiniowanie sta³ej PI
+//Zdefiniowanie staÅ‚ej PI
 #define M_PI 3.14159265358979323846
 
 //Konstruktor parametryczny implementacja
 DekProst::DekProst(Komponent* komponent, double amplituda, double wypelnienie) : Dekorator(komponent), s_amplituda(amplituda), s_wypelnienie(wypelnienie) {}
 //Destruktor implementacja
 DekProst::~DekProst() {}
-//Generowanie sygna³u prostok¹tnego na podstawie sygna³u sinus oraz aktualnej próbki i przypisanie dodatniej, b¹dŸ ujemnej wartoœci zadanej amplitudy.
+//Generowanie sygnaÅ‚u prostokÄ…tnego na podstawie sygnaÅ‚u sinus oraz aktualnej prÃ³bki i przypisanie dodatniej, bÄ…dÅº ujemnej wartoÅ›ci zadanej amplitudy.
 double DekProst::gen() {
 	double wartosc = 0;
 	s_probka++;

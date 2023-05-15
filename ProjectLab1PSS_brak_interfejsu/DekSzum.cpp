@@ -4,8 +4,8 @@
 
 /**
 * @file DekSzum.cpp
-* W pliku znajduje siê implementacja konstruktora, destruktora klasy DekSzum.
-* Oprócz tego mo¿na tutaj znaleŸæ definicjê funkcji gen().
+* W pliku znajduje siÄ™ implementacja konstruktora, destruktora klasy DekSzum.
+* OprÃ³cz tego moÅ¼na tutaj znaleÅºÄ‡ definicjÄ™ funkcji gen().
 *
 */
 
@@ -14,7 +14,7 @@ DekSzum::DekSzum(Komponent* komponent, double odchylenieSTD) : Dekorator(kompone
 //Destruktor implementacja
 DekSzum::~DekSzum() {}
 
-//Generowanie sygna³u w postaci szumu na podstawie zadanych parametrów (odchylenie standardowe, rozk³ad normalny).
+//Generowanie sygnaÅ‚u w postaci szumu na podstawie zadanych parametrÃ³w (odchylenie standardowe, rozkÅ‚ad normalny).
 double DekSzum::gen() {
 	double wartSZUM = s_dist(s_engine);
 	s_probka++;

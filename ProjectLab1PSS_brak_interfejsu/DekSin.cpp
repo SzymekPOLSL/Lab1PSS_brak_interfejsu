@@ -4,12 +4,12 @@
 
 /**
 * @file DekProst.cpp
-* W pliku znajduje siê implementacja konstruktora, destruktora klasy DekSin.
-* Oprócz tego mo¿na tutaj znaleŸæ definicjê funkcji gen().
+* W pliku znajduje siÄ™ implementacja konstruktora, destruktora klasy DekSin.
+* OprÃ³cz tego moÅ¼na tutaj znaleÅºÄ‡ definicjÄ™ funkcji gen().
 *
 */
 
-//Definicja sta³ej PI
+//Definicja staÅ‚ej PI
 #define M_PI 3.14159265358979323846
 
 //Konstruktor parametryczny implementacja
@@ -17,7 +17,7 @@ DekSin::DekSin(Komponent* komponent, double nA, double nf, double nfi) : Dekorat
 //Destruktor implementacja
 DekSin::~DekSin() {}
 
-//Generowanie sygna³u sinusoidalnego na podstawie zadanych parametrów (czêstotliwoœæ, amplituda, przesuniêcie fazowe) oraz aktualnej próbki.
+//Generowanie sygnaÅ‚u sinusoidalnego na podstawie zadanych parametrÃ³w (czÄ™stotliwoÅ›Ä‡, amplituda, przesuniÄ™cie fazowe) oraz aktualnej prÃ³bki.
 double DekSin::gen() {
 	double wartSIN = s_A * sin(2 * M_PI / s_f * s_probka + s_fi);
 	s_probka++;

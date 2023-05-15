@@ -5,7 +5,7 @@
 
 /**
 * @file DekSzum.hpp
-* Plik odpowiedzialny jest za generowanie sygna≥u w postaci szumu.
+* Plik odpowiedzialny jest za generowanie sygna≈Çu w postaci szumu.
 *
 */
 
@@ -14,12 +14,12 @@ class DekSzum : public Dekorator {
 	private:
 		/// Generator szumu
 		std::default_random_engine s_engine;
-		/// WybÛr rozk≥adu - rozk≥ad normalny
+		/// Wyb√≥r rozk≈Çadu - rozk≈Çad normalny
 		std::normal_distribution<double> s_dist;
 		double s_std;
 
 	public:
-		/// Konstruktor domyúlny
+		/// Konstruktor domy≈õlny
 		DekSzum(Komponent* komponent, double odchylenieSTD);
 		/// Destruktor klasy DekSzum
 		~DekSzum();

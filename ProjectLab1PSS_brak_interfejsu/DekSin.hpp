@@ -3,18 +3,18 @@
 
 /**
 * @file DekSin.hpp
-* Plik odpowiedzialny jest za generowanie sygna³u sinusoidalnego.
+* Plik odpowiedzialny jest za generowanie sygnaÅ‚u sinusoidalnego.
 *
 */
 
 class DekSin : public Dekorator {
 
 	private:
-		///Czêstotliwoœæ sygna³u sinusoidalnego
+		///CzÄ™stotliwoÅ›Ä‡ sygnaÅ‚u sinusoidalnego
 		double s_f;
-		///Amplituda sygna³u sinusoidalnego
+		///Amplituda sygnaÅ‚u sinusoidalnego
 		double s_A;
-		///Przesuniêcie fazowe sygna³u sinusoidalnego
+		///PrzesuniÄ™cie fazowe sygnaÅ‚u sinusoidalnego
 		double s_fi;
 
 	public:

@@ -3,22 +3,22 @@
 
 /**
 * @file DekProst.hpp
-* Plik odpowiedzialny jest za generowanie sygna≥u prostokπtnego.
+* Plik odpowiedzialny jest za generowanie sygna≈Çu prostokƒÖtnego.
 * 
 */
 
 class DekProst : public Dekorator {
 
 	private:
-		///Amplituda sygna≥u prostokπtnego
+		///Amplituda sygna≈Çu prostokƒÖtnego
 		double s_amplituda;
-		///Wype≥nienie sygna≥u prostokπtnego
+		///Wype≈Çnienie sygna≈Çu prostokƒÖtnego
 		double s_wypelnienie;
 
 	public:
-		///Konstruktor parametryczny sygna≥u prostokπtnego
+		///Konstruktor parametryczny sygna≈Çu prostokƒÖtnego
 		DekProst(Komponent* komponent, double amplituda, double wypelnienie);
-		///Destruktor sygna≥u prostokπtnego
+		///Destruktor sygna≈Çu prostokƒÖtnego
 		~DekProst();
 		///Metoda dziedziczona z klasy Komponent
 		double gen() override;
