@@ -1,0 +1,20 @@
+\hypertarget{_dekorator_8cpp_source}{}\doxysection{Dekorator.\+cpp}
+\mbox{\hyperlink{_dekorator_8cpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_dekorator_8hpp}{Dekorator.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00010}00010\ \textcolor{comment}{//Konstruktor\ parametryczny\ klasy\ Dekorator}}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00011}\mbox{\hyperlink{class_dekorator_a93c3f7b2aae3824a5358ca0cad3e8436}{00011}}\ \mbox{\hyperlink{class_dekorator_a93c3f7b2aae3824a5358ca0cad3e8436}{Dekorator::Dekorator}}(\mbox{\hyperlink{class_komponent}{Komponent}}*\ komponent)\ :\ s\_k(komponent),\ s\_probka(0)\ \{\}}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00013}00013\ \textcolor{comment}{//Destruktor\ parametryczny\ klasy\ Dekorator}}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00014}\mbox{\hyperlink{class_dekorator_a77bdd1469f49030866844ddcd053b5cd}{00014}}\ \mbox{\hyperlink{class_dekorator_a77bdd1469f49030866844ddcd053b5cd}{Dekorator::\string~Dekorator}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00016}00016\ \textcolor{comment}{//Implementacja\ funkcji\ gen(),\ w\ której\ następuje\ wywołanie\ funkcji\ gen()\ danego\ dekoratora.}}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00017}\mbox{\hyperlink{class_dekorator_a95e5a49054e76d569400b7ec7dc5de0f}{00017}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_dekorator_a95e5a49054e76d569400b7ec7dc5de0f}{Dekorator::gen}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_dekorator_a282225668620a6f4c64144c75b51e69e}{s\_k}}!=\textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_dekorator_a282225668620a6f4c64144c75b51e69e}{s\_k}}-\/>\mbox{\hyperlink{class_komponent_a5df67552b0f1366b5800ff69c91cb2af}{gen}}();}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_dekorator_8cpp_source_l00022}00022\ \}}
+
+\end{DoxyCode}

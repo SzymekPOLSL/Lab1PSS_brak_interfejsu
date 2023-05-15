@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['_7earx_0',['~ARX',['../class_a_r_x.html#abbba12ab36a3f0a6536938b242271c9f',1,'ARX']]],
-  ['_7epd_1',['~PD',['../class_p_d.html#ae29d4dd5df4f417dfa1d059e4bc1b958',1,'PD']]],
-  ['_7epi_2',['~PI',['../class_p_i.html#a28d9cd956997465c9197e4ba05cac2ba',1,'PI']]],
-  ['_7epid_3',['~PID',['../class_p_i_d.html#ab7d389fc5b88d881bc25f5dafd360441',1,'PID']]],
-  ['_7esiso_4',['~SISO',['../class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167',1,'SISO']]]
+  ['pd_0',['PD',['../class_p_d.html#aabe1ba1de4e253d6192d02cd979bd904',1,'PD::PD()'],['../class_p_d.html#acdb2ea41cc2d61369bacd8d57045e2a8',1,'PD::PD(double &amp;nkd)'],['../class_p_d.html#aca41c8d4830baaa755c78ac4eda505ee',1,'PD::PD(double &amp;nkp, double &amp;nkd, double &amp;nUmax, double &amp;nUmin, double &amp;nh)']]],
+  ['pi_1',['PI',['../class_p_i.html#a5231efe2d96d7dfbf7a16073edeff363',1,'PI::PI()'],['../class_p_i.html#a334c62fe67536a4adbc687a67cc1a760',1,'PI::PI(double &amp;nkp, double &amp;nki, double &amp;nsumaI, double &amp;nUmax, double &amp;nUmin, double &amp;nh)']]],
+  ['pid_2',['PID',['../class_p_i_d.html#ac5d142d10521bb10327f970b88402278',1,'PID']]],
+  ['print_3',['print',['../funkcje_pomocnicze_8cpp.html#a73d9ecf1b45067ffeb02ce0f0e42ef43',1,'print(std::vector&lt; double &gt; const &amp;input):&#160;funkcjePomocnicze.cpp'],['../funkcje_pomocniczne_8hpp.html#a73d9ecf1b45067ffeb02ce0f0e42ef43',1,'print(std::vector&lt; double &gt; const &amp;input):&#160;funkcjePomocnicze.cpp']]]
 ];

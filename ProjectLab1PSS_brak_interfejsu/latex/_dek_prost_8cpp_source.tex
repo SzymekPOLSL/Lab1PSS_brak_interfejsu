@@ -1,0 +1,27 @@
+\hypertarget{_dek_prost_8cpp_source}{}\doxysection{Dek\+Prost.\+cpp}
+\mbox{\hyperlink{_dek_prost_8cpp}{Id≈∫ do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_dek_prost_8hpp}{DekProst.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00011}00011\ \textcolor{comment}{//Zdefiniowanie\ sta≥ej\ PI}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00012}\mbox{\hyperlink{_dek_prost_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}{00012}}\ \textcolor{preprocessor}{\#define\ M\_PI\ 3.14159265358979323846}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00014}00014\ \textcolor{comment}{//Konstruktor\ parametryczny\ implementacja}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00015}\mbox{\hyperlink{class_dek_prost_af0a4386d1635026f10a8aea7c1742d56}{00015}}\ \mbox{\hyperlink{class_dek_prost_af0a4386d1635026f10a8aea7c1742d56}{DekProst::DekProst}}(\mbox{\hyperlink{class_komponent}{Komponent}}*\ komponent,\ \textcolor{keywordtype}{double}\ amplituda,\ \textcolor{keywordtype}{double}\ wypelnienie)\ :\ \mbox{\hyperlink{class_dekorator}{Dekorator}}(komponent),\ s\_amplituda(amplituda),\ s\_wypelnienie(wypelnienie)\ \{\}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00016}00016\ \textcolor{comment}{//Destruktor\ implementacja}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00017}\mbox{\hyperlink{class_dek_prost_aae4264017a2ff9172491814b5236924f}{00017}}\ \mbox{\hyperlink{class_dek_prost_aae4264017a2ff9172491814b5236924f}{DekProst::\string~DekProst}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00018}00018\ \textcolor{comment}{//Generowanie\ sygna≥u\ prostokπtnego\ na\ podstawie\ sygna≥u\ sinus\ oraz\ aktualnej\ prÛbki\ i\ przypisanie\ dodatniej,\ bπdü\ ujemnej\ wartoúci\ zadanej\ amplitudy.}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00019}\mbox{\hyperlink{class_dek_prost_ab1c3a1af1cc54687d04d5ee014fe79c9}{00019}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_dek_prost_ab1c3a1af1cc54687d04d5ee014fe79c9}{DekProst::gen}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{double}\ wartosc\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_dekorator_a5f21d6dd5b355f50982cfc932a359784}{s\_probka}}++;}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{if}\ (sin(\mbox{\hyperlink{_dek_prost_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}{M\_PI}}\ /\ \mbox{\hyperlink{class_dek_prost_a36618866c24e0a96c93ccec824706986}{s\_wypelnienie}}\ *\ \mbox{\hyperlink{class_dekorator_a5f21d6dd5b355f50982cfc932a359784}{s\_probka}})\ >=\ 0)\{}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ wartosc\ =\ \mbox{\hyperlink{class_dek_prost_ad7d4d30b330ad6911e729e6f3f909007}{s\_amplituda}};}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ wartosc\ =\ -\/\mbox{\hyperlink{class_dek_prost_ad7d4d30b330ad6911e729e6f3f909007}{s\_amplituda}};}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ wartosc\ +\ \mbox{\hyperlink{class_dekorator_a95e5a49054e76d569400b7ec7dc5de0f}{Dekorator::gen}}();}
+\DoxyCodeLine{\Hypertarget{_dek_prost_8cpp_source_l00029}00029\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,160 @@
+\hypertarget{class_dek_szum}{}\doxysection{Dokumentacja klasy Dek\+Szum}
+\label{class_dek_szum}\index{DekSzum@{DekSzum}}
+
+
+{\ttfamily \#include $<$Dek\+Szum.\+hpp$>$}
+
+Diagram dziedziczenia dla Dek\+Szum\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_dek_szum}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dek_szum_a504295603d6fcd250cb20d992c9531d3}{Dek\+Szum}} (\mbox{\hyperlink{class_komponent}{Komponent}} $\ast$komponent, double odchylenie\+STD)
+\begin{DoxyCompactList}\small\item\em Konstruktor domy渓ny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dek_szum_af32bc8e83da78f0e72536e9d509efe1f}{$\sim$\+Dek\+Szum}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \mbox{\hyperlink{class_dek_szum}{Dek\+Szum}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dek_szum_ad7640de6a5a1a333e80c7cac5bd9f5cc}{gen}} () override
+\begin{DoxyCompactList}\small\item\em Metoda gen, dziedziczona z klasy \mbox{\hyperlink{class_komponent}{Komponent}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_dekorator}{Dekorator}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dekorator_a93c3f7b2aae3824a5358ca0cad3e8436}{Dekorator}} (\mbox{\hyperlink{class_komponent}{Komponent}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy Destruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dekorator_a77bdd1469f49030866844ddcd053b5cd}{$\sim$\+Dekorator}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \mbox{\hyperlink{class_dekorator}{Dekorator}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dekorator_a95e5a49054e76d569400b7ec7dc5de0f}{gen}} () override
+\begin{DoxyCompactList}\small\item\em Metoda generuj dziedziczona od klasy \mbox{\hyperlink{class_komponent}{Komponent}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_komponent}{Komponent}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_komponent_a5579195d2c2b3ab289e6519abecc7d19}{$\sim$\+Komponent}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy komponent. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_komponent_a5df67552b0f1366b5800ff69c91cb2af}{gen}} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda generuj, dziedziczona przez klasy pochodne. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+std\+::default\+\_\+random\+\_\+engine \mbox{\hyperlink{class_dek_szum_ad0de220030360f54ca6b515d5eee217e}{s\+\_\+engine}}
+\begin{DoxyCompactList}\small\item\em Generator szumu. \end{DoxyCompactList}\item 
+std\+::normal\+\_\+distribution$<$ double $>$ \mbox{\hyperlink{class_dek_szum_af32288bc4176f930575d3fa46d5fe9a7}{s\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Wyb髍 rozk砤du -\/ rozk砤d normalny. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dek_szum_a62d7941ba2aa85e60dbac21b7fea4f23}{s\+\_\+std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Sk艂adowe}
+\doxysubsubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_dekorator}{Dekorator}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_komponent}{Komponent}} $\ast$ \mbox{\hyperlink{class_dekorator_a282225668620a6f4c64144c75b51e69e}{s\+\_\+k}}
+\begin{DoxyCompactList}\small\item\em Wska藕nik na poszczeg贸lne komponenty. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_dekorator_a5f21d6dd5b355f50982cfc932a359784}{s\+\_\+probka}}
+\begin{DoxyCompactList}\small\item\em Dana pr贸bka czasu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczeg贸艂owy}
+
+
+Definicja w linii \mbox{\hyperlink{_dek_szum_8hpp_source_l00012}{12}} pliku \mbox{\hyperlink{_dek_szum_8hpp_source}{Dek\+Szum.\+hpp}}.
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_dek_szum_a504295603d6fcd250cb20d992c9531d3}\label{class_dek_szum_a504295603d6fcd250cb20d992c9531d3}} 
+\index{DekSzum@{DekSzum}!DekSzum@{DekSzum}}
+\index{DekSzum@{DekSzum}!DekSzum@{DekSzum}}
+\doxysubsubsection{\texorpdfstring{DekSzum()}{DekSzum()}}
+{\footnotesize\ttfamily Dek\+Szum\+::\+Dek\+Szum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_komponent}{Komponent}} $\ast$}]{komponent,  }\item[{double}]{odchylenie\+STD }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domy渓ny. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_szum_8cpp_source_l00013}{13}} pliku \mbox{\hyperlink{_dek_szum_8cpp_source}{Dek\+Szum.\+cpp}}.
+
+\mbox{\Hypertarget{class_dek_szum_af32bc8e83da78f0e72536e9d509efe1f}\label{class_dek_szum_af32bc8e83da78f0e72536e9d509efe1f}} 
+\index{DekSzum@{DekSzum}!````~DekSzum@{$\sim$DekSzum}}
+\index{````~DekSzum@{$\sim$DekSzum}!DekSzum@{DekSzum}}
+\doxysubsubsection{\texorpdfstring{$\sim$DekSzum()}{~DekSzum()}}
+{\footnotesize\ttfamily Dek\+Szum\+::$\sim$\+Dek\+Szum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \mbox{\hyperlink{class_dek_szum}{Dek\+Szum}}. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_szum_8cpp_source_l00015}{15}} pliku \mbox{\hyperlink{_dek_szum_8cpp_source}{Dek\+Szum.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji sk艂adowych}
+\mbox{\Hypertarget{class_dek_szum_ad7640de6a5a1a333e80c7cac5bd9f5cc}\label{class_dek_szum_ad7640de6a5a1a333e80c7cac5bd9f5cc}} 
+\index{DekSzum@{DekSzum}!gen@{gen}}
+\index{gen@{gen}!DekSzum@{DekSzum}}
+\doxysubsubsection{\texorpdfstring{gen()}{gen()}}
+{\footnotesize\ttfamily double Dek\+Szum\+::gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda gen, dziedziczona z klasy \mbox{\hyperlink{class_komponent}{Komponent}}. 
+
+
+
+Reimplementowana z \mbox{\hyperlink{class_dekorator_a95e5a49054e76d569400b7ec7dc5de0f}{Dekorator}}.
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_szum_8cpp_source_l00018}{18}} pliku \mbox{\hyperlink{_dek_szum_8cpp_source}{Dek\+Szum.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja atrybut贸w sk艂adowych}
+\mbox{\Hypertarget{class_dek_szum_af32288bc4176f930575d3fa46d5fe9a7}\label{class_dek_szum_af32288bc4176f930575d3fa46d5fe9a7}} 
+\index{DekSzum@{DekSzum}!s\_dist@{s\_dist}}
+\index{s\_dist@{s\_dist}!DekSzum@{DekSzum}}
+\doxysubsubsection{\texorpdfstring{s\_dist}{s\_dist}}
+{\footnotesize\ttfamily std\+::normal\+\_\+distribution$<$double$>$ Dek\+Szum\+::s\+\_\+dist\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wyb髍 rozk砤du -\/ rozk砤d normalny. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_szum_8hpp_source_l00018}{18}} pliku \mbox{\hyperlink{_dek_szum_8hpp_source}{Dek\+Szum.\+hpp}}.
+
+\mbox{\Hypertarget{class_dek_szum_ad0de220030360f54ca6b515d5eee217e}\label{class_dek_szum_ad0de220030360f54ca6b515d5eee217e}} 
+\index{DekSzum@{DekSzum}!s\_engine@{s\_engine}}
+\index{s\_engine@{s\_engine}!DekSzum@{DekSzum}}
+\doxysubsubsection{\texorpdfstring{s\_engine}{s\_engine}}
+{\footnotesize\ttfamily std\+::default\+\_\+random\+\_\+engine Dek\+Szum\+::s\+\_\+engine\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Generator szumu. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_szum_8hpp_source_l00016}{16}} pliku \mbox{\hyperlink{_dek_szum_8hpp_source}{Dek\+Szum.\+hpp}}.
+
+\mbox{\Hypertarget{class_dek_szum_a62d7941ba2aa85e60dbac21b7fea4f23}\label{class_dek_szum_a62d7941ba2aa85e60dbac21b7fea4f23}} 
+\index{DekSzum@{DekSzum}!s\_std@{s\_std}}
+\index{s\_std@{s\_std}!DekSzum@{DekSzum}}
+\doxysubsubsection{\texorpdfstring{s\_std}{s\_std}}
+{\footnotesize\ttfamily double Dek\+Szum\+::s\+\_\+std\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_szum_8hpp_source_l00019}{19}} pliku \mbox{\hyperlink{_dek_szum_8hpp_source}{Dek\+Szum.\+hpp}}.
+
+
+
+Dokumentacja dla tej klasy zosta艂a wygenerowana z plik贸w\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dek_szum_8hpp}{Dek\+Szum.\+hpp}}\item 
+\mbox{\hyperlink{_dek_szum_8cpp}{Dek\+Szum.\+cpp}}\end{DoxyCompactItemize}

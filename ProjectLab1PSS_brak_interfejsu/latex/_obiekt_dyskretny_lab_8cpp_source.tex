@@ -13,69 +13,92 @@
 \DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_p_d_8hpp}{PD.hpp}}"{}}}
 \DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_p_i_d_8hpp}{PID.hpp}}"{}}}
 \DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{funkcje_pomocniczne_8hpp}{funkcjePomocniczne.hpp}}"{}}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00014}\mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00014}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\{}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//Uwzględnienie\ przy\ wypisywaniu\ danych\ w\ terminalu\ polskich\ liter.}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00016}00016\ \ \ \ \ std::locale::global(std::locale(\textcolor{stringliteral}{"{}pl\_PL.UTF-\/8"{}}));}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00017}00017\ \ \ \ \ std::wcout.imbue(std::locale());}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00018}00018\ \ \ \ \ std::vector<double>\ wyjscie\_y;}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00019}00019\ \ \ \ \ std::vector<double>\ wyjscie\_u;}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//Stworzenie\ obiektu\ klasy\ ARX}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//Wybór\ jednej\ z\ możliwości}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//ARX\ arx\{\ \{\ -\/0.4\ \},\ \{\ 0.6\ \},\ 1,\ 0.05\ \};}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//ARX\ arx\ =\ \{\ \{\ -\/0.4\ \},\ \{\ 0.6\ \},\ 2,\ 0\ \};}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//ARX\ arx\ =\ \{\ \{-\/0.4,\ 0.2\},\ \{0.6,\ 0.3\},\ 2,\ 0.0\ \};}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_komponent_8hpp}{Komponent.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_komponent_konkretny_8hpp}{KomponentKonkretny.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_dek_sin_8hpp}{DekSin.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_dek_szum_8hpp}{DekSzum.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_dek_prost_8hpp}{DekProst.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00019}\mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00019}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_obiekt_dyskretny_lab_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//Uwzględnienie\ przy\ wypisywaniu\ danych\ w\ terminalu\ polskich\ liter.}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00021}00021\ \ \ \ \ std::locale::global(std::locale(\textcolor{stringliteral}{"{}pl\_PL.UTF-\/8"{}}));}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00022}00022\ \ \ \ \ std::wcout.imbue(std::locale());}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00023}00023\ \ \ \ \ std::vector<double>\ wyjscie\_y;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00024}00024\ \ \ \ \ std::vector<double>\ wyjscie\_u;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00025}00025\ \ \ \ \ std::vector<double>\ wyjscie\_w;}
 \DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//Stworzenie\ obiektu\ o\ domyślnych\ parametrach}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{class_a_r_x}{ARX}}\ arx;}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//Stworzenie\ regulatorów\ PI\ oraz\ PD\ o\ domyślnych\ parametrach}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_p_i}{PI}}\ pi;}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_p_d}{PD}}\ pd;}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//Stworzenie\ regulatora\ PID\ o\ zadanych\ wartościach\ parametrów}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_p_i_d}{PID}}\ pid\ =\ \{0.1,\ 0.1,\ 0.0,\ 2.0,\ 100.0,\ 0.0,\ 1.0,\ 2.0\};}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00034}00034\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_d_a44bb16f16ca1c79cc01df56361f02aec}{wyswietlParametryPID}}(std::cout);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//Ścieżki\ do\ zapisu\ oraz\ odczytu\ parametrów}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00037}00037\ \ \ \ \ std::string\ file\_path\_odczyt\ =\ \textcolor{stringliteral}{"{}C:/Users/panda/source/repos/ProjectLab1PSS\_brak\_interfejsu/ProjectLab1PSS\_brak\_interfejsu/obiekt.json"{}};}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00038}00038\ \ \ \ \ std::string\ file\_path\_zapis\ =\ \textcolor{stringliteral}{"{}C:/Users/panda/source/repos/ProjectLab1PSS\_brak\_interfejsu/ProjectLab1PSS\_brak\_interfejsu/data.json"{}};}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00039}00039\ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//Zamiana\ parametrów\ obiektów\ na\ dane\ z\ pliku\ konfiguracyjnego}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00041}00041\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a31e36511ddebb81a49d6bb82e086dda7}{odczytajDane}}(arx,\ file\_path\_odczyt);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00042}00042\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_a3de86e4629a04aff44725c46928e8a32}{odczytajDane}}(pi,\ file\_path\_odczyt);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00043}00043\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_a84272a249cc16c092312e977cc932aa6}{wyswietlParametryPI}}(std::cout);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00044}00044\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}{wyswietlParametry}}(std::cout);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{double}\ u\_i\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//Symulacja\ dla\ zadanej\ liczby\ próbek\ i\ wejścia\ w\ postaci\ sterowania\ wybranego\ regulatora.}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 50;\ i++)}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00049}00049\ \ \ \ \ \{\ \ \ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ 0)\ \{}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ y\_i\ =\ arx.\mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{Symuluj}}(0.0);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}wyjście:\ "{}}\ <<\ y\_i\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ u\_i\ =\ pi.\mbox{\hyperlink{class_p_i_ab2241bb922838e0a311532a70267a51f}{Symuluj}}(y\_i);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_u.push\_back(u\_i);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_y.push\_back(y\_i);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ y\_i\ =\ arx.\mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{Symuluj}}(u\_i);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}wyjście:\ "{}}\ <<\ y\_i\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ u\_i\ =\ pi.\mbox{\hyperlink{class_p_i_ab2241bb922838e0a311532a70267a51f}{Symuluj}}(y\_i);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_u.push\_back(u\_i);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_y.push\_back(y\_i);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00064}00064\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00065}00065\ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//Zapisanie\ danych\ otrzymanego\ wyjścia\ do\ pliku\ tekstowego.}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00067}00067\ \ \ \ \ std::string\ file\_path\ =\ \textcolor{stringliteral}{"{}C:/Users/panda/source/repos/ProjectLab1PSS\_brak\_interfejsu/ProjectLab1PSS\_brak\_interfejsu/Dane.txt"{}};}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00068}00068\ \ \ \ \ \mbox{\hyperlink{funkcje_pomocnicze_8cpp_aa8fa1d07926357c02d36123fcefaa2b7}{zapiszDoPliku}}(wyjscie\_y,\ file\_path);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00069}00069\ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//Zapisanie\ parametrów\ obiektu\ oraz\ regulatora\ do\ pliku}}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00071}00071\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a1b6183dbda8b9224847f691bd2eff93d}{zapiszDane}}(file\_path\_zapis);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00072}00072\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_a74c8315fe60657bc8603a17f8f6f8610}{zapiszDane}}(file\_path\_zapis);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00073}00073\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}{wyswietlParametry}}(std::cout);}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//Stworzenie\ obiektu\ klasy\ ARX}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//Wybór\ jednej\ z\ możliwości}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//ARX\ arx\{\ \{\ -\/0.4\ \},\ \{\ 0.6\ \},\ 1,\ 0.05\ \};}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//ARX\ arx\ =\ \{\ \{\ -\/0.4\ \},\ \{\ 0.6\ \},\ 2,\ 0\ \};}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//ARX\ arx\ =\ \{\ \{-\/0.4,\ 0.2\},\ \{0.6,\ 0.3\},\ 2,\ 0.0\ \};}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//Stworzenie\ obiektu\ o\ domyślnych\ parametrach}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{class_a_r_x}{ARX}}\ arx;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//Stworzenie\ regulatorów\ PI\ oraz\ PD\ o\ domyślnych\ parametrach}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{class_p_i}{PI}}\ pi;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_p_d}{PD}}\ pd;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//Stworzenie\ regulatora\ PID\ o\ zadanych\ wartościach\ parametrów}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{class_p_i_d}{PID}}\ pid\ =\ \{0.1,\ 0.1,\ 0.0,\ 100.0,\ 0.0,\ 1.0,\ 2.0\};}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00040}00040\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_d_a44bb16f16ca1c79cc01df56361f02aec}{wyswietlParametryPID}}(std::cout);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//Ścieżki\ do\ zapisu\ oraz\ odczytu\ parametrów}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00043}00043\ \ \ \ \ std::string\ file\_path\_odczyt\ =\ \textcolor{stringliteral}{"{}C:/Users/panda/source/repos/ProjectLab1PSS\_brak\_interfejsu/ProjectLab1PSS\_brak\_interfejsu/obiekt.json"{}};}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00044}00044\ \ \ \ \ std::string\ file\_path\_zapis\ =\ \textcolor{stringliteral}{"{}C:/Users/panda/source/repos/ProjectLab1PSS\_brak\_interfejsu/ProjectLab1PSS\_brak\_interfejsu/data.json"{}};}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//Zamiana\ parametrów\ obiektów\ na\ dane\ z\ pliku\ konfiguracyjnego}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00047}00047\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a31e36511ddebb81a49d6bb82e086dda7}{odczytajDane}}(arx,\ file\_path\_odczyt);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00048}00048\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_a3de86e4629a04aff44725c46928e8a32}{odczytajDane}}(pi,\ file\_path\_odczyt);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00049}00049\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_a84272a249cc16c092312e977cc932aa6}{wyswietlParametryPI}}(std::cout);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00050}00050\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}{wyswietlParametry}}(std::cout);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//Przygotowanie\ wartości\ zadanej,\ wykorzystanej\ w\ regulacji\ obiektu}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{class_komponent}{Komponent}}*\ simple\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_komponent_konkretny}{KomponentKonkretny}}(2);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{class_komponent}{Komponent}}*\ decorator1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_dek_szum}{DekSzum}}(simple,\ 0.1);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{class_komponent}{Komponent}}*\ decorator2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_dek_sin}{DekSin}}(decorator1,\ 1,\ 60,\ 0);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{class_komponent}{Komponent}}*\ decorator3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_dek_prost}{DekProst}}(decorator2,\ 1,\ 20);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//Zmienne\ sterowania\ oraz\ wartości\ zadanej}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{double}\ u\_i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{double}\ w\_i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//Symulacja\ dla\ zadanej\ liczby\ próbek\ i\ wejścia\ w\ postaci\ sterowania\ wybranego\ regulatora.}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//Wartość\ zadana\ generowana\ jest\ przy\ wykorzystaniu\ generatora\ wartości\ zadanej.}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 50;\ i++)}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00065}00065\ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ y\_i\ =\ arx.\mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{Symuluj}}(0.0);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}wyjście:\ "{}}\ <<\ y\_i\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ w\_i\ =\ decorator3-\/>\mbox{\hyperlink{class_komponent_a5df67552b0f1366b5800ff69c91cb2af}{gen}}();}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ u\_i\ =\ pi.\mbox{\hyperlink{class_p_i_ac35e6e2bfdb8b04151319a9ae48fab1b}{Symuluj}}(w\_i\ -\/\ y\_i);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_u.push\_back(u\_i);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_y.push\_back(y\_i);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ y\_i\ =\ arx.\mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{Symuluj}}(u\_i);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}wyjście:\ "{}}\ <<\ y\_i\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ w\_i\ =\ decorator3-\/>\mbox{\hyperlink{class_komponent_a5df67552b0f1366b5800ff69c91cb2af}{gen}}();}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ u\_i\ =\ pi.\mbox{\hyperlink{class_p_i_ac35e6e2bfdb8b04151319a9ae48fab1b}{Symuluj}}(w\_i\ -\/\ y\_i);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_u.push\_back(u\_i);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ wyjscie\_y.push\_back(y\_i);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//Zapisanie\ danych\ otrzymanego\ wyjścia\ do\ pliku\ tekstowego.}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00085}00085\ \ \ \ \ std::string\ file\_path\ =\ \textcolor{stringliteral}{"{}C:/Users/panda/source/repos/ProjectLab1PSS\_brak\_interfejsu/ProjectLab1PSS\_brak\_interfejsu/Dane.txt"{}};}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00086}00086\ \ \ \ \ \mbox{\hyperlink{funkcje_pomocnicze_8cpp_aa8fa1d07926357c02d36123fcefaa2b7}{zapiszDoPliku}}(wyjscie\_y,\ file\_path);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{comment}{//Zapisanie\ parametrów\ obiektu\ oraz\ regulatora\ do\ pliku}}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00089}00089\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a1b6183dbda8b9224847f691bd2eff93d}{zapiszDane}}(file\_path\_zapis);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00090}00090\ \ \ \ \ pi.\mbox{\hyperlink{class_p_i_a74c8315fe60657bc8603a17f8f6f8610}{zapiszDane}}(file\_path\_zapis);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00091}00091\ \ \ \ \ arx.\mbox{\hyperlink{class_a_r_x_a8660da07ee58cf49db7bcf61affbf568}{wyswietlParametry}}(std::cout);}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keyword}{delete}\ decorator3;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keyword}{delete}\ decorator2;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keyword}{delete}\ decorator1;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keyword}{delete}\ simple;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_obiekt_dyskretny_lab_8cpp_source_l00099}00099\ \}}
 
 \end{DoxyCode}

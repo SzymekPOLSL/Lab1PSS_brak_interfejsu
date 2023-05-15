@@ -1,11 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "adfkmoprswz~",
-  1: "aps",
-  2: "fkopr",
-  3: "amopswz~",
+  0: "adfgklmoprswz~",
+  1: "adkps",
+  2: "dfkopr",
+  3: "adgklmopswz~",
   4: "s",
-  5: "d"
+  5: "m",
+  6: "d"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "pages"
+  5: "defines",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "Pliki",
   3: "Funkcje",
   4: "Zmienne",
-  5: "Strony"
+  5: "Definicje",
+  6: "Strony"
 };
 

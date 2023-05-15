@@ -15,11 +15,15 @@ Diagram dziedziczenia dla PI\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_p_i_a5231efe2d96d7dfbf7a16073edeff363}{PI}} ()
 \begin{DoxyCompactList}\small\item\em Konstruktor domyślny klasy \mbox{\hyperlink{class_p_i}{PI}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_p_i_ab940e38ce9bd545e33c3d832942ea9f8}{PI}} (double \&nkp, double \&nki, double \&nsumaI, double \&nw, double \&n\+Umax, double \&n\+Umin, double \&nh)
+\mbox{\hyperlink{class_p_i_a334c62fe67536a4adbc687a67cc1a760}{PI}} (double \&nkp, double \&nki, double \&nsumaI, double \&n\+Umax, double \&n\+Umin, double \&nh)
 \begin{DoxyCompactList}\small\item\em Konstruktor parametryczny klasy \mbox{\hyperlink{class_p_i}{PI}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_p_i_a28d9cd956997465c9197e4ba05cac2ba}{$\sim$\+PI}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor klasy \mbox{\hyperlink{class_p_i}{PI}}. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_p_i_ab2241bb922838e0a311532a70267a51f}{Symuluj}} (double s\+\_\+y) override
+double \mbox{\hyperlink{class_p_i_ac35e6e2bfdb8b04151319a9ae48fab1b}{Symuluj}} (double s\+\_\+e) override
+\item 
+double \mbox{\hyperlink{class_p_i_af425f25aa48d3bda75a1aa9bb8aca963}{liczP}} ()
+\item 
+double \mbox{\hyperlink{class_p_i_a69389633647f8c9ffb7f1e392ac9f4d9}{liczI}} ()
 \item 
 std\+::ostream \& \mbox{\hyperlink{class_p_i_a84272a249cc16c092312e977cc932aa6}{wyswietl\+Parametry\+PI}} (std\+::ostream \&os)
 \begin{DoxyCompactList}\small\item\em Wyświetlenie parametrów regulatora \mbox{\hyperlink{class_p_i}{PI}}. \end{DoxyCompactList}\item 
@@ -41,8 +45,6 @@ double \mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\+\_\+kp\+
 \begin{DoxyCompactList}\small\item\em Wzmocnienie części proporcjonalnej. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\+\_\+ki\+\_\+\+PI}}
 \begin{DoxyCompactList}\small\item\em Wzmocnienie części całkującej. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_p_i_a58f28def205676e2328702494241713d}{s\+\_\+w\+\_\+\+PI}}
-\begin{DoxyCompactList}\small\item\em Wartość zadana. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\+\_\+\+Umax\+\_\+\+PI}}
 \begin{DoxyCompactList}\small\item\em Max sterowanie. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\+\_\+\+Umin\+\_\+\+PI}}
@@ -77,11 +79,11 @@ Konstruktor domyślny klasy \mbox{\hyperlink{class_p_i}{PI}}.
 
 Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00008}{8}} pliku \mbox{\hyperlink{_p_i_8cpp_source}{PI.\+cpp}}.
 
-\mbox{\Hypertarget{class_p_i_ab940e38ce9bd545e33c3d832942ea9f8}\label{class_p_i_ab940e38ce9bd545e33c3d832942ea9f8}} 
+\mbox{\Hypertarget{class_p_i_a334c62fe67536a4adbc687a67cc1a760}\label{class_p_i_a334c62fe67536a4adbc687a67cc1a760}} 
 \index{PI@{PI}!PI@{PI}}
 \index{PI@{PI}!PI@{PI}}
 \doxysubsubsection{\texorpdfstring{PI()}{PI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily PI\+::\+PI (\begin{DoxyParamCaption}\item[{double \&}]{nkp,  }\item[{double \&}]{nki,  }\item[{double \&}]{nsumaI,  }\item[{double \&}]{nw,  }\item[{double \&}]{n\+Umax,  }\item[{double \&}]{n\+Umin,  }\item[{double \&}]{nh }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily PI\+::\+PI (\begin{DoxyParamCaption}\item[{double \&}]{nkp,  }\item[{double \&}]{nki,  }\item[{double \&}]{nsumaI,  }\item[{double \&}]{n\+Umax,  }\item[{double \&}]{n\+Umin,  }\item[{double \&}]{nh }\end{DoxyParamCaption})}
 
 
 
@@ -108,6 +110,36 @@ Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00018}{18}} pliku \mbox{\hy
 
 
 \doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_p_i_a69389633647f8c9ffb7f1e392ac9f4d9}\label{class_p_i_a69389633647f8c9ffb7f1e392ac9f4d9}} 
+\index{PI@{PI}!liczI@{liczI}}
+\index{liczI@{liczI}!PI@{PI}}
+\doxysubsubsection{\texorpdfstring{liczI()}{liczI()}}
+{\footnotesize\ttfamily double PI\+::liczI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Metoda służy do obliczenia części całkującej regulatora. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ out}}  & {\em I} & ///\texorpdfstring{$<$}{<} składowa całkująca \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00037}{37}} pliku \mbox{\hyperlink{_p_i_8cpp_source}{PI.\+cpp}}.
+
+\mbox{\Hypertarget{class_p_i_af425f25aa48d3bda75a1aa9bb8aca963}\label{class_p_i_af425f25aa48d3bda75a1aa9bb8aca963}} 
+\index{PI@{PI}!liczP@{liczP}}
+\index{liczP@{liczP}!PI@{PI}}
+\doxysubsubsection{\texorpdfstring{liczP()}{liczP()}}
+{\footnotesize\ttfamily double PI\+::liczP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Metoda służy do obliczenia części proporcjonalnej regulatora. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ out}}  & {\em P} & ///\texorpdfstring{$<$}{<} składowa proporcjonalna \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00032}{32}} pliku \mbox{\hyperlink{_p_i_8cpp_source}{PI.\+cpp}}.
+
 \mbox{\Hypertarget{class_p_i_a3de86e4629a04aff44725c46928e8a32}\label{class_p_i_a3de86e4629a04aff44725c46928e8a32}} 
 \index{PI@{PI}!odczytajDane@{odczytajDane}}
 \index{odczytajDane@{odczytajDane}!PI@{PI}}
@@ -123,17 +155,17 @@ Metoda służy do odczytania parametrów obiektu \mbox{\hyperlink{class_p_i}{PI}
 \end{DoxyParams}
 
 
-Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00062}{62}} pliku \mbox{\hyperlink{_p_i_8cpp_source}{PI.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00072}{72}} pliku \mbox{\hyperlink{_p_i_8cpp_source}{PI.\+cpp}}.
 
-\mbox{\Hypertarget{class_p_i_ab2241bb922838e0a311532a70267a51f}\label{class_p_i_ab2241bb922838e0a311532a70267a51f}} 
+\mbox{\Hypertarget{class_p_i_ac35e6e2bfdb8b04151319a9ae48fab1b}\label{class_p_i_ac35e6e2bfdb8b04151319a9ae48fab1b}} 
 \index{PI@{PI}!Symuluj@{Symuluj}}
 \index{Symuluj@{Symuluj}!PI@{PI}}
 \doxysubsubsection{\texorpdfstring{Symuluj()}{Symuluj()}}
-{\footnotesize\ttfamily double PI\+::\+Symuluj (\begin{DoxyParamCaption}\item[{double}]{s\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily double PI\+::\+Symuluj (\begin{DoxyParamCaption}\item[{double}]{s\+\_\+e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 Metoda publiczna dziedziczona z klasy \mbox{\hyperlink{class_s_i_s_o}{SISO}} Regulacja obiektu za pomocą regulatora \mbox{\hyperlink{class_p_i}{PI}}. 
 \begin{DoxyParams}[1]{Parametry}
-\mbox{\texttt{ in}}  & {\em s\+\_\+y} & ///\texorpdfstring{$<$}{<} próbka wyjścia z obiektu \\
+\mbox{\texttt{ in}}  & {\em s\+\_\+e} & ///\texorpdfstring{$<$}{<} próbka uchybu \\
 \hline
 \mbox{\texttt{ out}}  & {\em s\+\_\+u} & ///\texorpdfstring{$<$}{<} próbka sterowania \\
 \hline
@@ -144,11 +176,11 @@ Implementuje \mbox{\hyperlink{class_s_i_s_o_a5939b03ee6c80591bda9f0582ab50714}{S
 
 
 
-Reimplementowana w \mbox{\hyperlink{class_p_i_d_a873659269100f2093d3cf8f8edcab806}{PID}}.
+Reimplementowana w \mbox{\hyperlink{class_p_i_d_a196095c693fe6d853f5b8ccd43ff7031}{PID}}.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00032}{32}} pliku \mbox{\hyperlink{_p_i_8cpp_source}{PI.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00042}{42}} pliku \mbox{\hyperlink{_p_i_8cpp_source}{PI.\+cpp}}.
 
 \mbox{\Hypertarget{class_p_i_a84272a249cc16c092312e977cc932aa6}\label{class_p_i_a84272a249cc16c092312e977cc932aa6}} 
 \index{PI@{PI}!wyswietlParametryPI@{wyswietlParametryPI}}
@@ -177,7 +209,7 @@ Metoda służy do zapisu aktualnych parametrów obiektu \mbox{\hyperlink{class_p
 \end{DoxyParams}
 
 
-Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00083}{83}} pliku \mbox{\hyperlink{_p_i_8cpp_source}{PI.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{_p_i_8cpp_source_l00092}{92}} pliku \mbox{\hyperlink{_p_i_8cpp_source}{PI.\+cpp}}.
 
 
 
@@ -194,7 +226,7 @@ Kolejka, do której zapisywane są błędy (wartość zadana -\/ próbka wyjści
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00027}{27}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00025}{25}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
 
 \mbox{\Hypertarget{class_p_i_add3c6516ba15151ea1223494edfa5475}\label{class_p_i_add3c6516ba15151ea1223494edfa5475}} 
 \index{PI@{PI}!s\_h\_PI@{s\_h\_PI}}
@@ -208,7 +240,7 @@ Czas próbkowania.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00031}{31}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00029}{29}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
 
 \mbox{\Hypertarget{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}\label{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}} 
 \index{PI@{PI}!s\_ki\_PI@{s\_ki\_PI}}
@@ -250,7 +282,7 @@ Suma błędów do obliczenia części całkującej.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00029}{29}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00027}{27}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
 
 \mbox{\Hypertarget{class_p_i_a200f363813542da839801b7e0e15c658}\label{class_p_i_a200f363813542da839801b7e0e15c658}} 
 \index{PI@{PI}!s\_Umax\_PI@{s\_Umax\_PI}}
@@ -264,7 +296,7 @@ Max sterowanie.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00023}{23}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00021}{21}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
 
 \mbox{\Hypertarget{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}\label{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}} 
 \index{PI@{PI}!s\_Umin\_PI@{s\_Umin\_PI}}
@@ -278,21 +310,7 @@ Min sterowanie.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00025}{25}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
-
-\mbox{\Hypertarget{class_p_i_a58f28def205676e2328702494241713d}\label{class_p_i_a58f28def205676e2328702494241713d}} 
-\index{PI@{PI}!s\_w\_PI@{s\_w\_PI}}
-\index{s\_w\_PI@{s\_w\_PI}!PI@{PI}}
-\doxysubsubsection{\texorpdfstring{s\_w\_PI}{s\_w\_PI}}
-{\footnotesize\ttfamily double PI\+::s\+\_\+w\+\_\+\+PI\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Wartość zadana. 
-
-
-
-Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00021}{21}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{_p_i_8hpp_source_l00023}{23}} pliku \mbox{\hyperlink{_p_i_8hpp_source}{PI.\+hpp}}.
 
 
 

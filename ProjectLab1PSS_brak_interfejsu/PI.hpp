@@ -17,8 +17,6 @@ class PI: virtual public SISO{
 		double s_kp_PI;
 		/// Wzmocnienie części całkującej
 		double s_ki_PI;
-		/// Wartość zadana
-		double s_w_PI;
 		/// Max sterowanie
 		double s_Umax_PI;
 		/// Min sterowanie
@@ -33,18 +31,32 @@ class PI: virtual public SISO{
 		/// Konstruktor domyślny klasy PI
 		PI();
 		/// Konstruktor parametryczny klasy PI
-		PI(double& nkp, double& nki, double& nsumaI, double& nw, double& nUmax, double& nUmin, double& nh);
+		PI(double& nkp, double& nki, double& nsumaI, double& nUmax, double& nUmin, double& nh);
 		/// Destruktor klasy PI
 		~PI();
 
 		/**
 		* Metoda publiczna dziedziczona z klasy SISO
 		* Regulacja obiektu za pomocą regulatora PI.
-		* @param[in] s_y ///< próbka wyjścia z obiektu
+		* @param[in] s_e ///< próbka uchybu
 		* @param[out] s_u ///< próbka sterowania
 		*
 		*/
-		double Symuluj(double s_y) override;
+		double Symuluj(double s_e) override;
+
+		/**
+		* Metoda służy do obliczenia części proporcjonalnej regulatora.
+		* @param[out] P ///< składowa proporcjonalna
+		*
+		*/
+		double liczP();
+
+		/**
+		* Metoda służy do obliczenia części całkującej regulatora.
+		* @param[out] I ///< składowa całkująca
+		*
+		*/
+		double liczI();
 
 		/// Wyświetlenie parametrów regulatora PI
 		std::ostream& wyswietlParametryPI(std::ostream& os);

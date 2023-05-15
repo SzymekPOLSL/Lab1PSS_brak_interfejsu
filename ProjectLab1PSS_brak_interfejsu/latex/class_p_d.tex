@@ -17,11 +17,15 @@ Diagram dziedziczenia dla PD\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em Konstruktor domyślny klasy \mbox{\hyperlink{class_p_d}{PD}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_p_d_acdb2ea41cc2d61369bacd8d57045e2a8}{PD}} (double \&nkd)
 \begin{DoxyCompactList}\small\item\em Dziedziczenie tylko wartości kd (do \mbox{\hyperlink{class_p_i_d}{PID}}) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_p_d_a8946aaff70414bebd43d359fc6751a3b}{PD}} (double \&nkp, double \&nkd, double \&nw, double \&n\+Umax, double \&n\+Umin, double \&nh)
+\mbox{\hyperlink{class_p_d_aca41c8d4830baaa755c78ac4eda505ee}{PD}} (double \&nkp, double \&nkd, double \&n\+Umax, double \&n\+Umin, double \&nh)
 \begin{DoxyCompactList}\small\item\em Konstruktor parametryczny klasy \mbox{\hyperlink{class_p_d}{PD}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_p_d_ae29d4dd5df4f417dfa1d059e4bc1b958}{$\sim$\+PD}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor klasy \mbox{\hyperlink{class_p_d}{PD}}. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_p_d_a4f0031536b92ec76f27abeb6dfc1c3f0}{Symuluj}} (double s\+\_\+y) override
+double \mbox{\hyperlink{class_p_d_a695f2401288e868ffc42cbdb985827f1}{Symuluj}} (double s\+\_\+e) override
+\item 
+double \mbox{\hyperlink{class_p_d_a508565bee9f25c1432355e73a67c4f5a}{liczP}} ()
+\item 
+double \mbox{\hyperlink{class_p_d_af3f9e187172ae75a6b10fcebdd6faddf}{liczD}} ()
 \item 
 std\+::ostream \& \mbox{\hyperlink{class_p_d_aaecc51cd65d1f3ae969900ef387b34ca}{wyswietl\+Parametry\+PD}} (std\+::ostream \&os)
 \begin{DoxyCompactList}\small\item\em Wyświetlenie parametrów regulatora \mbox{\hyperlink{class_p_d}{PD}}. \end{DoxyCompactList}\item 
@@ -48,8 +52,6 @@ std\+::deque$<$ double $>$ \mbox{\hyperlink{class_p_d_a0f31acbddf73b67cffb44a885
 \begin{DoxyCompactList}\small\item\em Kolejka, do której zapisywane są błędy (wartość zadana -\/ próbka wyjścia) \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_p_d_ac4975bc269f1ca880396c066c5ae47cd}{s\+\_\+kp}}
 \begin{DoxyCompactList}\small\item\em Wzmocnienie część proporcjonalna. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_p_d_ac72ece569f0dc0f16faf79cec95a2bff}{s\+\_\+w}}
-\begin{DoxyCompactList}\small\item\em Wartość zadana. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_p_d_adda2f5296b8a866f0b3243c644196b64}{s\+\_\+\+Umax}}
 \begin{DoxyCompactList}\small\item\em Max sterowanie. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_p_d_ad29d5916c72065338ff63a7e75ba4c9d}{s\+\_\+\+Umin}}
@@ -94,11 +96,11 @@ Dziedziczenie tylko wartości kd (do \mbox{\hyperlink{class_p_i_d}{PID}})
 
 Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00013}{13}} pliku \mbox{\hyperlink{_p_d_8cpp_source}{PD.\+cpp}}.
 
-\mbox{\Hypertarget{class_p_d_a8946aaff70414bebd43d359fc6751a3b}\label{class_p_d_a8946aaff70414bebd43d359fc6751a3b}} 
+\mbox{\Hypertarget{class_p_d_aca41c8d4830baaa755c78ac4eda505ee}\label{class_p_d_aca41c8d4830baaa755c78ac4eda505ee}} 
 \index{PD@{PD}!PD@{PD}}
 \index{PD@{PD}!PD@{PD}}
 \doxysubsubsection{\texorpdfstring{PD()}{PD()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily PD\+::\+PD (\begin{DoxyParamCaption}\item[{double \&}]{nkp,  }\item[{double \&}]{nkd,  }\item[{double \&}]{nw,  }\item[{double \&}]{n\+Umax,  }\item[{double \&}]{n\+Umin,  }\item[{double \&}]{nh }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily PD\+::\+PD (\begin{DoxyParamCaption}\item[{double \&}]{nkp,  }\item[{double \&}]{nkd,  }\item[{double \&}]{n\+Umax,  }\item[{double \&}]{n\+Umin,  }\item[{double \&}]{nh }\end{DoxyParamCaption})}
 
 
 
@@ -125,6 +127,36 @@ Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00023}{23}} pliku \mbox{\hy
 
 
 \doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_p_d_af3f9e187172ae75a6b10fcebdd6faddf}\label{class_p_d_af3f9e187172ae75a6b10fcebdd6faddf}} 
+\index{PD@{PD}!liczD@{liczD}}
+\index{liczD@{liczD}!PD@{PD}}
+\doxysubsubsection{\texorpdfstring{liczD()}{liczD()}}
+{\footnotesize\ttfamily double PD\+::liczD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Metoda służy do obliczenia części różniczkującej regulatora. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ out}}  & {\em D} & ///\texorpdfstring{$<$}{<} składowa różniczkująca \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00042}{42}} pliku \mbox{\hyperlink{_p_d_8cpp_source}{PD.\+cpp}}.
+
+\mbox{\Hypertarget{class_p_d_a508565bee9f25c1432355e73a67c4f5a}\label{class_p_d_a508565bee9f25c1432355e73a67c4f5a}} 
+\index{PD@{PD}!liczP@{liczP}}
+\index{liczP@{liczP}!PD@{PD}}
+\doxysubsubsection{\texorpdfstring{liczP()}{liczP()}}
+{\footnotesize\ttfamily double PD\+::liczP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Metoda służy do obliczenia części proporcjonalnej regulatora. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ out}}  & {\em P} & ///\texorpdfstring{$<$}{<} składowa proporcjonalna \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00037}{37}} pliku \mbox{\hyperlink{_p_d_8cpp_source}{PD.\+cpp}}.
+
 \mbox{\Hypertarget{class_p_d_ade785f98ac7393ed46e413cbc849a0ad}\label{class_p_d_ade785f98ac7393ed46e413cbc849a0ad}} 
 \index{PD@{PD}!odczytajDane@{odczytajDane}}
 \index{odczytajDane@{odczytajDane}!PD@{PD}}
@@ -140,17 +172,17 @@ Metoda służy do odczytania parametrów obiektu \mbox{\hyperlink{class_p_d}{PD}
 \end{DoxyParams}
 
 
-Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00062}{62}} pliku \mbox{\hyperlink{_p_d_8cpp_source}{PD.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00072}{72}} pliku \mbox{\hyperlink{_p_d_8cpp_source}{PD.\+cpp}}.
 
-\mbox{\Hypertarget{class_p_d_a4f0031536b92ec76f27abeb6dfc1c3f0}\label{class_p_d_a4f0031536b92ec76f27abeb6dfc1c3f0}} 
+\mbox{\Hypertarget{class_p_d_a695f2401288e868ffc42cbdb985827f1}\label{class_p_d_a695f2401288e868ffc42cbdb985827f1}} 
 \index{PD@{PD}!Symuluj@{Symuluj}}
 \index{Symuluj@{Symuluj}!PD@{PD}}
 \doxysubsubsection{\texorpdfstring{Symuluj()}{Symuluj()}}
-{\footnotesize\ttfamily double PD\+::\+Symuluj (\begin{DoxyParamCaption}\item[{double}]{s\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily double PD\+::\+Symuluj (\begin{DoxyParamCaption}\item[{double}]{s\+\_\+e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 Metoda publiczna dziedziczona z klasy \mbox{\hyperlink{class_s_i_s_o}{SISO}} Regulacja obiektu za pomocą regulatora \mbox{\hyperlink{class_p_d}{PD}}. 
 \begin{DoxyParams}[1]{Parametry}
-\mbox{\texttt{ in}}  & {\em s\+\_\+y} & ///\texorpdfstring{$<$}{<} próbka wyjścia z obiektu \\
+\mbox{\texttt{ in}}  & {\em s\+\_\+e} & ///\texorpdfstring{$<$}{<} próbka uchybu \\
 \hline
 \mbox{\texttt{ out}}  & {\em s\+\_\+u} & ///\texorpdfstring{$<$}{<} próbka sterowania \\
 \hline
@@ -161,11 +193,11 @@ Implementuje \mbox{\hyperlink{class_s_i_s_o_a5939b03ee6c80591bda9f0582ab50714}{S
 
 
 
-Reimplementowana w \mbox{\hyperlink{class_p_i_d_a873659269100f2093d3cf8f8edcab806}{PID}}.
+Reimplementowana w \mbox{\hyperlink{class_p_i_d_a196095c693fe6d853f5b8ccd43ff7031}{PID}}.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00037}{37}} pliku \mbox{\hyperlink{_p_d_8cpp_source}{PD.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00047}{47}} pliku \mbox{\hyperlink{_p_d_8cpp_source}{PD.\+cpp}}.
 
 \mbox{\Hypertarget{class_p_d_aaecc51cd65d1f3ae969900ef387b34ca}\label{class_p_d_aaecc51cd65d1f3ae969900ef387b34ca}} 
 \index{PD@{PD}!wyswietlParametryPD@{wyswietlParametryPD}}
@@ -194,7 +226,7 @@ Metoda służy do zapisu aktualnych parametrów obiektu \mbox{\hyperlink{class_p
 \end{DoxyParams}
 
 
-Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00083}{83}} pliku \mbox{\hyperlink{_p_d_8cpp_source}{PD.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{_p_d_8cpp_source_l00092}{92}} pliku \mbox{\hyperlink{_p_d_8cpp_source}{PD.\+cpp}}.
 
 
 
@@ -225,7 +257,7 @@ Czas próbkowania.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_d_8hpp_source_l00027}{27}} pliku \mbox{\hyperlink{_p_d_8hpp_source}{PD.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{_p_d_8hpp_source_l00025}{25}} pliku \mbox{\hyperlink{_p_d_8hpp_source}{PD.\+hpp}}.
 
 \mbox{\Hypertarget{class_p_d_a662827c5903f82ecf70b956e38e69eb0}\label{class_p_d_a662827c5903f82ecf70b956e38e69eb0}} 
 \index{PD@{PD}!s\_kd@{s\_kd}}
@@ -239,7 +271,7 @@ Wzmocnienie część różniczkująca.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_d_8hpp_source_l00030}{30}} pliku \mbox{\hyperlink{_p_d_8hpp_source}{PD.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{_p_d_8hpp_source_l00028}{28}} pliku \mbox{\hyperlink{_p_d_8hpp_source}{PD.\+hpp}}.
 
 \mbox{\Hypertarget{class_p_d_ac4975bc269f1ca880396c066c5ae47cd}\label{class_p_d_ac4975bc269f1ca880396c066c5ae47cd}} 
 \index{PD@{PD}!s\_kp@{s\_kp}}
@@ -267,7 +299,7 @@ Max sterowanie.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_d_8hpp_source_l00023}{23}} pliku \mbox{\hyperlink{_p_d_8hpp_source}{PD.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{_p_d_8hpp_source_l00021}{21}} pliku \mbox{\hyperlink{_p_d_8hpp_source}{PD.\+hpp}}.
 
 \mbox{\Hypertarget{class_p_d_ad29d5916c72065338ff63a7e75ba4c9d}\label{class_p_d_ad29d5916c72065338ff63a7e75ba4c9d}} 
 \index{PD@{PD}!s\_Umin@{s\_Umin}}
@@ -281,21 +313,7 @@ Min sterowanie.
 
 
 
-Definicja w linii \mbox{\hyperlink{_p_d_8hpp_source_l00025}{25}} pliku \mbox{\hyperlink{_p_d_8hpp_source}{PD.\+hpp}}.
-
-\mbox{\Hypertarget{class_p_d_ac72ece569f0dc0f16faf79cec95a2bff}\label{class_p_d_ac72ece569f0dc0f16faf79cec95a2bff}} 
-\index{PD@{PD}!s\_w@{s\_w}}
-\index{s\_w@{s\_w}!PD@{PD}}
-\doxysubsubsection{\texorpdfstring{s\_w}{s\_w}}
-{\footnotesize\ttfamily double PD\+::s\+\_\+w\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Wartość zadana. 
-
-
-
-Definicja w linii \mbox{\hyperlink{_p_d_8hpp_source_l00021}{21}} pliku \mbox{\hyperlink{_p_d_8hpp_source}{PD.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{_p_d_8hpp_source_l00023}{23}} pliku \mbox{\hyperlink{_p_d_8hpp_source}{PD.\+hpp}}.
 
 
 

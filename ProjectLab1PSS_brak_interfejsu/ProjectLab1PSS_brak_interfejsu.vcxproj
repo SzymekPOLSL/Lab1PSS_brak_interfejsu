@@ -128,6 +128,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dekorator.cpp" />
+    <ClCompile Include="DekProst.cpp" />
+    <ClCompile Include="DekSin.cpp" />
+    <ClCompile Include="DekSzum.cpp" />
     <ClCompile Include="funkcjePomocnicze.cpp" />
     <ClCompile Include="klasaARX.cpp" />
     <ClCompile Include="ObiektDyskretnyLab.cpp" />
@@ -137,9 +141,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\OneDrive\Pulpit\json-develop\json-develop\single_include\nlohmann\json.hpp" />
+    <ClInclude Include="Dekorator.hpp" />
+    <ClInclude Include="DekProst.hpp" />
+    <ClInclude Include="DekSin.hpp" />
+    <ClInclude Include="DekSzum.hpp" />
     <ClInclude Include="funkcjePomocniczne.hpp" />
     <ClInclude Include="klasaARX.hpp" />
     <ClInclude Include="klasaSISO.hpp" />
+    <ClInclude Include="Komponent.hpp" />
+    <ClInclude Include="KomponentKonkretny.hpp" />
     <ClInclude Include="PD.hpp" />
     <ClInclude Include="PI.hpp" />
     <ClInclude Include="PID.hpp" />

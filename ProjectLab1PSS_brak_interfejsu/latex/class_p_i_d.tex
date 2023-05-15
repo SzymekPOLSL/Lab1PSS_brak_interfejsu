@@ -13,11 +13,11 @@ Diagram dziedziczenia dla PID\begin{figure}[H]
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_p_i_d_a2c8431d3c35848835202e4e5f6563100}{PID}} (double nkp, double nki, double nsumaI, double nw, double n\+Umax, double n\+Umin, double nh, double nkd)
+\mbox{\hyperlink{class_p_i_d_ac5d142d10521bb10327f970b88402278}{PID}} (double nkp, double nki, double nsumaI, double n\+Umax, double n\+Umin, double nh, double nkd)
 \item 
 \mbox{\hyperlink{class_p_i_d_ab7d389fc5b88d881bc25f5dafd360441}{$\sim$\+PID}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor klasy \mbox{\hyperlink{class_p_i_d}{PID}}. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_p_i_d_a873659269100f2093d3cf8f8edcab806}{Symuluj}} (double s\+\_\+y) override
+double \mbox{\hyperlink{class_p_i_d_a196095c693fe6d853f5b8ccd43ff7031}{Symuluj}} (double s\+\_\+e) override
 \item 
 std\+::ostream \& \mbox{\hyperlink{class_p_i_d_a44bb16f16ca1c79cc01df56361f02aec}{wyswietl\+Parametry\+PID}} (std\+::ostream \&os)
 \begin{DoxyCompactList}\small\item\em Wyświetlenie parametrów regulatora \mbox{\hyperlink{class_p_i_d}{PID}}. \end{DoxyCompactList}\item 
@@ -30,11 +30,15 @@ void \mbox{\hyperlink{class_p_i_d_a1d8e2491d584e36e1a1fbfbe3d4f946e}{zapisz\+Dan
 \item 
 \mbox{\hyperlink{class_p_i_a5231efe2d96d7dfbf7a16073edeff363}{PI}} ()
 \begin{DoxyCompactList}\small\item\em Konstruktor domyślny klasy \mbox{\hyperlink{class_p_i}{PI}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_p_i_ab940e38ce9bd545e33c3d832942ea9f8}{PI}} (double \&nkp, double \&nki, double \&nsumaI, double \&nw, double \&n\+Umax, double \&n\+Umin, double \&nh)
+\mbox{\hyperlink{class_p_i_a334c62fe67536a4adbc687a67cc1a760}{PI}} (double \&nkp, double \&nki, double \&nsumaI, double \&n\+Umax, double \&n\+Umin, double \&nh)
 \begin{DoxyCompactList}\small\item\em Konstruktor parametryczny klasy \mbox{\hyperlink{class_p_i}{PI}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_p_i_a28d9cd956997465c9197e4ba05cac2ba}{$\sim$\+PI}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor klasy \mbox{\hyperlink{class_p_i}{PI}}. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_p_i_ab2241bb922838e0a311532a70267a51f}{Symuluj}} (double s\+\_\+y) override
+double \mbox{\hyperlink{class_p_i_ac35e6e2bfdb8b04151319a9ae48fab1b}{Symuluj}} (double s\+\_\+e) override
+\item 
+double \mbox{\hyperlink{class_p_i_af425f25aa48d3bda75a1aa9bb8aca963}{liczP}} ()
+\item 
+double \mbox{\hyperlink{class_p_i_a69389633647f8c9ffb7f1e392ac9f4d9}{liczI}} ()
 \item 
 std\+::ostream \& \mbox{\hyperlink{class_p_i_a84272a249cc16c092312e977cc932aa6}{wyswietl\+Parametry\+PI}} (std\+::ostream \&os)
 \begin{DoxyCompactList}\small\item\em Wyświetlenie parametrów regulatora \mbox{\hyperlink{class_p_i}{PI}}. \end{DoxyCompactList}\item 
@@ -57,8 +61,6 @@ double \mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\+\_\+kp\+
 \begin{DoxyCompactList}\small\item\em Wzmocnienie części proporcjonalnej. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\+\_\+ki\+\_\+\+PI}}
 \begin{DoxyCompactList}\small\item\em Wzmocnienie części całkującej. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_p_i_a58f28def205676e2328702494241713d}{s\+\_\+w\+\_\+\+PI}}
-\begin{DoxyCompactList}\small\item\em Wartość zadana. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\+\_\+\+Umax\+\_\+\+PI}}
 \begin{DoxyCompactList}\small\item\em Max sterowanie. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\+\_\+\+Umin\+\_\+\+PI}}
@@ -76,11 +78,15 @@ double \mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\+\_\+h\+\
 \begin{DoxyCompactList}\small\item\em Konstruktor domyślny klasy \mbox{\hyperlink{class_p_d}{PD}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_p_d_acdb2ea41cc2d61369bacd8d57045e2a8}{PD}} (double \&nkd)
 \begin{DoxyCompactList}\small\item\em Dziedziczenie tylko wartości kd (do \mbox{\hyperlink{class_p_i_d}{PID}}) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_p_d_a8946aaff70414bebd43d359fc6751a3b}{PD}} (double \&nkp, double \&nkd, double \&nw, double \&n\+Umax, double \&n\+Umin, double \&nh)
+\mbox{\hyperlink{class_p_d_aca41c8d4830baaa755c78ac4eda505ee}{PD}} (double \&nkp, double \&nkd, double \&n\+Umax, double \&n\+Umin, double \&nh)
 \begin{DoxyCompactList}\small\item\em Konstruktor parametryczny klasy \mbox{\hyperlink{class_p_d}{PD}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_p_d_ae29d4dd5df4f417dfa1d059e4bc1b958}{$\sim$\+PD}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor klasy \mbox{\hyperlink{class_p_d}{PD}}. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_p_d_a4f0031536b92ec76f27abeb6dfc1c3f0}{Symuluj}} (double s\+\_\+y) override
+double \mbox{\hyperlink{class_p_d_a695f2401288e868ffc42cbdb985827f1}{Symuluj}} (double s\+\_\+e) override
+\item 
+double \mbox{\hyperlink{class_p_d_a508565bee9f25c1432355e73a67c4f5a}{liczP}} ()
+\item 
+double \mbox{\hyperlink{class_p_d_af3f9e187172ae75a6b10fcebdd6faddf}{liczD}} ()
 \item 
 std\+::ostream \& \mbox{\hyperlink{class_p_d_aaecc51cd65d1f3ae969900ef387b34ca}{wyswietl\+Parametry\+PD}} (std\+::ostream \&os)
 \begin{DoxyCompactList}\small\item\em Wyświetlenie parametrów regulatora \mbox{\hyperlink{class_p_d}{PD}}. \end{DoxyCompactList}\item 
@@ -110,11 +116,11 @@ Definicja w linii \mbox{\hyperlink{_p_i_d_8hpp_source_l00013}{13}} pliku \mbox{\
 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
-\mbox{\Hypertarget{class_p_i_d_a2c8431d3c35848835202e4e5f6563100}\label{class_p_i_d_a2c8431d3c35848835202e4e5f6563100}} 
+\mbox{\Hypertarget{class_p_i_d_ac5d142d10521bb10327f970b88402278}\label{class_p_i_d_ac5d142d10521bb10327f970b88402278}} 
 \index{PID@{PID}!PID@{PID}}
 \index{PID@{PID}!PID@{PID}}
 \doxysubsubsection{\texorpdfstring{PID()}{PID()}}
-{\footnotesize\ttfamily PID\+::\+PID (\begin{DoxyParamCaption}\item[{double}]{nkp,  }\item[{double}]{nki,  }\item[{double}]{nsumaI,  }\item[{double}]{nw,  }\item[{double}]{n\+Umax,  }\item[{double}]{n\+Umin,  }\item[{double}]{nh,  }\item[{double}]{nkd }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily PID\+::\+PID (\begin{DoxyParamCaption}\item[{double}]{nkp,  }\item[{double}]{nki,  }\item[{double}]{nsumaI,  }\item[{double}]{n\+Umax,  }\item[{double}]{n\+Umin,  }\item[{double}]{nh,  }\item[{double}]{nkd }\end{DoxyParamCaption})}
 
 
 
@@ -154,22 +160,22 @@ Metoda służy do odczytania parametrów obiektu \mbox{\hyperlink{class_p_i_d}{P
 
 Definicja w linii \mbox{\hyperlink{_p_i_d_8cpp_source_l00059}{59}} pliku \mbox{\hyperlink{_p_i_d_8cpp_source}{PID.\+cpp}}.
 
-\mbox{\Hypertarget{class_p_i_d_a873659269100f2093d3cf8f8edcab806}\label{class_p_i_d_a873659269100f2093d3cf8f8edcab806}} 
+\mbox{\Hypertarget{class_p_i_d_a196095c693fe6d853f5b8ccd43ff7031}\label{class_p_i_d_a196095c693fe6d853f5b8ccd43ff7031}} 
 \index{PID@{PID}!Symuluj@{Symuluj}}
 \index{Symuluj@{Symuluj}!PID@{PID}}
 \doxysubsubsection{\texorpdfstring{Symuluj()}{Symuluj()}}
-{\footnotesize\ttfamily double PID\+::\+Symuluj (\begin{DoxyParamCaption}\item[{double}]{s\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily double PID\+::\+Symuluj (\begin{DoxyParamCaption}\item[{double}]{s\+\_\+e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 Metoda publiczna dziedziczona z klasy \mbox{\hyperlink{class_s_i_s_o}{SISO}} Regulacja obiektu za pomocą regulatora \mbox{\hyperlink{class_p_i_d}{PID}}. 
 \begin{DoxyParams}[1]{Parametry}
-\mbox{\texttt{ in}}  & {\em s\+\_\+y} & ///\texorpdfstring{$<$}{<} próbka wyjścia z obiektu \\
+\mbox{\texttt{ in}}  & {\em s\+\_\+y} & ///\texorpdfstring{$<$}{<} próbka uchybu \\
 \hline
 \mbox{\texttt{ out}}  & {\em s\+\_\+u} & ///\texorpdfstring{$<$}{<} próbka sterowania \\
 \hline
 \end{DoxyParams}
 
 
-Reimplementowana z \mbox{\hyperlink{class_p_d_a4f0031536b92ec76f27abeb6dfc1c3f0}{PD}}.
+Reimplementowana z \mbox{\hyperlink{class_p_d_a695f2401288e868ffc42cbdb985827f1}{PD}}.
 
 
 
@@ -202,7 +208,7 @@ Metoda służy do zapisu aktualnych parametrów obiektu \mbox{\hyperlink{class_p
 \end{DoxyParams}
 
 
-Definicja w linii \mbox{\hyperlink{_p_i_d_8cpp_source_l00081}{81}} pliku \mbox{\hyperlink{_p_i_d_8cpp_source}{PID.\+cpp}}.
+Definicja w linii \mbox{\hyperlink{_p_i_d_8cpp_source_l00080}{80}} pliku \mbox{\hyperlink{_p_i_d_8cpp_source}{PID.\+cpp}}.
 
 
 

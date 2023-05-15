@@ -1,0 +1,148 @@
+\hypertarget{class_dek_prost}{}\doxysection{Dokumentacja klasy Dek\+Prost}
+\label{class_dek_prost}\index{DekProst@{DekProst}}
+
+
+{\ttfamily \#include $<$Dek\+Prost.\+hpp$>$}
+
+Diagram dziedziczenia dla Dek\+Prost\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_dek_prost}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dek_prost_af0a4386d1635026f10a8aea7c1742d56}{Dek\+Prost}} (\mbox{\hyperlink{class_komponent}{Komponent}} $\ast$komponent, double amplituda, double wypelnienie)
+\begin{DoxyCompactList}\small\item\em Konstruktor parametryczny sygna硊 prostok箃nego. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dek_prost_aae4264017a2ff9172491814b5236924f}{$\sim$\+Dek\+Prost}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor sygna硊 prostok箃nego. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dek_prost_ab1c3a1af1cc54687d04d5ee014fe79c9}{gen}} () override
+\begin{DoxyCompactList}\small\item\em Metoda dziedziczona z klasy \mbox{\hyperlink{class_komponent}{Komponent}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_dekorator}{Dekorator}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dekorator_a93c3f7b2aae3824a5358ca0cad3e8436}{Dekorator}} (\mbox{\hyperlink{class_komponent}{Komponent}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy Destruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dekorator_a77bdd1469f49030866844ddcd053b5cd}{$\sim$\+Dekorator}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \mbox{\hyperlink{class_dekorator}{Dekorator}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dekorator_a95e5a49054e76d569400b7ec7dc5de0f}{gen}} () override
+\begin{DoxyCompactList}\small\item\em Metoda generuj dziedziczona od klasy \mbox{\hyperlink{class_komponent}{Komponent}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_komponent}{Komponent}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_komponent_a5579195d2c2b3ab289e6519abecc7d19}{$\sim$\+Komponent}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy komponent. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_komponent_a5df67552b0f1366b5800ff69c91cb2af}{gen}} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda generuj, dziedziczona przez klasy pochodne. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_dek_prost_ad7d4d30b330ad6911e729e6f3f909007}{s\+\_\+amplituda}}
+\begin{DoxyCompactList}\small\item\em Amplituda sygna硊 prostok箃nego. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dek_prost_a36618866c24e0a96c93ccec824706986}{s\+\_\+wypelnienie}}
+\begin{DoxyCompactList}\small\item\em Wype硁ienie sygna硊 prostok箃nego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Sk艂adowe}
+\doxysubsubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_dekorator}{Dekorator}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_komponent}{Komponent}} $\ast$ \mbox{\hyperlink{class_dekorator_a282225668620a6f4c64144c75b51e69e}{s\+\_\+k}}
+\begin{DoxyCompactList}\small\item\em Wska藕nik na poszczeg贸lne komponenty. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_dekorator_a5f21d6dd5b355f50982cfc932a359784}{s\+\_\+probka}}
+\begin{DoxyCompactList}\small\item\em Dana pr贸bka czasu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczeg贸艂owy}
+
+
+Definicja w linii \mbox{\hyperlink{_dek_prost_8hpp_source_l00010}{10}} pliku \mbox{\hyperlink{_dek_prost_8hpp_source}{Dek\+Prost.\+hpp}}.
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_dek_prost_af0a4386d1635026f10a8aea7c1742d56}\label{class_dek_prost_af0a4386d1635026f10a8aea7c1742d56}} 
+\index{DekProst@{DekProst}!DekProst@{DekProst}}
+\index{DekProst@{DekProst}!DekProst@{DekProst}}
+\doxysubsubsection{\texorpdfstring{DekProst()}{DekProst()}}
+{\footnotesize\ttfamily Dek\+Prost\+::\+Dek\+Prost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_komponent}{Komponent}} $\ast$}]{komponent,  }\item[{double}]{amplituda,  }\item[{double}]{wypelnienie }\end{DoxyParamCaption})}
+
+
+
+Konstruktor parametryczny sygna硊 prostok箃nego. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_prost_8cpp_source_l00015}{15}} pliku \mbox{\hyperlink{_dek_prost_8cpp_source}{Dek\+Prost.\+cpp}}.
+
+\mbox{\Hypertarget{class_dek_prost_aae4264017a2ff9172491814b5236924f}\label{class_dek_prost_aae4264017a2ff9172491814b5236924f}} 
+\index{DekProst@{DekProst}!````~DekProst@{$\sim$DekProst}}
+\index{````~DekProst@{$\sim$DekProst}!DekProst@{DekProst}}
+\doxysubsubsection{\texorpdfstring{$\sim$DekProst()}{~DekProst()}}
+{\footnotesize\ttfamily Dek\+Prost\+::$\sim$\+Dek\+Prost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor sygna硊 prostok箃nego. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_prost_8cpp_source_l00017}{17}} pliku \mbox{\hyperlink{_dek_prost_8cpp_source}{Dek\+Prost.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji sk艂adowych}
+\mbox{\Hypertarget{class_dek_prost_ab1c3a1af1cc54687d04d5ee014fe79c9}\label{class_dek_prost_ab1c3a1af1cc54687d04d5ee014fe79c9}} 
+\index{DekProst@{DekProst}!gen@{gen}}
+\index{gen@{gen}!DekProst@{DekProst}}
+\doxysubsubsection{\texorpdfstring{gen()}{gen()}}
+{\footnotesize\ttfamily double Dek\+Prost\+::gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda dziedziczona z klasy \mbox{\hyperlink{class_komponent}{Komponent}}. 
+
+
+
+Reimplementowana z \mbox{\hyperlink{class_dekorator_a95e5a49054e76d569400b7ec7dc5de0f}{Dekorator}}.
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_prost_8cpp_source_l00019}{19}} pliku \mbox{\hyperlink{_dek_prost_8cpp_source}{Dek\+Prost.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja atrybut贸w sk艂adowych}
+\mbox{\Hypertarget{class_dek_prost_ad7d4d30b330ad6911e729e6f3f909007}\label{class_dek_prost_ad7d4d30b330ad6911e729e6f3f909007}} 
+\index{DekProst@{DekProst}!s\_amplituda@{s\_amplituda}}
+\index{s\_amplituda@{s\_amplituda}!DekProst@{DekProst}}
+\doxysubsubsection{\texorpdfstring{s\_amplituda}{s\_amplituda}}
+{\footnotesize\ttfamily double Dek\+Prost\+::s\+\_\+amplituda\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Amplituda sygna硊 prostok箃nego. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_prost_8hpp_source_l00014}{14}} pliku \mbox{\hyperlink{_dek_prost_8hpp_source}{Dek\+Prost.\+hpp}}.
+
+\mbox{\Hypertarget{class_dek_prost_a36618866c24e0a96c93ccec824706986}\label{class_dek_prost_a36618866c24e0a96c93ccec824706986}} 
+\index{DekProst@{DekProst}!s\_wypelnienie@{s\_wypelnienie}}
+\index{s\_wypelnienie@{s\_wypelnienie}!DekProst@{DekProst}}
+\doxysubsubsection{\texorpdfstring{s\_wypelnienie}{s\_wypelnienie}}
+{\footnotesize\ttfamily double Dek\+Prost\+::s\+\_\+wypelnienie\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wype硁ienie sygna硊 prostok箃nego. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_dek_prost_8hpp_source_l00016}{16}} pliku \mbox{\hyperlink{_dek_prost_8hpp_source}{Dek\+Prost.\+hpp}}.
+
+
+
+Dokumentacja dla tej klasy zosta艂a wygenerowana z plik贸w\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dek_prost_8hpp}{Dek\+Prost.\+hpp}}\item 
+\mbox{\hyperlink{_dek_prost_8cpp}{Dek\+Prost.\+cpp}}\end{DoxyCompactItemize}

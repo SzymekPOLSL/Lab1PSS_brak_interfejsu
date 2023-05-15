@@ -5,12 +5,12 @@
 #include "json.hpp"
 
 //Konstruktor domyślny
-PI::PI(): s_kp_PI(0.1), s_ki_PI(0.1), s_sumaI_PI(0.0), s_w_PI(2.0), s_Umax_PI(100.0), s_Umin_PI(0) {
+PI::PI(): s_kp_PI(0.1), s_ki_PI(0.1), s_sumaI_PI(0.0), s_Umax_PI(100.0), s_Umin_PI(0), s_h_PI(1.0) {
 	this->s_error_PI.push_front(0.0);
 }
 
 //Konstruktor parametryczny
-PI::PI(double& nkp, double& nki, double& nsumaI, double& nw, double& nUmax, double& nUmin, double& nh) : s_kp_PI(nkp), s_ki_PI(nki), s_sumaI_PI(nsumaI), s_w_PI(nw), s_Umax_PI(nUmax), s_Umin_PI(nUmin), s_h_PI(nh) {
+PI::PI(double& nkp, double& nki, double& nsumaI, double& nUmax, double& nUmin, double& nh) : s_kp_PI(nkp), s_ki_PI(nki), s_sumaI_PI(nsumaI), s_Umax_PI(nUmax), s_Umin_PI(nUmin), s_h_PI(nh) {
 	this->s_error_PI.push_front(0.0);
 }
 
@@ -28,17 +28,27 @@ std::ostream& PI::wyswietlParametryPI(std::ostream& os) {
 	return os;
 }
 
+//Obliczenie części proporcjonalnej.
+double PI::liczP() {
+	return this->s_kp_PI * this->s_error_PI.at(0);
+}
+
+//Obliczenie części różniczukjącej.
+double PI::liczI() {
+	return this->s_ki_PI * this->s_sumaI_PI * this->s_h_PI;
+}
+
 // Proces regulacji regulatorem PI
-double PI::Symuluj(double s_y) {
+double PI::Symuluj(double s_e) {
 	double u = 0.0;
 	//Aktualizacja wartości błędu
-	this->s_error_PI.push_front(this->s_w_PI - s_y);
+	this->s_error_PI.push_front(s_e);
 	this->s_error_PI.pop_back();
 	//Obliczenie sumy błędu potrzebnej w części całkującej
 	this->s_sumaI_PI += this->s_error_PI.at(0);
 	//Obliczenie części proporcjonalnej oraz całkującej
-	double P = this->s_kp_PI * this->s_error_PI.at(0);
-	double I = this->s_ki_PI * this->s_sumaI_PI * this->s_h_PI;
+	double P = liczP();
+	double I = liczI();
 	u = P + I;
 	//Anti-wnidup
 	if (u > this->s_Umax_PI) {
@@ -68,7 +78,6 @@ void PI::odczytajDane(PI& pi, const std::string& file_path) {
 	// Zapis danych do odpowiednich pól obiektu
 	pi.s_kp_PI = j["kp"];
 	pi.s_ki_PI = j["ki"];
-	pi.s_w_PI = j["w"];
 	pi.s_h_PI = j["h"];
 	pi.s_Umax_PI = j["Umax"];
 	pi.s_Umin_PI = j["Umin"];
@@ -85,7 +94,6 @@ void PI::zapiszDane(const std::string& file_path) {
 	nlohmann::json data = {
 		{"kp", this->s_kp_PI},
 		{"ki", this->s_ki_PI},
-		{"w", this->s_w_PI},
 		{"h", this->s_h_PI},
 		{"Umax", this->s_Umax_PI},
 		{"Umin", this->s_Umin_PI}

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dokumentacja laboratorium PSS: Plik ≈∫r√≥d≈Çowy DekSzum.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dokumentacja laboratorium PSS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowa≈Ñ</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DekSzum.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_dek_szum_8hpp.html">Id≈∫ do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_dekorator_8hpp.html">Dekorator.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_dek_szum.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_dek_szum.html">DekSzum</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_dekorator.html">Dekorator</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_dek_szum.html#ad0de220030360f54ca6b515d5eee217e">   16</a></span>        std::default_random_engine <a class="code hl_variable" href="class_dek_szum.html#ad0de220030360f54ca6b515d5eee217e">s_engine</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_dek_szum.html#af32288bc4176f930575d3fa46d5fe9a7">   18</a></span>        std::normal_distribution&lt;double&gt; <a class="code hl_variable" href="class_dek_szum.html#af32288bc4176f930575d3fa46d5fe9a7">s_dist</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_dek_szum.html#a62d7941ba2aa85e60dbac21b7fea4f23">   19</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="class_dek_szum.html#a62d7941ba2aa85e60dbac21b7fea4f23">s_std</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="class_dek_szum.html">DekSzum</a>(<a class="code hl_class" href="class_komponent.html">Komponent</a>* komponent, <span class="keywordtype">double</span> odchylenieSTD);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_function" href="class_dek_szum.html#af32bc8e83da78f0e72536e9d509efe1f">~DekSzum</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="class_dek_szum.html#ad7640de6a5a1a333e80c7cac5bd9f5cc">gen</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="ttc" id="a_dekorator_8hpp_html"><div class="ttname"><a href="_dekorator_8hpp.html">Dekorator.hpp</a></div></div>
+<div class="ttc" id="aclass_dek_szum_html"><div class="ttname"><a href="class_dek_szum.html">DekSzum</a></div><div class="ttdef"><b>Definition:</b> <a href="_dek_szum_8hpp_source.html#l00012">DekSzum.hpp:12</a></div></div>
+<div class="ttc" id="aclass_dek_szum_html_a62d7941ba2aa85e60dbac21b7fea4f23"><div class="ttname"><a href="class_dek_szum.html#a62d7941ba2aa85e60dbac21b7fea4f23">DekSzum::s_std</a></div><div class="ttdeci">double s_std</div><div class="ttdef"><b>Definition:</b> <a href="_dek_szum_8hpp_source.html#l00019">DekSzum.hpp:19</a></div></div>
+<div class="ttc" id="aclass_dek_szum_html_ad0de220030360f54ca6b515d5eee217e"><div class="ttname"><a href="class_dek_szum.html#ad0de220030360f54ca6b515d5eee217e">DekSzum::s_engine</a></div><div class="ttdeci">std::default_random_engine s_engine</div><div class="ttdoc">Generator szumu.</div><div class="ttdef"><b>Definition:</b> <a href="_dek_szum_8hpp_source.html#l00016">DekSzum.hpp:16</a></div></div>
+<div class="ttc" id="aclass_dek_szum_html_ad7640de6a5a1a333e80c7cac5bd9f5cc"><div class="ttname"><a href="class_dek_szum.html#ad7640de6a5a1a333e80c7cac5bd9f5cc">DekSzum::gen</a></div><div class="ttdeci">double gen() override</div><div class="ttdoc">Metoda gen, dziedziczona z klasy Komponent.</div><div class="ttdef"><b>Definition:</b> <a href="_dek_szum_8cpp_source.html#l00018">DekSzum.cpp:18</a></div></div>
+<div class="ttc" id="aclass_dek_szum_html_af32288bc4176f930575d3fa46d5fe9a7"><div class="ttname"><a href="class_dek_szum.html#af32288bc4176f930575d3fa46d5fe9a7">DekSzum::s_dist</a></div><div class="ttdeci">std::normal_distribution&lt; double &gt; s_dist</div><div class="ttdoc">WybÛr rozk≥adu - rozk≥ad normalny.</div><div class="ttdef"><b>Definition:</b> <a href="_dek_szum_8hpp_source.html#l00018">DekSzum.hpp:18</a></div></div>
+<div class="ttc" id="aclass_dek_szum_html_af32bc8e83da78f0e72536e9d509efe1f"><div class="ttname"><a href="class_dek_szum.html#af32bc8e83da78f0e72536e9d509efe1f">DekSzum::~DekSzum</a></div><div class="ttdeci">~DekSzum()</div><div class="ttdoc">Destruktor klasy DekSzum.</div><div class="ttdef"><b>Definition:</b> <a href="_dek_szum_8cpp_source.html#l00015">DekSzum.cpp:15</a></div></div>
+<div class="ttc" id="aclass_dekorator_html"><div class="ttname"><a href="class_dekorator.html">Dekorator</a></div><div class="ttdef"><b>Definition:</b> <a href="_dekorator_8hpp_source.html#l00011">Dekorator.hpp:11</a></div></div>
+<div class="ttc" id="aclass_komponent_html"><div class="ttname"><a href="class_komponent.html">Komponent</a></div><div class="ttdef"><b>Definition:</b> <a href="_komponent_8hpp_source.html#l00009">Komponent.hpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

@@ -8,7 +8,7 @@
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00006}00006\ }
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00007}00007\ \textcolor{comment}{//Tworzenie\ obiektu\ PID,\ dokonywane\ jest\ na\ podstawie\ pól\ klas\ PD\ oraz\ PI.}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00008}\mbox{\hyperlink{class_p_i_d_a2c8431d3c35848835202e4e5f6563100}{00008}}\ \mbox{\hyperlink{class_p_i_d_a2c8431d3c35848835202e4e5f6563100}{PID::PID}}(\textcolor{keywordtype}{double}\ nkp,\ \textcolor{keywordtype}{double}\ nki,\ \textcolor{keywordtype}{double}\ nsumaI,\ \textcolor{keywordtype}{double}\ nw,\ \textcolor{keywordtype}{double}\ nUmax,\ \textcolor{keywordtype}{double}\ nUmin,\ \textcolor{keywordtype}{double}\ nh,\ \textcolor{keywordtype}{double}\ nkd)\ :\ \mbox{\hyperlink{class_p_d}{PD}}(nkd),\ \mbox{\hyperlink{class_p_i}{PI}}(nkp,\ nki,\ nsumaI,\ nw,\ nUmax,\ nUmin,\ nh)\ \ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00008}\mbox{\hyperlink{class_p_i_d_ac5d142d10521bb10327f970b88402278}{00008}}\ \mbox{\hyperlink{class_p_i_d_ac5d142d10521bb10327f970b88402278}{PID::PID}}(\textcolor{keywordtype}{double}\ nkp,\ \textcolor{keywordtype}{double}\ nki,\ \textcolor{keywordtype}{double}\ nsumaI,\ \textcolor{keywordtype}{double}\ nUmax,\ \textcolor{keywordtype}{double}\ nUmin,\ \textcolor{keywordtype}{double}\ nh,\ \textcolor{keywordtype}{double}\ nkd)\ :\ \mbox{\hyperlink{class_p_d}{PD}}(nkd),\ \mbox{\hyperlink{class_p_i}{PI}}(nkp,\ nki,\ nsumaI,\ nUmax,\ nUmin,\ nh)\ \ \{}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00009}00009\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.resize(2,\ 0);}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00010}00010\ \}}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00011}00011\ }
@@ -28,25 +28,25 @@
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00025}00025\ \}}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00026}00026\ }
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00027}00027\ \textcolor{comment}{//\ Proces\ regulacji\ regulatorem\ PID}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00028}\mbox{\hyperlink{class_p_i_d_a873659269100f2093d3cf8f8edcab806}{00028}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_i_d_a873659269100f2093d3cf8f8edcab806}{PID::Symuluj}}(\textcolor{keywordtype}{double}\ s\_y)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00028}\mbox{\hyperlink{class_p_i_d_a196095c693fe6d853f5b8ccd43ff7031}{00028}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_p_i_d_a196095c693fe6d853f5b8ccd43ff7031}{PID::Symuluj}}(\textcolor{keywordtype}{double}\ s\_e)\ \{}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{double}\ u\ =\ 0.0;}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//Aktualizacja\ wartości\ błędu}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00031}00031\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.push\_front(this-\/>\mbox{\hyperlink{class_p_i_a58f28def205676e2328702494241713d}{s\_w\_PI}}\ -\/\ s\_y);}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00031}00031\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.push\_front(s\_e);}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00032}00032\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.pop\_back();}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//Obliczenie\ sumy\ błędu\ potrzebnej\ w\ części\ całkującej}}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00034}00034\ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ +=\ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.at(0);}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//Obliczenie\ części\ proporcjonalnej,\ całkującej\ oraz\ różniczkującej}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{double}\ P\ =\ this-\/>\mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\_kp\_PI}}\ *\ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.at(0);}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{double}\ I\ =\ this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ *\ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ *\ this-\/>\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}};}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{double}\ D\ =\ this-\/>\mbox{\hyperlink{class_p_d_a662827c5903f82ecf70b956e38e69eb0}{s\_kd}}\ *\ (this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.at(0)\ -\/\ this-\/>\mbox{\hyperlink{class_p_i_a1fd36160f2fcf1a3eeb1c0fb436435ba}{s\_error\_PI}}.at(1))\ /\ this-\/>s\_h\_PI;}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{double}\ P\ =\ \mbox{\hyperlink{class_p_i_af425f25aa48d3bda75a1aa9bb8aca963}{PI::liczP}}();}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{double}\ I\ =\ \mbox{\hyperlink{class_p_i_a69389633647f8c9ffb7f1e392ac9f4d9}{liczI}}();}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{double}\ D\ =\ \mbox{\hyperlink{class_p_d_af3f9e187172ae75a6b10fcebdd6faddf}{liczD}}();}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00039}00039\ \ \ \ \ u\ =\ P\ +\ I\ +\ D;}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//Anti-\/wnidup}}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (u\ >\ this-\/>\mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}})\ \{}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ =\ (u\ -\/\ P\ -\/\ D)/(this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ *\ this-\/>s\_h\_PI);}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ =\ (u\ -\/\ P\ -\/\ D)/(this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ *\ this-\/>\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}});}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ u\ =\ \mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}};}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00044}00044\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (u\ <\ this-\/>\mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}})\ \{}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ =\ (u\ -\/\ P\ -\/\ D)/(this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ *\ this-\/>s\_h\_PI);}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_p_i_a3cb673ffe4aab3af1686cadad8dbe0e4}{s\_sumaI\_PI}}\ =\ (u\ -\/\ P\ -\/\ D)/(this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ *\ this-\/>\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}});}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ u\ =\ \mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}};}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00048}00048\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00049}00049\ }
@@ -69,33 +69,31 @@
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00066}00066\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\_kp\_PI}}\ =\ j[\textcolor{stringliteral}{"{}kp"{}}];}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00067}00067\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\ =\ j[\textcolor{stringliteral}{"{}ki"{}}];}
 \DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00068}00068\ \ \ \ \ pid.\mbox{\hyperlink{class_p_d_a662827c5903f82ecf70b956e38e69eb0}{s\_kd}}\ =\ j[\textcolor{stringliteral}{"{}kd"{}}];}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00069}00069\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_a58f28def205676e2328702494241713d}{s\_w\_PI}}\ =\ j[\textcolor{stringliteral}{"{}w"{}}];}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00070}00070\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}}\ =\ j[\textcolor{stringliteral}{"{}h"{}}];}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00071}00071\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}}\ =\ j[\textcolor{stringliteral}{"{}Umax"{}}];}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00072}00072\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}}\ =\ j[\textcolor{stringliteral}{"{}Umin"{}}];}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00073}00073\ \}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00075}00075\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00076}00076\ \textcolor{comment}{*\ Zapis\ danych\ z\ obiektu\ PID\ do\ pliku\ o\ podanej\ ścieżce.}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00077}00077\ \textcolor{comment}{*\ Podczas\ zapisu\ do\ pliku\ wybierane\ jest\ nazewnictwo\ zmiennych.}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00078}00078\ \textcolor{comment}{*\ Metoda\ aktualizuje\ dane\ parametru.}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00079}00079\ \textcolor{comment}{*}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00080}00080\ \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00081}\mbox{\hyperlink{class_p_i_d_a1d8e2491d584e36e1a1fbfbe3d4f946e}{00081}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_i_d_a1d8e2491d584e36e1a1fbfbe3d4f946e}{PID::zapiszDane}}(\textcolor{keyword}{const}\ std::string\&\ file\_path)\ \{}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{comment}{//\ Tworzenie\ obiektu\ JSON}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00083}00083\ \ \ \ \ nlohmann::json\ data\ =\ \{}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}kp"{}},\ this-\/>\mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\_kp\_PI}}\},}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}ki"{}},\ this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\},}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}kd"{}},\ this-\/>\mbox{\hyperlink{class_p_d_a662827c5903f82ecf70b956e38e69eb0}{s\_kd}}\},}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}w"{}},\ this-\/>\mbox{\hyperlink{class_p_i_a58f28def205676e2328702494241713d}{s\_w\_PI}}\},}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}h"{}},\ this-\/>\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}}\},}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Umax"{}},\ this-\/>\mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}}\},}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Umin"{}},\ this-\/>\mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}}\}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00091}00091\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00092}00092\ }
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{comment}{//\ Zapisywanie\ danych\ do\ pliku\ JSON}}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00094}00094\ \ \ \ \ std::ofstream\ file(file\_path,\ std::ios::app);}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00095}00095\ \ \ \ \ file\ <<\ data;}
-\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00069}00069\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}}\ =\ j[\textcolor{stringliteral}{"{}h"{}}];}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00070}00070\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}}\ =\ j[\textcolor{stringliteral}{"{}Umax"{}}];}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00071}00071\ \ \ \ \ pid.\mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}}\ =\ j[\textcolor{stringliteral}{"{}Umin"{}}];}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00074}00074\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00075}00075\ \textcolor{comment}{*\ Zapis\ danych\ z\ obiektu\ PID\ do\ pliku\ o\ podanej\ ścieżce.}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00076}00076\ \textcolor{comment}{*\ Podczas\ zapisu\ do\ pliku\ wybierane\ jest\ nazewnictwo\ zmiennych.}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00077}00077\ \textcolor{comment}{*\ Metoda\ aktualizuje\ dane\ parametru.}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00078}00078\ \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00079}00079\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00080}\mbox{\hyperlink{class_p_i_d_a1d8e2491d584e36e1a1fbfbe3d4f946e}{00080}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_p_i_d_a1d8e2491d584e36e1a1fbfbe3d4f946e}{PID::zapiszDane}}(\textcolor{keyword}{const}\ std::string\&\ file\_path)\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{comment}{//\ Tworzenie\ obiektu\ JSON}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00082}00082\ \ \ \ \ nlohmann::json\ data\ =\ \{}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}kp"{}},\ this-\/>\mbox{\hyperlink{class_p_i_aaabc4ca453fb4dd7862d51619974b5ca}{s\_kp\_PI}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}ki"{}},\ this-\/>\mbox{\hyperlink{class_p_i_aa34c203ce1731a1bfdf3fc913220ba74}{s\_ki\_PI}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}kd"{}},\ this-\/>\mbox{\hyperlink{class_p_d_a662827c5903f82ecf70b956e38e69eb0}{s\_kd}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}h"{}},\ this-\/>\mbox{\hyperlink{class_p_i_add3c6516ba15151ea1223494edfa5475}{s\_h\_PI}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Umax"{}},\ this-\/>\mbox{\hyperlink{class_p_i_a200f363813542da839801b7e0e15c658}{s\_Umax\_PI}}\},}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Umin"{}},\ this-\/>\mbox{\hyperlink{class_p_i_ab10df9aee0c237515c9fa7fa893ce5bd}{s\_Umin\_PI}}\}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00089}00089\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{comment}{//\ Zapisywanie\ danych\ do\ pliku\ JSON}}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00092}00092\ \ \ \ \ std::ofstream\ file(file\_path,\ std::ios::app);}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00093}00093\ \ \ \ \ file\ <<\ data;}
+\DoxyCodeLine{\Hypertarget{_p_i_d_8cpp_source_l00094}00094\ \}}
 
 \end{DoxyCode}

@@ -17,8 +17,6 @@ class PD: virtual public SISO {
 		std::deque<double> s_error;
 		/// Wzmocnienie część proporcjonalna
 		double s_kp; 
-		/// Wartość zadana
-		double s_w;
 		/// Max sterowanie
 		double s_Umax;
 		/// Min sterowanie
@@ -34,18 +32,32 @@ class PD: virtual public SISO {
 		/// Dziedziczenie tylko wartości kd (do PID)
 		PD(double& nkd);
 		/// Konstruktor parametryczny klasy PD
-		PD(double& nkp, double& nkd, double& nw, double& nUmax, double& nUmin, double& nh);
+		PD(double& nkp, double& nkd, double& nUmax, double& nUmin, double& nh);
 		/// Destruktor klasy PD
 		~PD();
 
 		/**
 		* Metoda publiczna dziedziczona z klasy SISO
 		* Regulacja obiektu za pomocą regulatora PD.
-		* @param[in] s_y ///< próbka wyjścia z obiektu
+		* @param[in] s_e ///< próbka uchybu
 		* @param[out] s_u ///< próbka sterowania
 		*
 		*/
-		double Symuluj(double s_y) override;
+		double Symuluj(double s_e) override;
+
+		/**
+		* Metoda służy do obliczenia części proporcjonalnej regulatora.
+		* @param[out] P ///< składowa proporcjonalna
+		* 
+		*/
+		double liczP();
+
+		/**
+		* Metoda służy do obliczenia części różniczkującej regulatora.
+		* @param[out] D ///< składowa różniczkująca
+		* 
+		*/
+		double liczD();
 
 		/// Wyświetlenie parametrów regulatora PD
 		std::ostream& wyswietlParametryPD(std::ostream& os);

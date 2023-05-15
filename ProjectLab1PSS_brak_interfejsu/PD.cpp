@@ -5,17 +5,17 @@
 #include "json.hpp"
 
 //Konstruktor domyślny
-PD::PD() : s_kp(2.0), s_kd(1.0), s_w(2.0), s_Umax(10.0), s_Umin(0.0){
+PD::PD() : s_kp(2.0), s_kd(1.0), s_Umax(10.0), s_Umin(0.0), s_h(1.0){
 	this->s_error.resize(2,0);
 }
 
 //Konstruktor domyślny z uwzględnieniem wzmocnienia części różniczkującej jako parametru.
-PD::PD(double& nkd):s_kp(0.0), s_kd(nkd), s_w(0.0), s_Umax(10.0), s_Umin(0.0)  {
+PD::PD(double& nkd):s_kp(0.0), s_kd(nkd), s_Umax(10.0), s_Umin(0.0), s_h(1.0) {
 	this->s_error.resize(2, 0);
 }
 
 //Konstruktor parametryczny
-PD::PD(double& nkp, double& nkd, double& nw, double& nUmax, double& nUmin, double& nh): s_kp(nkp), s_kd(nkd), s_w(nw), s_Umax(nUmax), s_Umin(nUmin), s_h(nh) {
+PD::PD(double& nkp, double& nkd, double& nUmax, double& nUmin, double& nh): s_kp(nkp), s_kd(nkd), s_Umax(nUmax), s_Umin(nUmin), s_h(nh) {
 	this->s_error.resize(2, 0);
 }
 
@@ -33,15 +33,25 @@ std::ostream& PD::wyswietlParametryPD(std::ostream& os) {
 	return os;
 }
 
+//Obliczenie części proporcjonalnej.
+double PD::liczP() {
+	return this->s_kp * this->s_error.at(0);
+}
+
+//Obliczenie części różniczukjącej.
+double PD::liczD() {
+	return this->s_kd * (this->s_error.at(0) - this->s_error.at(1)) / this->s_h;
+}
+
 // Proces regulacji regulatorem PD
-double PD::Symuluj(double s_y){
+double PD::Symuluj(double s_e){
 	double u = 0.0;
 	//Aktualizacja wartości błędu
-	this->s_error.push_front(this->s_w - s_y);
+	this->s_error.push_front(s_e);
 	this->s_error.pop_back();
 	//Obliczenie części proporcjonalnej oraz różniczkującej
-	double P = this->s_kp * this->s_error.at(0);
-	double D = this->s_kd * (this->s_error.at(0) - this->s_error.at(1))/this->s_h;
+	double P = liczP();
+	double D = liczD();
 	u = P + D;
 	//Sprawdzenie, czy sterowanie mieści się w zadanym zakresie.
 	if (u > this->s_Umax) {
@@ -68,7 +78,6 @@ void PD::odczytajDane(PD& pd, const std::string& file_path) {
 	// Zapis danych do odpowiednich pól obiektu
 	pd.s_kp = j["kp"];
 	pd.s_kd = j["kd"];
-	pd.s_w = j["w"];
 	pd.s_h = j["h"];
 	pd.s_Umax = j["Umax"];
 	pd.s_Umin = j["Umin"];
@@ -85,7 +94,6 @@ void PD::zapiszDane(const std::string& file_path) {
 	nlohmann::json data = {
 		{"kp", this->s_kp},
 		{"kd", this->s_kd},
-		{"w", this->s_w},
 		{"h", this->s_h},
 		{"Umax", this->s_Umax},
 		{"Umin", this->s_Umin}

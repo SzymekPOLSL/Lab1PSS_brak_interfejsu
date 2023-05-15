@@ -5,7 +5,7 @@
 #include "json.hpp"
 
 //Tworzenie obiektu PID, dokonywane jest na podstawie pól klas PD oraz PI.
-PID::PID(double nkp, double nki, double nsumaI, double nw, double nUmax, double nUmin, double nh, double nkd) : PD(nkd), PI(nkp, nki, nsumaI, nw, nUmax, nUmin, nh)  {
+PID::PID(double nkp, double nki, double nsumaI, double nUmax, double nUmin, double nh, double nkd) : PD(nkd), PI(nkp, nki, nsumaI, nUmax, nUmin, nh)  {
 	this->s_error_PI.resize(2, 0);
 }
 
@@ -25,17 +25,17 @@ std::ostream& PID::wyswietlParametryPID(std::ostream& os) {
 }
 
 // Proces regulacji regulatorem PID
-double PID::Symuluj(double s_y) {
+double PID::Symuluj(double s_e) {
 	double u = 0.0;
 	//Aktualizacja wartości błędu
-	this->s_error_PI.push_front(this->s_w_PI - s_y);
+	this->s_error_PI.push_front(s_e);
 	this->s_error_PI.pop_back();
 	//Obliczenie sumy błędu potrzebnej w części całkującej
 	this->s_sumaI_PI += this->s_error_PI.at(0);
 	//Obliczenie części proporcjonalnej, całkującej oraz różniczkującej
-	double P = this->s_kp_PI * this->s_error_PI.at(0);
-	double I = this->s_ki_PI * this->s_sumaI_PI * this->s_h_PI;
-	double D = this->s_kd * (this->s_error_PI.at(0) - this->s_error_PI.at(1)) / this->s_h_PI;
+	double P = PI::liczP();
+	double I = liczI();
+	double D = liczD();
 	u = P + I + D;
 	//Anti-wnidup
 	if (u > this->s_Umax_PI) {
@@ -66,7 +66,6 @@ void PID::odczytajDane(PID& pid, const std::string& file_path) {
 	pid.s_kp_PI = j["kp"];
 	pid.s_ki_PI = j["ki"];
 	pid.s_kd = j["kd"];
-	pid.s_w_PI = j["w"];
 	pid.s_h_PI = j["h"];
 	pid.s_Umax_PI = j["Umax"];
 	pid.s_Umin_PI = j["Umin"];
@@ -84,7 +83,6 @@ void PID::zapiszDane(const std::string& file_path) {
 		{"kp", this->s_kp_PI},
 		{"ki", this->s_ki_PI},
 		{"kd", this->s_kd},
-		{"w", this->s_w_PI},
 		{"h", this->s_h_PI},
 		{"Umax", this->s_Umax_PI},
 		{"Umin", this->s_Umin_PI}
