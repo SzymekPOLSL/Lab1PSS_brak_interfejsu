@@ -134,6 +134,8 @@
     <ClCompile Include="DekSzum.cpp" />
     <ClCompile Include="funkcjePomocnicze.cpp" />
     <ClCompile Include="klasaARX.cpp" />
+    <ClCompile Include="KompRow.cpp" />
+    <ClCompile Include="KompSz.cpp" />
     <ClCompile Include="ObiektDyskretnyLab.cpp" />
     <ClCompile Include="PD.cpp" />
     <ClCompile Include="PI.cpp" />

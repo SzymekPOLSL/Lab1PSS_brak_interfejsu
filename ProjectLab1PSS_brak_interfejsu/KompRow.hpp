@@ -11,20 +11,12 @@ class KompRow : public Kompozyt {
 
 	public:
 		/// Destruktor
-		~KompRow() {}
+		~KompRow();
 
 		/**
 		* Wykorzystanie metody Symuluj do stworzenia struktury równoleg³ej.
 		* Wynikiem jest suma kolejnych wyjœæ obiektów SISO.
 		*/
-		double Symuluj(double s_y) override {
-			double wynik = 0;
-			for (Komponent_Struktura* c : children) {
-				if (c != nullptr) {
-					wynik += c->Symuluj(s_y);
-				}
-			}
-			return wynik;
-		}
+		double Symuluj(double s_y) override;
 
 };
