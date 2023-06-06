@@ -24,7 +24,7 @@ ARX::ARX(): s_paramA(1), s_paramB(0), s_k(0), s_varE(0), s_u(0), s_y(0){} // Wpi
 * Wielkość s_u oraz s_y zależy od liczby podanych współczynników wielomianów A oraz B. 
 * 
 */
-ARX::ARX(std::vector<double>& nparamA, std::vector<double>& nparamB, unsigned int& nk, double& nvarE): s_paramA(nparamA), s_paramB(nparamB), s_k(nk), s_varE(nvarE), s_u(0), s_y(0) {
+ARX::ARX(std::vector<double> nparamA, std::vector<double> nparamB, unsigned int nk, double nvarE): s_paramA(nparamA), s_paramB(nparamB), s_k(nk), s_varE(nvarE), s_u(0), s_y(0) {
     this->s_u.resize((int)s_paramB.size()+s_k, 0);
     this->s_y.resize((int)s_paramA.size(), 0);
 }

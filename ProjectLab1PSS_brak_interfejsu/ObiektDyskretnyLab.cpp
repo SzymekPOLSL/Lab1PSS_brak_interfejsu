@@ -15,6 +15,10 @@
 #include "DekSin.hpp"
 #include "DekSzum.hpp"
 #include "DekProst.hpp"
+#include "Komponent_Struktura.hpp"
+#include "Kompozyt.hpp"
+#include "KompSz.hpp"
+#include "KompRow.hpp"
 
 int main(){
     //Uwzględnienie przy wypisywaniu danych w terminalu polskich liter.
@@ -90,6 +94,49 @@ int main(){
     pi.zapiszDane(file_path_zapis);
     arx.wyswietlParametry(std::cout);
 
+    //Stworzenie wskaźnika, będącego pierwszą gałęzią tworzonej struktury. Wybór struktury układu.
+    Komponent_Struktura* branch = new KompRow;
+
+    //Stworzenie końcowych elementów drzewa w postaci wskaźników do pojedynczych obiektów SISO.
+    Komponent_Struktura* obiekt1 = new ARX{ { -0.8, 0.4 }, {1}, 1, 0 };
+    Komponent_Struktura* obiekt2 = new ARX{ { -0.8, 0.4 }, {1}, 1, 0 };
+    Komponent_Struktura* obiekt3 = new ARX{ { -0.8, 0.4 }, {1}, 1, 0 };
+
+    //Dodanie obiektów do stworzonej wcześniej gałęzi.
+    branch->dodaj(obiekt1);
+    branch->dodaj(obiekt2);
+    branch->dodaj(obiekt3);
+
+    //branch->usun(obiekt1);
+    //branch->usun(obiekt2);
+    
+
+    //Symulacja sprawdzenia poprawności stworzonych struktur (wymuszenie skokiem jednostkowym).
+    double pomiar = 0;
+    std::vector<double> wyjscie_struktura;
+
+    for (int i = 0; i < 50; i++)
+    {
+        if (i == 0) {
+            double pomiar = branch->Symuluj(0.0);
+            wyjscie_struktura.push_back(pomiar);
+        }
+        else {
+            double pomiar = branch->Symuluj(1.0);
+            wyjscie_struktura.push_back(pomiar);
+        }
+    }
+      
+    //Zapis do pliku wyjścia struktury
+    std::string file_path_str = "C:/Users/panda/source/repos/ProjectLab1PSS_brak_interfejsu/ProjectLab1PSS_brak_interfejsu/Dane_Struktura.txt";
+    zapiszDoPliku(wyjscie_struktura, file_path_str);
+
+
+    //Usunięcie poszczególnych obiektów dynamicznych
+    delete obiekt3;
+    delete obiekt2;
+    delete obiekt1;
+    delete branch;
     delete decorator3;
     delete decorator2;
     delete decorator1;

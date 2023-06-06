@@ -33,7 +33,7 @@ public:
     * @param[in] varE
     *
     */
-    ARX(std::vector<double>& nparamA, std::vector<double>& nparamB, unsigned int& nk, double& nvarE);
+    ARX(std::vector<double> nparamA, std::vector<double> nparamB, unsigned int nk, double nvarE);
     ~ARX();
 
     std::ostream& wyswietlParametry(std::ostream & os); ///< Metoda odpowiedzialna za wyświetlenie aktualnych pól opisujących model ARX.

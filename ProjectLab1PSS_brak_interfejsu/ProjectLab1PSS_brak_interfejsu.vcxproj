@@ -150,6 +150,10 @@
     <ClInclude Include="klasaSISO.hpp" />
     <ClInclude Include="Komponent.hpp" />
     <ClInclude Include="KomponentKonkretny.hpp" />
+    <ClInclude Include="Komponent_Struktura.hpp" />
+    <ClInclude Include="Kompozyt.hpp" />
+    <ClInclude Include="KompRow.hpp" />
+    <ClInclude Include="KompSz.hpp" />
     <ClInclude Include="PD.hpp" />
     <ClInclude Include="PI.hpp" />
     <ClInclude Include="PID.hpp" />
