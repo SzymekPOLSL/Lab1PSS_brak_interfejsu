@@ -1,0 +1,162 @@
+\hypertarget{class_komponent___struktura}{}\doxysection{Dokumentacja klasy Komponent\+\_\+\+Struktura}
+\label{class_komponent___struktura}\index{Komponent\_Struktura@{Komponent\_Struktura}}
+
+
+{\ttfamily \#include $<$Komponent\+\_\+\+Struktura.\+hpp$>$}
+
+Diagram dziedziczenia dla Komponent\+\_\+\+Struktura\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.200000cm]{class_komponent___struktura}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_komponent___struktura_a3df8c1a1177bda3f17857ecef6ba2d6d}{$\sim$\+Komponent\+\_\+\+Struktura}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_komponent___struktura_a0b11947c38aed479c984c20d32cc77c0}{Set\+Parent}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$nparent)
+\begin{DoxyCompactList}\small\item\em Ustawienie danego \char`\"{}rodzica\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ \mbox{\hyperlink{class_komponent___struktura_a5eb3e69b28b2fb3ad8d761611a3e8927}{Get\+Parent}} () const
+\begin{DoxyCompactList}\small\item\em Odebranie danego rodzica. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_komponent___struktura_afbe374b319f9be537bd65250173c0190}{dodaj}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Operacja dodawania kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s¹ to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_komponent___struktura_a9ebab0e681403b17baa7b9ba2579ecaa}{usun}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Operacja usuniêcia kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s¹ to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_komponent___struktura_a19686e69b56cee733d792af23e9237b7}{Symuluj}} (double s\+\_\+u)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ \mbox{\hyperlink{class_komponent___struktura_a7cb0e2ed12c6c2ecdfde465b1f1f4b54}{parent}}
+\begin{DoxyCompactList}\small\item\em WskaŸnik na klasê \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} wskazuj¹ca na \char`\"{}rodziców\char`\"{}, czyli najstarsze elementy drzewa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+
+
+Definicja w linii \mbox{\hyperlink{_komponent___struktura_8hpp_source_l00009}{9}} pliku \mbox{\hyperlink{_komponent___struktura_8hpp_source}{Komponent\+\_\+\+Struktura.\+hpp}}.
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_komponent___struktura_a3df8c1a1177bda3f17857ecef6ba2d6d}\label{class_komponent___struktura_a3df8c1a1177bda3f17857ecef6ba2d6d}} 
+\index{Komponent\_Struktura@{Komponent\_Struktura}!````~Komponent\_Struktura@{$\sim$Komponent\_Struktura}}
+\index{````~Komponent\_Struktura@{$\sim$Komponent\_Struktura}!Komponent\_Struktura@{Komponent\_Struktura}}
+\doxysubsubsection{\texorpdfstring{$\sim$Komponent\_Struktura()}{~Komponent\_Struktura()}}
+{\footnotesize\ttfamily virtual Komponent\+\_\+\+Struktura\+::$\sim$\+Komponent\+\_\+\+Struktura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Wirtualny destruktor. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_komponent___struktura_8hpp_source_l00017}{17}} pliku \mbox{\hyperlink{_komponent___struktura_8hpp_source}{Komponent\+\_\+\+Struktura.\+hpp}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji skÅ‚adowych}
+\mbox{\Hypertarget{class_komponent___struktura_afbe374b319f9be537bd65250173c0190}\label{class_komponent___struktura_afbe374b319f9be537bd65250173c0190}} 
+\index{Komponent\_Struktura@{Komponent\_Struktura}!dodaj@{dodaj}}
+\index{dodaj@{dodaj}!Komponent\_Struktura@{Komponent\_Struktura}}
+\doxysubsubsection{\texorpdfstring{dodaj()}{dodaj()}}
+{\footnotesize\ttfamily virtual void Komponent\+\_\+\+Struktura\+::dodaj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$}]{komponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Operacja dodawania kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s¹ to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. 
+
+
+
+Reimplementowana w \mbox{\hyperlink{class_kompozyt_ab643dd1daf15629b176e4b07d4127ceb}{Kompozyt}}.
+
+
+
+Definicja w linii \mbox{\hyperlink{_komponent___struktura_8hpp_source_l00030}{30}} pliku \mbox{\hyperlink{_komponent___struktura_8hpp_source}{Komponent\+\_\+\+Struktura.\+hpp}}.
+
+\mbox{\Hypertarget{class_komponent___struktura_a5eb3e69b28b2fb3ad8d761611a3e8927}\label{class_komponent___struktura_a5eb3e69b28b2fb3ad8d761611a3e8927}} 
+\index{Komponent\_Struktura@{Komponent\_Struktura}!GetParent@{GetParent}}
+\index{GetParent@{GetParent}!Komponent\_Struktura@{Komponent\_Struktura}}
+\doxysubsubsection{\texorpdfstring{GetParent()}{GetParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ Komponent\+\_\+\+Struktura\+::\+Get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Odebranie danego rodzica. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_komponent___struktura_8hpp_source_l00025}{25}} pliku \mbox{\hyperlink{_komponent___struktura_8hpp_source}{Komponent\+\_\+\+Struktura.\+hpp}}.
+
+\mbox{\Hypertarget{class_komponent___struktura_a0b11947c38aed479c984c20d32cc77c0}\label{class_komponent___struktura_a0b11947c38aed479c984c20d32cc77c0}} 
+\index{Komponent\_Struktura@{Komponent\_Struktura}!SetParent@{SetParent}}
+\index{SetParent@{SetParent}!Komponent\_Struktura@{Komponent\_Struktura}}
+\doxysubsubsection{\texorpdfstring{SetParent()}{SetParent()}}
+{\footnotesize\ttfamily void Komponent\+\_\+\+Struktura\+::\+Set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$}]{nparent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ustawienie danego \char`\"{}rodzica\char`\"{}. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_komponent___struktura_8hpp_source_l00020}{20}} pliku \mbox{\hyperlink{_komponent___struktura_8hpp_source}{Komponent\+\_\+\+Struktura.\+hpp}}.
+
+\mbox{\Hypertarget{class_komponent___struktura_a19686e69b56cee733d792af23e9237b7}\label{class_komponent___struktura_a19686e69b56cee733d792af23e9237b7}} 
+\index{Komponent\_Struktura@{Komponent\_Struktura}!Symuluj@{Symuluj}}
+\index{Symuluj@{Symuluj}!Komponent\_Struktura@{Komponent\_Struktura}}
+\doxysubsubsection{\texorpdfstring{Symuluj()}{Symuluj()}}
+{\footnotesize\ttfamily virtual double Komponent\+\_\+\+Struktura\+::\+Symuluj (\begin{DoxyParamCaption}\item[{double}]{s\+\_\+u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Metoda czysto wirtualna, symuluje zwraca próbkê wyjœcia po dostarczeniu próbki wejœcia. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em s\+\_\+u} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em y} & \\
+\hline
+\end{DoxyParams}
+
+
+Implementowany w \mbox{\hyperlink{class_p_d_a695f2401288e868ffc42cbdb985827f1}{PD}}, \mbox{\hyperlink{class_p_i_ac35e6e2bfdb8b04151319a9ae48fab1b}{PI}}, \mbox{\hyperlink{class_p_i_d_a196095c693fe6d853f5b8ccd43ff7031}{PID}}, \mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{ARX}}, \mbox{\hyperlink{class_komp_row_a967918ac6c1cb15396b3baa92f77b942}{Komp\+Row}} i \mbox{\hyperlink{class_komp_sz_a79ba13634d00419732a5c46ca16773ae}{Komp\+Sz}}.
+
+\mbox{\Hypertarget{class_komponent___struktura_a9ebab0e681403b17baa7b9ba2579ecaa}\label{class_komponent___struktura_a9ebab0e681403b17baa7b9ba2579ecaa}} 
+\index{Komponent\_Struktura@{Komponent\_Struktura}!usun@{usun}}
+\index{usun@{usun}!Komponent\_Struktura@{Komponent\_Struktura}}
+\doxysubsubsection{\texorpdfstring{usun()}{usun()}}
+{\footnotesize\ttfamily virtual void Komponent\+\_\+\+Struktura\+::usun (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$}]{komponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Operacja usuniêcia kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s¹ to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. 
+
+
+
+Reimplementowana w \mbox{\hyperlink{class_kompozyt_af844f5a507fac071d3a5a4d1b20dab3b}{Kompozyt}}.
+
+
+
+Definicja w linii \mbox{\hyperlink{_komponent___struktura_8hpp_source_l00032}{32}} pliku \mbox{\hyperlink{_komponent___struktura_8hpp_source}{Komponent\+\_\+\+Struktura.\+hpp}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\mbox{\Hypertarget{class_komponent___struktura_a7cb0e2ed12c6c2ecdfde465b1f1f4b54}\label{class_komponent___struktura_a7cb0e2ed12c6c2ecdfde465b1f1f4b54}} 
+\index{Komponent\_Struktura@{Komponent\_Struktura}!parent@{parent}}
+\index{parent@{parent}!Komponent\_Struktura@{Komponent\_Struktura}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}}$\ast$ Komponent\+\_\+\+Struktura\+::parent\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+WskaŸnik na klasê \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} wskazuj¹ca na \char`\"{}rodziców\char`\"{}, czyli najstarsze elementy drzewa. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_komponent___struktura_8hpp_source_l00013}{13}} pliku \mbox{\hyperlink{_komponent___struktura_8hpp_source}{Komponent\+\_\+\+Struktura.\+hpp}}.
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_komponent___struktura_8hpp}{Komponent\+\_\+\+Struktura.\+hpp}}\end{DoxyCompactItemize}

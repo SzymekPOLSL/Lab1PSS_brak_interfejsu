@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['m_5fpi_0',['M_PI',['../_dek_prost_8cpp.html#ae71449b1cc6e6250b91f539153a7a0d3',1,'M_PI():&#160;DekProst.cpp'],['../_dek_sin_8cpp.html#ae71449b1cc6e6250b91f539153a7a0d3',1,'M_PI():&#160;DekSin.cpp']]],
-  ['main_1',['main',['../_obiekt_dyskretny_lab_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'ObiektDyskretnyLab.cpp']]]
+  ['liczd_0',['liczD',['../class_p_d.html#af3f9e187172ae75a6b10fcebdd6faddf',1,'PD']]],
+  ['liczi_1',['liczI',['../class_p_i.html#a69389633647f8c9ffb7f1e392ac9f4d9',1,'PI']]],
+  ['liczp_2',['liczP',['../class_p_d.html#a508565bee9f25c1432355e73a67c4f5a',1,'PD::liczP()'],['../class_p_i.html#af425f25aa48d3bda75a1aa9bb8aca963',1,'PI::liczP()']]]
 ];

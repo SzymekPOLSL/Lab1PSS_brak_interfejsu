@@ -32,6 +32,7 @@ var menudata={children:[
 {text:"Składowe klas",url:"functions.html",children:[
 {text:"Wszystko",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
+{text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
 {text:"g",url:"functions.html#index_g"},
 {text:"k",url:"functions.html#index_k"},
@@ -39,6 +40,7 @@ var menudata={children:[
 {text:"o",url:"functions.html#index_o"},
 {text:"p",url:"functions.html#index_p"},
 {text:"s",url:"functions.html#index_s"},
+{text:"u",url:"functions.html#index_u"},
 {text:"w",url:"functions.html#index_w"},
 {text:"z",url:"functions.html#index_z"},
 {text:"~",url:"functions.html#index__7E"}]},
@@ -51,10 +53,14 @@ var menudata={children:[
 {text:"o",url:"functions_func.html#index_o"},
 {text:"p",url:"functions_func.html#index_p"},
 {text:"s",url:"functions_func.html#index_s"},
+{text:"u",url:"functions_func.html#index_u"},
 {text:"w",url:"functions_func.html#index_w"},
 {text:"z",url:"functions_func.html#index_z"},
 {text:"~",url:"functions_func.html#index__7E"}]},
-{text:"Zmienne",url:"functions_vars.html"}]}]},
+{text:"Zmienne",url:"functions_vars.html",children:[
+{text:"c",url:"functions_vars.html#index_c"},
+{text:"p",url:"functions_vars.html#index_p"},
+{text:"s",url:"functions_vars.html#index_s"}]}]}]},
 {text:"Pliki",url:"files.html",children:[
 {text:"Lista plików",url:"files.html"},
 {text:"Składowe plików",url:"globals.html",children:[

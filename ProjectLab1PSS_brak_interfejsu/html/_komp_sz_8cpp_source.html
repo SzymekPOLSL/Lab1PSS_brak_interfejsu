@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dokumentacja laboratorium PSS: Plik źródłowy KompSz.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dokumentacja laboratorium PSS
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">KompSz.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_komp_sz_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_komp_sz_8hpp.html">KompSz.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//Destruktor</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_komp_sz.html#a6da9bdc2d74849e1239716776683e376">    4</a></span><a class="code hl_function" href="class_komp_sz.html#a6da9bdc2d74849e1239716776683e376">KompSz::~KompSz</a>() {}</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//Symulacja dzia�ania struktury szeregowej uk�adu</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_komp_sz.html#a79ba13634d00419732a5c46ca16773ae">    7</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="class_komp_sz.html#a79ba13634d00419732a5c46ca16773ae">KompSz::Symuluj</a>(<span class="keywordtype">double</span> s_y){</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordtype">double</span> wynik = 0;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">double</span> wejscie = s_y;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="class_komponent___struktura.html">Komponent_Struktura</a>* c : <a class="code hl_variable" href="class_kompozyt.html#ab40feedfa0b460c3340e7464245e6c86">children</a>) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">if</span> (c != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            wynik = c-&gt;Symuluj(wejscie);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            wejscie = wynik;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">return</span> wynik;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="ttc" id="a_komp_sz_8hpp_html"><div class="ttname"><a href="_komp_sz_8hpp.html">KompSz.hpp</a></div></div>
+<div class="ttc" id="aclass_komp_sz_html_a6da9bdc2d74849e1239716776683e376"><div class="ttname"><a href="class_komp_sz.html#a6da9bdc2d74849e1239716776683e376">KompSz::~KompSz</a></div><div class="ttdeci">~KompSz()</div><div class="ttdoc">Destruktor.</div><div class="ttdef"><b>Definition:</b> <a href="_komp_sz_8cpp_source.html#l00004">KompSz.cpp:4</a></div></div>
+<div class="ttc" id="aclass_komp_sz_html_a79ba13634d00419732a5c46ca16773ae"><div class="ttname"><a href="class_komp_sz.html#a79ba13634d00419732a5c46ca16773ae">KompSz::Symuluj</a></div><div class="ttdeci">double Symuluj(double s_y) override</div><div class="ttdef"><b>Definition:</b> <a href="_komp_sz_8cpp_source.html#l00007">KompSz.cpp:7</a></div></div>
+<div class="ttc" id="aclass_komponent___struktura_html"><div class="ttname"><a href="class_komponent___struktura.html">Komponent_Struktura</a></div><div class="ttdef"><b>Definition:</b> <a href="_komponent___struktura_8hpp_source.html#l00009">Komponent_Struktura.hpp:9</a></div></div>
+<div class="ttc" id="aclass_kompozyt_html_ab40feedfa0b460c3340e7464245e6c86"><div class="ttname"><a href="class_kompozyt.html#ab40feedfa0b460c3340e7464245e6c86">Kompozyt::children</a></div><div class="ttdeci">std::list&lt; Komponent_Struktura * &gt; children</div><div class="ttdoc">Lista przechowuje &quot;dzieci&quot;, czyli kolejne obiekty SISO.</div><div class="ttdef"><b>Definition:</b> <a href="_kompozyt_8hpp_source.html#l00017">Kompozyt.hpp:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

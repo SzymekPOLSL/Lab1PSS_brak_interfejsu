@@ -73,14 +73,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="klasa_s_i_s_o_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_s_i_s_o.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_s_i_s_o.html">SISO</a>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">   11</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">~SISO</a>() {};</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_s_i_s_o.html#a5939b03ee6c80591bda9f0582ab50714">   17</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_s_i_s_o.html#a5939b03ee6c80591bda9f0582ab50714">Symuluj</a>(<span class="keywordtype">double</span> s_u) = 0;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
-<div class="ttc" id="aclass_s_i_s_o_html"><div class="ttname"><a href="class_s_i_s_o.html">SISO</a></div><div class="ttdef"><b>Definition:</b> <a href="klasa_s_i_s_o_8hpp_source.html#l00008">klasaSISO.hpp:8</a></div></div>
-<div class="ttc" id="aclass_s_i_s_o_html_a3f6b0b7cda79493b941553e5d5780167"><div class="ttname"><a href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">SISO::~SISO</a></div><div class="ttdeci">virtual ~SISO()</div><div class="ttdoc">Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor.</div><div class="ttdef"><b>Definition:</b> <a href="klasa_s_i_s_o_8hpp_source.html#l00011">klasaSISO.hpp:11</a></div></div>
-<div class="ttc" id="aclass_s_i_s_o_html_a5939b03ee6c80591bda9f0582ab50714"><div class="ttname"><a href="class_s_i_s_o.html#a5939b03ee6c80591bda9f0582ab50714">SISO::Symuluj</a></div><div class="ttdeci">virtual double Symuluj(double s_u)=0</div></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_komponent___struktura_8hpp.html">Komponent_Struktura.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_s_i_s_o.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_s_i_s_o.html">SISO</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_komponent___struktura.html">Komponent_Struktura</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">   12</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">~SISO</a>() {};</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
+<div class="ttc" id="a_komponent___struktura_8hpp_html"><div class="ttname"><a href="_komponent___struktura_8hpp.html">Komponent_Struktura.hpp</a></div></div>
+<div class="ttc" id="aclass_komponent___struktura_html"><div class="ttname"><a href="class_komponent___struktura.html">Komponent_Struktura</a></div><div class="ttdef"><b>Definition:</b> <a href="_komponent___struktura_8hpp_source.html#l00009">Komponent_Struktura.hpp:9</a></div></div>
+<div class="ttc" id="aclass_s_i_s_o_html"><div class="ttname"><a href="class_s_i_s_o.html">SISO</a></div><div class="ttdef"><b>Definition:</b> <a href="klasa_s_i_s_o_8hpp_source.html#l00009">klasaSISO.hpp:9</a></div></div>
+<div class="ttc" id="aclass_s_i_s_o_html_a3f6b0b7cda79493b941553e5d5780167"><div class="ttname"><a href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">SISO::~SISO</a></div><div class="ttdeci">virtual ~SISO()</div><div class="ttdoc">Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor.</div><div class="ttdef"><b>Definition:</b> <a href="klasa_s_i_s_o_8hpp_source.html#l00012">klasaSISO.hpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -7,7 +7,7 @@
 Diagram dziedziczenia dla PD\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_p_d}
+\includegraphics[height=4.000000cm]{class_p_d}
 \end{center}
 \end{figure}
 \doxysubsection*{Metody publiczne}
@@ -37,14 +37,32 @@ void \mbox{\hyperlink{class_p_d_a4e8ed7db040dc62c50d6887fa67386c5}{zapisz\+Dane}
 \begin{DoxyCompactItemize}
 \item 
 virtual \mbox{\hyperlink{class_s_i_s_o_a3f6b0b7cda79493b941553e5d5780167}{$\sim$\+SISO}} ()
-\begin{DoxyCompactList}\small\item\em Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor. \end{DoxyCompactList}\item 
-virtual double \mbox{\hyperlink{class_s_i_s_o_a5939b03ee6c80591bda9f0582ab50714}{Symuluj}} (double s\+\_\+u)=0
+\begin{DoxyCompactList}\small\item\em Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_komponent___struktura_a3df8c1a1177bda3f17857ecef6ba2d6d}{$\sim$\+Komponent\+\_\+\+Struktura}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_komponent___struktura_a0b11947c38aed479c984c20d32cc77c0}{Set\+Parent}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$nparent)
+\begin{DoxyCompactList}\small\item\em Ustawienie danego \char`\"{}rodzica\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ \mbox{\hyperlink{class_komponent___struktura_a5eb3e69b28b2fb3ad8d761611a3e8927}{Get\+Parent}} () const
+\begin{DoxyCompactList}\small\item\em Odebranie danego rodzica. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_komponent___struktura_afbe374b319f9be537bd65250173c0190}{dodaj}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Operacja dodawania kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s� to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_komponent___struktura_a9ebab0e681403b17baa7b9ba2579ecaa}{usun}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Operacja usuni�cia kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s� to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_komponent___struktura_a19686e69b56cee733d792af23e9237b7}{Symuluj}} (double s\+\_\+u)=0
 \end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty chronione}
 \begin{DoxyCompactItemize}
 \item 
 double \mbox{\hyperlink{class_p_d_a662827c5903f82ecf70b956e38e69eb0}{s\+\_\+kd}}
 \begin{DoxyCompactList}\small\item\em Wzmocnienie część różniczkująca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ \mbox{\hyperlink{class_komponent___struktura_a7cb0e2ed12c6c2ecdfde465b1f1f4b54}{parent}}
+\begin{DoxyCompactList}\small\item\em Wska�nik na klas� \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} wskazuj�ca na \char`\"{}rodzic�w\char`\"{}, czyli najstarsze elementy drzewa. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty prywatne}
 \begin{DoxyCompactItemize}
 \item 
@@ -189,7 +207,7 @@ Metoda publiczna dziedziczona z klasy \mbox{\hyperlink{class_s_i_s_o}{SISO}} Reg
 \end{DoxyParams}
 
 
-Implementuje \mbox{\hyperlink{class_s_i_s_o_a5939b03ee6c80591bda9f0582ab50714}{SISO}}.
+Implementuje \mbox{\hyperlink{class_komponent___struktura_a19686e69b56cee733d792af23e9237b7}{Komponent\+\_\+\+Struktura}}.
 
 
 

@@ -1,0 +1,28 @@
+\hypertarget{_kompozyt_8hpp_source}{}\doxysection{Kompozyt.\+hpp}
+\mbox{\hyperlink{_kompozyt_8hpp}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_komponent___struktura_8hpp}{Komponent\_Struktura.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00013}\mbox{\hyperlink{class_kompozyt}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_kompozyt}{Kompozyt}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_komponent___struktura}{Komponent\_Struktura}}\ \{}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00017}\mbox{\hyperlink{class_kompozyt_ab40feedfa0b460c3340e7464245e6c86}{00017}}\ \ \ \ \ \ \ \ \ std::list\ <Komponent\_Struktura*>\ \mbox{\hyperlink{class_kompozyt_ab40feedfa0b460c3340e7464245e6c86}{children}};}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00021}\mbox{\hyperlink{class_kompozyt_a9d17f41017aa63358df7cfc4b7ad7733}{00021}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_kompozyt_a9d17f41017aa63358df7cfc4b7ad7733}{\string~Kompozyt}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00024}\mbox{\hyperlink{class_kompozyt_ab643dd1daf15629b176e4b07d4127ceb}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_kompozyt_ab643dd1daf15629b176e4b07d4127ceb}{dodaj}}(\mbox{\hyperlink{class_komponent___struktura}{Komponent\_Struktura}}*\ nkomponent)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>children.push\_back(nkomponent);}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ nkomponent-\/>\mbox{\hyperlink{class_komponent___struktura_a0b11947c38aed479c984c20d32cc77c0}{SetParent}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00030}\mbox{\hyperlink{class_kompozyt_af844f5a507fac071d3a5a4d1b20dab3b}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_kompozyt_af844f5a507fac071d3a5a4d1b20dab3b}{usun}}(\mbox{\hyperlink{class_komponent___struktura}{Komponent\_Struktura}}*\ nkomponent)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_kompozyt_ab40feedfa0b460c3340e7464245e6c86}{children}}.remove(nkomponent);}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ nkomponent-\/>\mbox{\hyperlink{class_komponent___struktura_a0b11947c38aed479c984c20d32cc77c0}{SetParent}}(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_kompozyt_8hpp_source_l00034}00034\ \};}
+
+\end{DoxyCode}

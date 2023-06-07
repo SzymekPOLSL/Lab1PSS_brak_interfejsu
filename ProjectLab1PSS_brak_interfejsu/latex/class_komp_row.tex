@@ -1,0 +1,101 @@
+\hypertarget{class_komp_row}{}\doxysection{Dokumentacja klasy Komp\+Row}
+\label{class_komp_row}\index{KompRow@{KompRow}}
+
+
+{\ttfamily \#include $<$Komp\+Row.\+hpp$>$}
+
+Diagram dziedziczenia dla Komp\+Row\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_komp_row}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_komp_row_ae743d103c20602a83b24ba2c87c571b6}{$\sim$\+Komp\+Row}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_komp_row_a967918ac6c1cb15396b3baa92f77b942}{Symuluj}} (double s\+\_\+y) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_kompozyt}{Kompozyt}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_kompozyt_a9d17f41017aa63358df7cfc4b7ad7733}{$\sim$\+Kompozyt}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kompozyt_ab643dd1daf15629b176e4b07d4127ceb}{dodaj}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$nkomponent) override
+\begin{DoxyCompactList}\small\item\em Przypisanie obiektów \mbox{\hyperlink{class_s_i_s_o}{SISO}} do odpowiedniego \char`\"{}rodzica\char`\"{}, czyli wybranej struktury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kompozyt_af844f5a507fac071d3a5a4d1b20dab3b}{usun}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$nkomponent) override
+\begin{DoxyCompactList}\small\item\em Usuniêcie obiektu \mbox{\hyperlink{class_s_i_s_o}{SISO}} z odpowiedniego \char`\"{}rodzica\char`\"{}, czyli wybranej struktury. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_komponent___struktura_a3df8c1a1177bda3f17857ecef6ba2d6d}{$\sim$\+Komponent\+\_\+\+Struktura}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_komponent___struktura_a0b11947c38aed479c984c20d32cc77c0}{Set\+Parent}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$nparent)
+\begin{DoxyCompactList}\small\item\em Ustawienie danego \char`\"{}rodzica\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ \mbox{\hyperlink{class_komponent___struktura_a5eb3e69b28b2fb3ad8d761611a3e8927}{Get\+Parent}} () const
+\begin{DoxyCompactList}\small\item\em Odebranie danego rodzica. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_komponent___struktura_afbe374b319f9be537bd65250173c0190}{dodaj}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Operacja dodawania kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s¹ to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_komponent___struktura_a9ebab0e681403b17baa7b9ba2579ecaa}{usun}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Operacja usuniêcia kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s¹ to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_komponent___struktura_a19686e69b56cee733d792af23e9237b7}{Symuluj}} (double s\+\_\+u)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone SkÅ‚adowe}
+\doxysubsubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_kompozyt}{Kompozyt}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ $>$ \mbox{\hyperlink{class_kompozyt_ab40feedfa0b460c3340e7464245e6c86}{children}}
+\begin{DoxyCompactList}\small\item\em Lista przechowuje \char`\"{}dzieci\char`\"{}, czyli kolejne obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ \mbox{\hyperlink{class_komponent___struktura_a7cb0e2ed12c6c2ecdfde465b1f1f4b54}{parent}}
+\begin{DoxyCompactList}\small\item\em WskaŸnik na klasê \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} wskazuj¹ca na \char`\"{}rodziców\char`\"{}, czyli najstarsze elementy drzewa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+
+
+Definicja w linii \mbox{\hyperlink{_komp_row_8hpp_source_l00010}{10}} pliku \mbox{\hyperlink{_komp_row_8hpp_source}{Komp\+Row.\+hpp}}.
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_komp_row_ae743d103c20602a83b24ba2c87c571b6}\label{class_komp_row_ae743d103c20602a83b24ba2c87c571b6}} 
+\index{KompRow@{KompRow}!````~KompRow@{$\sim$KompRow}}
+\index{````~KompRow@{$\sim$KompRow}!KompRow@{KompRow}}
+\doxysubsubsection{\texorpdfstring{$\sim$KompRow()}{~KompRow()}}
+{\footnotesize\ttfamily Komp\+Row\+::$\sim$\+Komp\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor. 
+
+
+
+Definicja w linii \mbox{\hyperlink{_komp_row_8cpp_source_l00004}{4}} pliku \mbox{\hyperlink{_komp_row_8cpp_source}{Komp\+Row.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji skÅ‚adowych}
+\mbox{\Hypertarget{class_komp_row_a967918ac6c1cb15396b3baa92f77b942}\label{class_komp_row_a967918ac6c1cb15396b3baa92f77b942}} 
+\index{KompRow@{KompRow}!Symuluj@{Symuluj}}
+\index{Symuluj@{Symuluj}!KompRow@{KompRow}}
+\doxysubsubsection{\texorpdfstring{Symuluj()}{Symuluj()}}
+{\footnotesize\ttfamily double Komp\+Row\+::\+Symuluj (\begin{DoxyParamCaption}\item[{double}]{s\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Wykorzystanie metody Symuluj do stworzenia struktury równoleg³ej. Wynikiem jest suma kolejnych wyjœæ obiektów \mbox{\hyperlink{class_s_i_s_o}{SISO}}. 
+
+Implementuje \mbox{\hyperlink{class_komponent___struktura_a19686e69b56cee733d792af23e9237b7}{Komponent\+\_\+\+Struktura}}.
+
+
+
+Definicja w linii \mbox{\hyperlink{_komp_row_8cpp_source_l00007}{7}} pliku \mbox{\hyperlink{_komp_row_8cpp_source}{Komp\+Row.\+cpp}}.
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z plikÃ³w\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_komp_row_8hpp}{Komp\+Row.\+hpp}}\item 
+\mbox{\hyperlink{_komp_row_8cpp}{Komp\+Row.\+cpp}}\end{DoxyCompactItemize}

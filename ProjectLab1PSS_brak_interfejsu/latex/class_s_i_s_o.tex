@@ -7,22 +7,41 @@
 Diagram dziedziczenia dla SISO\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_s_i_s_o}
+\includegraphics[height=4.000000cm]{class_s_i_s_o}
 \end{center}
 \end{figure}
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 virtual \mbox{\hyperlink{class_s_i_s_o_a3f6b0b7cda79493b941553e5d5780167}{$\sim$\+SISO}} ()
-\begin{DoxyCompactList}\small\item\em Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor. \end{DoxyCompactList}\item 
-virtual double \mbox{\hyperlink{class_s_i_s_o_a5939b03ee6c80591bda9f0582ab50714}{Symuluj}} (double s\+\_\+u)=0
+\begin{DoxyCompactList}\small\item\em Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_komponent___struktura_a3df8c1a1177bda3f17857ecef6ba2d6d}{$\sim$\+Komponent\+\_\+\+Struktura}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_komponent___struktura_a0b11947c38aed479c984c20d32cc77c0}{Set\+Parent}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$nparent)
+\begin{DoxyCompactList}\small\item\em Ustawienie danego \char`\"{}rodzica\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ \mbox{\hyperlink{class_komponent___struktura_a5eb3e69b28b2fb3ad8d761611a3e8927}{Get\+Parent}} () const
+\begin{DoxyCompactList}\small\item\em Odebranie danego rodzica. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_komponent___struktura_afbe374b319f9be537bd65250173c0190}{dodaj}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Operacja dodawania kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s� to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_komponent___struktura_a9ebab0e681403b17baa7b9ba2579ecaa}{usun}} (\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$komponent)
+\begin{DoxyCompactList}\small\item\em Operacja usuni�cia kolejnych \char`\"{}dzieci\char`\"{} do drzewa. W tym wypadku s� to obiekty \mbox{\hyperlink{class_s_i_s_o}{SISO}}. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_komponent___struktura_a19686e69b56cee733d792af23e9237b7}{Symuluj}} (double s\+\_\+u)=0
 \end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} $\ast$ \mbox{\hyperlink{class_komponent___struktura_a7cb0e2ed12c6c2ecdfde465b1f1f4b54}{parent}}
+\begin{DoxyCompactList}\small\item\em Wska�nik na klas� \mbox{\hyperlink{class_komponent___struktura}{Komponent\+\_\+\+Struktura}} wskazuj�ca na \char`\"{}rodzic�w\char`\"{}, czyli najstarsze elementy drzewa. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Opis szczegółowy}
 
 
-Definicja w linii \mbox{\hyperlink{klasa_s_i_s_o_8hpp_source_l00008}{8}} pliku \mbox{\hyperlink{klasa_s_i_s_o_8hpp_source}{klasa\+SISO.\+hpp}}.
+Definicja w linii \mbox{\hyperlink{klasa_s_i_s_o_8hpp_source_l00009}{9}} pliku \mbox{\hyperlink{klasa_s_i_s_o_8hpp_source}{klasa\+SISO.\+hpp}}.
 
 
 
@@ -39,27 +58,7 @@ Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być rów
 
 
 
-Definicja w linii \mbox{\hyperlink{klasa_s_i_s_o_8hpp_source_l00011}{11}} pliku \mbox{\hyperlink{klasa_s_i_s_o_8hpp_source}{klasa\+SISO.\+hpp}}.
-
-
-
-\doxysubsection{Dokumentacja funkcji składowych}
-\mbox{\Hypertarget{class_s_i_s_o_a5939b03ee6c80591bda9f0582ab50714}\label{class_s_i_s_o_a5939b03ee6c80591bda9f0582ab50714}} 
-\index{SISO@{SISO}!Symuluj@{Symuluj}}
-\index{Symuluj@{Symuluj}!SISO@{SISO}}
-\doxysubsubsection{\texorpdfstring{Symuluj()}{Symuluj()}}
-{\footnotesize\ttfamily virtual double SISO\+::\+Symuluj (\begin{DoxyParamCaption}\item[{double}]{s\+\_\+u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-Metoda czysto wirtualna, symuluje zwraca próbkę wyjścia po dostarczeniu próbki wejścia. 
-\begin{DoxyParams}[1]{Parametry}
-\mbox{\texttt{ in}}  & {\em s\+\_\+u} & \\
-\hline
-\mbox{\texttt{ out}}  & {\em y} & \\
-\hline
-\end{DoxyParams}
-
-
-Implementowany w \mbox{\hyperlink{class_p_d_a695f2401288e868ffc42cbdb985827f1}{PD}}, \mbox{\hyperlink{class_p_i_ac35e6e2bfdb8b04151319a9ae48fab1b}{PI}}, \mbox{\hyperlink{class_p_i_d_a196095c693fe6d853f5b8ccd43ff7031}{PID}} i \mbox{\hyperlink{class_a_r_x_aa2ee25b5f56aa74bda0323f61cef3c27}{ARX}}.
+Definicja w linii \mbox{\hyperlink{klasa_s_i_s_o_8hpp_source_l00012}{12}} pliku \mbox{\hyperlink{klasa_s_i_s_o_8hpp_source}{klasa\+SISO.\+hpp}}.
 
 
 

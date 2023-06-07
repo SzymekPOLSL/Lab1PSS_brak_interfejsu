@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['zapiszdane_0',['zapiszDane',['../class_a_r_x.html#a1b6183dbda8b9224847f691bd2eff93d',1,'ARX::zapiszDane()'],['../class_p_d.html#a4e8ed7db040dc62c50d6887fa67386c5',1,'PD::zapiszDane()'],['../class_p_i.html#a74c8315fe60657bc8603a17f8f6f8610',1,'PI::zapiszDane()'],['../class_p_i_d.html#a1d8e2491d584e36e1a1fbfbe3d4f946e',1,'PID::zapiszDane()']]],
-  ['zapiszdopliku_1',['zapiszDoPliku',['../funkcje_pomocnicze_8cpp.html#aa8fa1d07926357c02d36123fcefaa2b7',1,'zapiszDoPliku(std::vector&lt; double &gt; dane, const std::string &amp;file_path):&#160;funkcjePomocnicze.cpp'],['../funkcje_pomocniczne_8hpp.html#aa8fa1d07926357c02d36123fcefaa2b7',1,'zapiszDoPliku(std::vector&lt; double &gt; dane, const std::string &amp;file_path):&#160;funkcjePomocnicze.cpp']]]
+  ['wyswietlparametry_0',['wyswietlParametry',['../class_a_r_x.html#a8660da07ee58cf49db7bcf61affbf568',1,'ARX']]],
+  ['wyswietlparametrypd_1',['wyswietlParametryPD',['../class_p_d.html#aaecc51cd65d1f3ae969900ef387b34ca',1,'PD']]],
+  ['wyswietlparametrypi_2',['wyswietlParametryPI',['../class_p_i.html#a84272a249cc16c092312e977cc932aa6',1,'PI']]],
+  ['wyswietlparametrypid_3',['wyswietlParametryPID',['../class_p_i_d.html#a44bb16f16ca1c79cc01df56361f02aec',1,'PID']]]
 ];

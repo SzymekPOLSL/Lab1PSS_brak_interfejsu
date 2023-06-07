@@ -1,0 +1,22 @@
+\hypertarget{_komp_sz_8cpp_source}{}\doxysection{Komp\+Sz.\+cpp}
+\mbox{\hyperlink{_komp_sz_8cpp}{IdÅº do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_komp_sz_8hpp}{KompSz.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00003}00003\ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00004}\mbox{\hyperlink{class_komp_sz_a6da9bdc2d74849e1239716776683e376}{00004}}\ \mbox{\hyperlink{class_komp_sz_a6da9bdc2d74849e1239716776683e376}{KompSz::\string~KompSz}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00006}00006\ \textcolor{comment}{//Symulacja\ dzia³ania\ struktury\ szeregowej\ uk³adu}}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00007}\mbox{\hyperlink{class_komp_sz_a79ba13634d00419732a5c46ca16773ae}{00007}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_komp_sz_a79ba13634d00419732a5c46ca16773ae}{KompSz::Symuluj}}(\textcolor{keywordtype}{double}\ s\_y)\{}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{keywordtype}{double}\ wynik\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{double}\ wejscie\ =\ s\_y;}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_komponent___struktura}{Komponent\_Struktura}}*\ c\ :\ \mbox{\hyperlink{class_kompozyt_ab40feedfa0b460c3340e7464245e6c86}{children}})\ \{}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ wynik\ =\ c-\/>Symuluj(wejscie);}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ wejscie\ =\ wynik;}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{return}\ wynik;}
+\DoxyCodeLine{\Hypertarget{_komp_sz_8cpp_source_l00017}00017\ \}}
+
+\end{DoxyCode}

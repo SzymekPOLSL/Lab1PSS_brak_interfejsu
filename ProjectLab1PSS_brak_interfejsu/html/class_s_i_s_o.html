@@ -72,7 +72,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
 <a href="class_s_i_s_o-members.html">Lista wszystkich składowych</a>  </div>
-  <div class="headertitle"><div class="title">Dokumentacja klasy SISO<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy SISO</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -83,11 +83,12 @@ Diagram dziedziczenia dla SISO</div>
  <div class="center">
   <img src="class_s_i_s_o.png" usemap="#SISO_map" alt=""/>
   <map id="SISO_map" name="SISO_map">
-<area href="class_a_r_x.html" alt="ARX" shape="rect" coords="0,56,41,80"/>
-<area href="class_p_d.html" alt="PD" shape="rect" coords="51,56,92,80"/>
-<area href="class_p_i.html" alt="PI" shape="rect" coords="102,56,143,80"/>
-<area href="class_p_i_d.html" alt="PID" shape="rect" coords="51,112,92,136"/>
-<area href="class_p_i_d.html" alt="PID" shape="rect" coords="102,112,143,136"/>
+<area href="class_komponent___struktura.html" alt="Komponent_Struktura" shape="rect" coords="142,0,274,24"/>
+<area href="class_a_r_x.html" alt="ARX" shape="rect" coords="0,112,132,136"/>
+<area href="class_p_d.html" alt="PD" shape="rect" coords="142,112,274,136"/>
+<area href="class_p_i.html" alt="PI" shape="rect" coords="284,112,416,136"/>
+<area href="class_p_i_d.html" alt="PID" shape="rect" coords="142,168,274,192"/>
+<area href="class_p_i_d.html" alt="PID" shape="rect" coords="284,168,416,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -96,12 +97,35 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a3f6b0b7cda79493b941553e5d5780167"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a3f6b0b7cda79493b941553e5d5780167">~SISO</a> ()</td></tr>
 <tr class="memdesc:a3f6b0b7cda79493b941553e5d5780167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor.  <br /></td></tr>
 <tr class="separator:a3f6b0b7cda79493b941553e5d5780167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5939b03ee6c80591bda9f0582ab50714"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_i_s_o.html#a5939b03ee6c80591bda9f0582ab50714">Symuluj</a> (double s_u)=0</td></tr>
-<tr class="separator:a5939b03ee6c80591bda9f0582ab50714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_komponent___struktura"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_komponent___struktura')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_komponent___struktura.html">Komponent_Struktura</a></td></tr>
+<tr class="memitem:a3df8c1a1177bda3f17857ecef6ba2d6d inherit pub_methods_class_komponent___struktura"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_komponent___struktura.html#a3df8c1a1177bda3f17857ecef6ba2d6d">~Komponent_Struktura</a> ()</td></tr>
+<tr class="memdesc:a3df8c1a1177bda3f17857ecef6ba2d6d inherit pub_methods_class_komponent___struktura"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wirtualny destruktor.  <br /></td></tr>
+<tr class="separator:a3df8c1a1177bda3f17857ecef6ba2d6d inherit pub_methods_class_komponent___struktura"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b11947c38aed479c984c20d32cc77c0 inherit pub_methods_class_komponent___struktura"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_komponent___struktura.html#a0b11947c38aed479c984c20d32cc77c0">SetParent</a> (<a class="el" href="class_komponent___struktura.html">Komponent_Struktura</a> *nparent)</td></tr>
+<tr class="memdesc:a0b11947c38aed479c984c20d32cc77c0 inherit pub_methods_class_komponent___struktura"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawienie danego "rodzica".  <br /></td></tr>
+<tr class="separator:a0b11947c38aed479c984c20d32cc77c0 inherit pub_methods_class_komponent___struktura"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eb3e69b28b2fb3ad8d761611a3e8927 inherit pub_methods_class_komponent___struktura"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_komponent___struktura.html">Komponent_Struktura</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_komponent___struktura.html#a5eb3e69b28b2fb3ad8d761611a3e8927">GetParent</a> () const</td></tr>
+<tr class="memdesc:a5eb3e69b28b2fb3ad8d761611a3e8927 inherit pub_methods_class_komponent___struktura"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odebranie danego rodzica.  <br /></td></tr>
+<tr class="separator:a5eb3e69b28b2fb3ad8d761611a3e8927 inherit pub_methods_class_komponent___struktura"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe374b319f9be537bd65250173c0190 inherit pub_methods_class_komponent___struktura"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_komponent___struktura.html#afbe374b319f9be537bd65250173c0190">dodaj</a> (<a class="el" href="class_komponent___struktura.html">Komponent_Struktura</a> *komponent)</td></tr>
+<tr class="memdesc:afbe374b319f9be537bd65250173c0190 inherit pub_methods_class_komponent___struktura"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operacja dodawania kolejnych "dzieci" do drzewa. W tym wypadku s� to obiekty <a class="el" href="class_s_i_s_o.html">SISO</a>.  <br /></td></tr>
+<tr class="separator:afbe374b319f9be537bd65250173c0190 inherit pub_methods_class_komponent___struktura"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ebab0e681403b17baa7b9ba2579ecaa inherit pub_methods_class_komponent___struktura"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_komponent___struktura.html#a9ebab0e681403b17baa7b9ba2579ecaa">usun</a> (<a class="el" href="class_komponent___struktura.html">Komponent_Struktura</a> *komponent)</td></tr>
+<tr class="memdesc:a9ebab0e681403b17baa7b9ba2579ecaa inherit pub_methods_class_komponent___struktura"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operacja usuni�cia kolejnych "dzieci" do drzewa. W tym wypadku s� to obiekty <a class="el" href="class_s_i_s_o.html">SISO</a>.  <br /></td></tr>
+<tr class="separator:a9ebab0e681403b17baa7b9ba2579ecaa inherit pub_methods_class_komponent___struktura"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19686e69b56cee733d792af23e9237b7 inherit pub_methods_class_komponent___struktura"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_komponent___struktura.html#a19686e69b56cee733d792af23e9237b7">Symuluj</a> (double s_u)=0</td></tr>
+<tr class="separator:a19686e69b56cee733d792af23e9237b7 inherit pub_methods_class_komponent___struktura"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_komponent___struktura"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_komponent___struktura')"><img src="closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="class_komponent___struktura.html">Komponent_Struktura</a></td></tr>
+<tr class="memitem:a7cb0e2ed12c6c2ecdfde465b1f1f4b54 inherit pro_attribs_class_komponent___struktura"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_komponent___struktura.html">Komponent_Struktura</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_komponent___struktura.html#a7cb0e2ed12c6c2ecdfde465b1f1f4b54">parent</a></td></tr>
+<tr class="memdesc:a7cb0e2ed12c6c2ecdfde465b1f1f4b54 inherit pro_attribs_class_komponent___struktura"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wska�nik na klas� <a class="el" href="class_komponent___struktura.html">Komponent_Struktura</a> wskazuj�ca na "rodzic�w", czyli najstarsze elementy drzewa.  <br /></td></tr>
+<tr class="separator:a7cb0e2ed12c6c2ecdfde465b1f1f4b54 inherit pro_attribs_class_komponent___struktura"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
-<p class="definition">Definicja w linii <a class="el" href="klasa_s_i_s_o_8hpp_source.html#l00008">8</a> pliku <a class="el" href="klasa_s_i_s_o_8hpp_source.html">klasaSISO.hpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="klasa_s_i_s_o_8hpp_source.html#l00009">9</a> pliku <a class="el" href="klasa_s_i_s_o_8hpp_source.html">klasaSISO.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="a3f6b0b7cda79493b941553e5d5780167" name="a3f6b0b7cda79493b941553e5d5780167"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f6b0b7cda79493b941553e5d5780167">&#9670;&#160;</a></span>~SISO()</h2>
@@ -128,43 +152,7 @@ Metody publiczne</h2></td></tr>
 
 <p>Przez to, że klasa posiada jedynie metodę wirtualną, wirtualny musi być również destruktor. </p>
 
-<p class="definition">Definicja w linii <a class="el" href="klasa_s_i_s_o_8hpp_source.html#l00011">11</a> pliku <a class="el" href="klasa_s_i_s_o_8hpp_source.html">klasaSISO.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a id="a5939b03ee6c80591bda9f0582ab50714" name="a5939b03ee6c80591bda9f0582ab50714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5939b03ee6c80591bda9f0582ab50714">&#9670;&#160;</a></span>Symuluj()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double SISO::Symuluj </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>s_u</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Metoda czysto wirtualna, symuluje zwraca próbkę wyjścia po dostarczeniu próbki wejścia. </p><dl class="params"><dt>Parametry</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">s_u</td><td></td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implementowany w <a class="el" href="class_p_d.html#a695f2401288e868ffc42cbdb985827f1">PD</a>, <a class="el" href="class_p_i.html#ac35e6e2bfdb8b04151319a9ae48fab1b">PI</a>, <a class="el" href="class_p_i_d.html#a196095c693fe6d853f5b8ccd43ff7031">PID</a> i <a class="el" href="class_a_r_x.html#aa2ee25b5f56aa74bda0323f61cef3c27">ARX</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="klasa_s_i_s_o_8hpp_source.html#l00012">12</a> pliku <a class="el" href="klasa_s_i_s_o_8hpp_source.html">klasaSISO.hpp</a>.</p>
 
 </div>
 </div>
